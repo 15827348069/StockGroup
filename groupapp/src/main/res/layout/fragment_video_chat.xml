@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/group_layout_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_chat_list"
+        android:layout_above="@+id/blog_bottom_layout_line"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:visibility="visible"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/blog_bottom_layout_line"
+        android:background="#d5d5d5"
+        android:layout_above="@+id/blog_detail_pinglun"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fbfbfb"
+        android:layout_alignParentBottom="true"
+        android:text="说点什么吧"
+        android:paddingLeft="15dp"
+        android:drawablePadding="8dp"
+        android:drawableLeft="@drawable/icon_blog_say_some"
+        android:textColor="#a5a5a5"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:id="@+id/blog_detail_pinglun"
+        />
+</RelativeLayout>

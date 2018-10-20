@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:id="@+id/tv_no_care"
+        android:text="暂无关注"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:textSize="15dp"
+        android:textColor="@color/black_99"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_content"
+        android:visibility="invisible"
+        >
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/homt_tuijian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:background="@color/white"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:fastScrollEnabled="true"
+        android:scrollbars="none" />
+
+    <View
+        android:id="@+id/care_line"
+        android:layout_width="0.5dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/linen" />
+
+    <RelativeLayout
+        android:id="@+id/more_layout"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/more_teacher_button"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_select_tran"
+            android:text="更多"
+            android:textColor="@color/black_66"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/care_more_point"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/red_point_bg"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

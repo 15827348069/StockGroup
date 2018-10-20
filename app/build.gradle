@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+
+android {
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'grouppro'
+            keyPassword '123456'
+//            storeFile file('D:/炒股圈子APK/zbmf_Key Store/kubo.keystore')
+            storeFile file('E:\\zbmf_key\\kubo.keystore')
+            storePassword 'kubo@mac--7878'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.zbmf.groupro"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 3
+        versionName "1.0.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "FOGD7WZ0KS78D4epgVX9W",
+                GETUI_APP_KEY   : "QffhZoeLty6yAzZSWgioJ5",
+                GETUI_APP_SECRET: "koC7CGQtfz86ainxOskCx5"
+        ]
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFileName = new File(output.outputFile.parent, output.outputFile.name.replace("app-release.apk", "mcc_pro.apk"))
+                }
+            }
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        def fileName = "mcc_pro.apk"
+//                        output.outputFile = new File(outputFile.parent, fileName)
+//                    }
+//                }
+//            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/android-async-http-1.4.5.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/weiboSDKCore_3.1.4.jar')
+    compile files('libs/GifView.jar')
+    compile files('libs/Baidu_Mtj_3.7.2.0.jar')
+    compile files('libs/GetuiSDK2.9.5.0.jar')
+    compile files('libs/Java-WebSocket-1.3.1-SNAPSHOT.jar')
+    compile files('libs/imageloader.jar')
+    compile files('libs/open_sdk_r5778.jar')
+    compile files('libs/mta-sdk-1.6.2.jar')
+    compile project(':FlycoTabLayout_Lib')
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'org.apache.httpcomponents:httpcore:4.4.6'
+    compile 'com.android.support:support-v4:25.4.0'
+    compile 'com.android.support:design:25.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+}

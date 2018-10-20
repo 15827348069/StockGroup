@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_feed_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="15dp"
+    tools:context="com.zbmf.groupro.activity.FeedBackActivity">
+
+    <EditText
+        android:id="@+id/ed_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top|left"
+        android:hint="我们的没一点进步都离不开您的宝贵建议"
+        android:imeOptions="actionDone"
+        android:minHeight="125dp"
+        android:padding="11dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        android:textColorHint="#999999"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="常见问题"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+
+</LinearLayout>

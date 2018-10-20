@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="title_alert">提示标题</string>
+    <string name="title_message">提示消息</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="change">更换</string>
+    <string name="hint">提示</string>
+    <string name="complete">完成</string>
+    <string name="inquiry">查询</string>
+    <string name="none">无</string>
+    <string name="close">关闭</string>
+    <string name="refresh">刷新</string>
+    <string name="exit">退出</string>
+    <string name="common_title">标题</string>
+    <string name="image_desc">图片描述</string>
+    <string name="login">登录</string>
+    <string name="logout">退出</string>
+    <string name="submit">提交</string>
+    <string name="select">选择</string>
+    <string name="add">添加</string>
+    <string name="save">保 存</string>
+    <string name="update">更新</string>
+    <string name="delete">删除</string>
+    <string name="modify">修改</string>
+    <string name="reset">重置</string>
+    <string name="update_hint">更新提醒</string>
+    <string name="back">返回</string>
+    <string name="previous_step">上一步</string>
+    <string name="next_step">下一步</string>
+    <string name="play">播放</string>
+    <string name="search">搜索</string>
+    <string name="ask">提问</string>
+    <string name="edit">编辑</string>
+    <string name="take_photo">拍照</string>
+    <string name="is_new_version">当前已是最新版本</string>
+    <string name="dialog_loading_tip" tools:ignore="TypographyEllipsis">努力加载中...</string>
+    <string name="loading_login">正在登录&#8230;</string>
+    <string name="loading_data">正在加载&#8230;</string>
+    <string name="loading_save">正在保存&#8230;</string>
+    <string name="loading_submit">正在提交&#8230;</string>
+    <string name="loading_regist">正在注册&#8230;</string>
+    <string name="loading_modify">正在修改&#8230;</string>
+    <string name="loading_get_code">正在获取验证码&#8230;</string>
+    <string name="success_get_code">获取验证码成功</string>
+    <string name="success_rest_pass">设置密码成功，请重新登录</string>
+    <string name="success_save">保存成功</string>
+    <string name="success_submit">提交成功</string>
+    <string name="fail_submit">提交失败</string>
+    <string name="fail_get_code">获取验证码失败</string>
+    <string name="fail_rest_pass">设置密码失败</string>
+    <string name="fail_save">保存失败</string>
+    <string name="money_value">¥%s</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+
+    <!-- XRecyclerView -->
+    <string name="listview_header_hint_normal">下拉刷新</string>
+    <string name="listview_header_hint_release">开始刷新</string>
+    <string name="listview_loading">正在加载&#8230;</string>
+    <string name="nomore_loading">没有数据了</string>
+    <string name="refreshing">刷新中&#8230;</string>
+    <string name="refresh_done">刷新完成</string>
+    <string name="loading_done">加载完成</string>
+    <string name="listview_header_last_time">最后更新...</string>
+
+    <!-- AndroidPicker -->
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+
+    <!-- QuantityView -->
+    <string name="qv_min_quantity_allowed">允许的最小数量为%d</string>
+    <string name="qv_max_quantity_allowed">允许的最大数量为%d</string>
+    <string name="qv_enter_quantity">请输入数字</string>
+    <string name="change_quantity">更换数量</string>
+
+    <string name="head_tipsTextView">下拉更新</string>
+    <string name="head_refresh_release_label">释放更新</string>
+    <string name="head_lastUpdatedTextView">最后更新: 2013/03/11 下午05:07:52</string>
+    <string name="more_data">正在加载数据...</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="pull_to_refresh_pull_label">加载更多</string>
+    <string name="pull_to_refresh_release_label">释放加载</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_pull_up_label">@string/pullup_to_load</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+    <string name="pull_to_refresh_from_bottom_pull_up_label">@string/pull_to_refresh_pull_up_label</string>
+    <string name="ask_success">提问成功，请等待回答！\n进入个人中心-我的提问查看问答提问</string>
+</resources>

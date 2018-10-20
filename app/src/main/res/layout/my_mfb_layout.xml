@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/activity_group_title_layout"></include>
+    <com.zbmf.groupro.view.PullToRefreshScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/group_layout_background"
+        android:id="@+id/mfb_scrollview"
+        ptr:ptrAnimationStyle="flip"
+        android:layout_below="@+id/title_layout"
+        android:layout_above="@+id/fans_bottom_layout"
+        >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="魔方宝"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="6892"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:id="@+id/my_mfb_message"
+            />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="魔方宝明细"
+            android:textColor="#666666" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/no_message"></include>
+            <com.zbmf.groupro.view.ListViewForScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mfb_list"
+                android:divider="@color/linen"
+                android:dividerHeight="1dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+    </com.zbmf.groupro.view.PullToRefreshScrollView>
+</LinearLayout>

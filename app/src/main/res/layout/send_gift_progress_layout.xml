@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn_send_gift"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:text="送TA"
+        android:background="@drawable/button_select"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+    <com.zbmf.groupro.view.WaitingBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:background="@color/colorAccent"
+        android:id="@+id/send_gift_waitting"
+        />
+</RelativeLayout>

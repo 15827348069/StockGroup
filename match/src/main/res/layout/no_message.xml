@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_none"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_below="@+id/title_layout_id"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="40dp"
+        android:paddingTop="80dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_no_message"/>
+
+        <TextView
+            android:id="@+id/no_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_left_button"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_layout_line_gray_15dp"
+                android:gravity="center"
+                android:text="找老师"
+                android:textColor="@color/black_99"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_right_button"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="铁粉优惠"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:background="@color/app_bag"
+    tools:context="com.zbmf.StocksMatch.activity.SearchActivity">
+    <!--<include layout="@layout/action_title_layout"/>-->
+    <!--<include layout="@layout/fragment_title_layout"/>-->
+    <include layout="@layout/activity_title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/title_background">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <EditText
+                android:id="@+id/search_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginEnd="50dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginStart="45dp"
+                android:background="@drawable/search_bg"
+                android:imeOptions="actionSearch"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/hintEt"
+                android:lines="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/black_46"
+                android:textColorHint="@color/black_99"
+                android:textSize="15sp"
+                android:paddingEnd="15dp"
+                android:paddingStart="8dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clearBtn"
+                android:padding="5dp"
+                android:clickable="true"
+                android:onClick="clearEt"
+                android:src="@drawable/clear"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginEnd="55dp"
+                android:layout_marginRight="55dp"
+                android:background="?android:attr/selectableItemBackground"
+                tools:ignore="OnClick,RtlHardcoded"
+                android:focusable="true"/>
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/searchMatchName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_weight="1"/>-->
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:scrollbars="none"
+        android:divider="@color/line"
+        android:dividerHeight="1dp"
+        app:ptrMode="both"
+        android:id="@+id/pull_list"/>
+
+</LinearLayout>

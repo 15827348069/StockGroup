@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tab">
+        <item>@string/gc</item>
+        <item>@string/hq</item>
+        <item>@string/wdbs</item>
+        <item>@string/tz</item>
+        <item>@string/more</item>
+    </string-array>
+    <string-array name="kAsia">
+        <item>1A0001</item>
+        <item>399001</item>
+        <item>399005</item>
+        <item>399006</item>
+        <item>hsi</item>
+        <item>twse</item>
+        <item>nky</item>
+        <item>fssti</item>
+        <item>kospi</item>
+    </string-array>
+
+    <string-array name="vAsia">
+        <item>中国上证综指</item>
+        <item>中国深证成指</item>
+        <item>中小板指数</item>
+        <item>创业板指数</item>
+        <item>香港恒生指数</item>
+        <item>台湾加权指数</item>
+        <item>日经225指数</item>
+        <item>新加坡海峡时报</item>
+        <item>韩国成分指数</item>
+    </string-array>
+
+    <string-array name="kEurope">
+        <item>indu</item>
+        <item>ccmp</item>
+        <item>spx</item>
+        <item>ukx</item>
+        <item>indexcf</item>
+        <item>cac</item>
+        <item>dax</item>
+    </string-array>
+    <string-array name="vEurope">
+        <item>美国道琼斯</item>
+        <item>美国纳斯达克</item>
+        <item>标准普尔500</item>
+        <item>英金融时报</item>
+        <item>俄MICEX指数</item>
+        <item>法国CAC40指数</item>
+        <item>德国DAX指数</item>
+    </string-array>
+
+    <string-array name="kFuture">
+        <item>comex</item>
+        <item>nymex</item>
+        <item>399300</item>
+        <item>cad</item>
+        <item>ahd</item>
+        <item>zsd</item>
+        <item>bck</item>
+        <item>brbw</item>
+        <item>bwgs</item>
+        <item>bpta</item>
+        <item>bsc</item>
+    </string-array>
+    <string-array name="vFuture">
+        <item>黄金</item>
+        <item>原油</item>
+        <item>沪深300</item>
+        <item>LME铜</item>
+        <item>LME铝</item>
+        <item>LME锌</item>
+        <item>焦炭</item>
+        <item>螺纹钢西部</item>
+        <item>白砂糖</item>
+        <item>PTA</item>
+        <item>动力煤</item>
+    </string-array>
+    
+    <string-array name="kRMB">
+        <item>rmbgbp</item>
+        <item>rmbhkd</item>
+        <item>rmbusd</item>
+        <item>rmbchf</item>
+        <item>rmbsgd</item>
+        <item>rmbsek</item>
+        <item>rmbdkk</item>
+        <item>rmbnok</item>
+        <item>rmbjpy</item>
+        <item>rmbcad</item>
+        <item>rmbaud</item>
+        <item>rmbeur</item>
+        <item>rmbmop</item>
+        <item>rmbphp</item>
+        <item>rmbthb</item>
+        <item>rmbnzd</item>
+        <item>rmbkrw</item>
+    </string-array>
+
+    <string-array name="vRMB">
+        <item>英镑</item>
+        <item>港币</item>
+        <item>美元</item>
+        <item>瑞士法郎</item>
+        <item>新加坡元</item>
+        <item>瑞典克郎</item>
+        <item>丹麦克郎</item>
+        <item>挪威克郎</item>
+        <item>日元</item>
+        <item>加拿大元</item>
+        <item>澳大利亚元</item>
+        <item>欧元</item>
+        <item>澳门元</item>
+        <item>菲律宾比索</item>
+        <item>泰国铢</item>
+        <item>新西兰元</item>
+        <item>韩国元</item>
+    </string-array>
+
+    <string-array name="kUs">
+        <item>audusd</item>
+        <item>diniw</item>
+        <item>eurusd</item>
+        <item>usdcny</item>
+        <item>usdjpy</item>
+    </string-array>
+
+    <string-array name="vUs">
+        <item>澳元美元</item>
+        <item>美元指数</item>
+        <item>欧元美元</item>
+        <item>美元人民币</item>
+        <item>美元日元</item>
+    </string-array>
+
+    <string-array name="groups">
+        <item>自选股</item>
+        <item>亚洲股市</item>
+        <item>欧美股市</item>
+        <item>期货</item>
+        <item>汇率</item>
+        <item>人民币牌价</item>
+    </string-array>
+
+</resources>

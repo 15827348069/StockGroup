@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总资产"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_all_asset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_all"
+            android:layout_marginTop="6dp"
+            android:text="0"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_can"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@id/tv_all"
+            android:text="可用资金"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_can_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_can"
+            android:layout_below="@id/tv_can"
+            android:layout_marginTop="6dp"
+            android:text="0"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_aprofit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="25dp"
+            android:text="总收益率"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_profit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/tv_aprofit"
+            android:layout_below="@id/tv_aprofit"
+            android:layout_marginTop="6dp"
+            android:text="0.00%"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="32dp"
+        android:paddingTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日收益"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="+0.00%"
+                android:textColor="#ea3535"
+                android:textSize="12sp"
+                android:id="@+id/tv_day_yield"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="今日跑赢"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <com.zbmf.StocksMatch.view.MyIncreaseView
+                android:id="@+id/tv_day_reached"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="0人"
+                android:textColor="#ea3535"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.zbmf.StocksMatch.view.CustomMyProgress
+            android:id="@+id/custom_day_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="10dp"
+            app:cus_inner_drawable="@drawable/niu1"
+            app:cus_progress_reached_bar_height="14dp"
+            app:cus_progress_reached_color="#efefef"
+            app:cus_progress_reached_end_color="#ff754b"
+            app:cus_progress_reached_start_color="#ea3535"
+            app:cus_progress_unreached_bar_height="14dp"
+            app:cus_progress_unreached_color="#efefef"
+            app:cus_run_rate="fast"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周收益"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="+0.00%"
+                android:textColor="#ea3535"
+                android:textSize="12sp"
+                android:id="@+id/tv_week_yield"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="本周跑赢"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <com.zbmf.StocksMatch.view.MyIncreaseView
+                android:id="@+id/tv_week_reached"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="0人"
+                android:textColor="#ea3535"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.zbmf.StocksMatch.view.CustomMyProgress
+            android:id="@+id/custom_week_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="10dp"
+            app:cus_inner_drawable="@drawable/niu1"
+            app:cus_progress_reached_bar_height="14dp"
+            app:cus_progress_unreached_bar_height="14dp"
+            app:cus_progress_reached_color="#efefef"
+            app:cus_progress_reached_end_color="#ff754b"
+            app:cus_progress_reached_start_color="#ea3535"
+            app:cus_progress_unreached_color="#efefef"
+            app:cus_run_rate="fast" />
+
+        <TextView
+            android:id="@+id/btn_reset"
+            android:layout_width="195dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/buy_follow_c"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:visibility="gone"
+            android:text="收益太差?可以重置帐户"
+            android:textColor="#ff5252"
+            android:textSize="14dp" />
+    </LinearLayout>
+</LinearLayout>

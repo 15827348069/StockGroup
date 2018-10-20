@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background">
+    <com.zbmf.groupro.view.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/louse_use_coupons"
+        android:dividerHeight="0dp"
+        android:divider="@color/group_layout_background"
+        android:paddingBottom="10dp"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="pullFromEnd"
+        />
+</RelativeLayout>

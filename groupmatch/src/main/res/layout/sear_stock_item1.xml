@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 行情条目布局 带侧滑删除 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:minHeight="45dp"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="中华香烟"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_symbol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="600000"
+                android:textColor="#747273"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+
+
+
+</LinearLayout>

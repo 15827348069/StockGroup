@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_select"
+    android:minHeight="60dp"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp">
+
+    <com.zbmf.StockGroup.view.RoundedCornerImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/teacher_avatar"
+        android:layout_height="@dimen/teacher_avatar"
+        android:layout_centerVertical="true"
+        android:src="@drawable/avatar_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@id/iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_live_text"
+                style="@style/number_text"
+                android:layout_marginRight="5dp"
+                android:drawableLeft="@drawable/care_live_textview" />
+
+            <TextView
+                android:id="@+id/tv_chat_text"
+                style="@style/number_text"
+                android:layout_marginLeft="5dp"
+                android:drawableLeft="@drawable/care_chat_textview" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

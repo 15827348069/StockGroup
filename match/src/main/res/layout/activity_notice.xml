@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bag"
+    android:orientation="vertical">
+    <!--tools:context="com.zbmf.StocksMatch.activity.NoticeActivity"-->
+
+    <include layout="@layout/activity_title"/>
+    <!--<include layout="@layout/fragment_title_layout"/>-->
+    <!--<com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView-->
+    <!--ptr:ptrMode="both"-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/recyclerView"/>-->
+    <!--<ListView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+
+    <!--android:id="@+id/ptr"-->
+    <!--/>-->
+    <!--app:ptrMode="both"-->
+    <!--android:divider="@color/line"-->
+    <!--android:dividerHeight="1dp"-->
+
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_to_refresh_sub_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            >
+
+            <com.zbmf.worklibrary.view.ListViewForScrollView
+            android:id="@+id/ptr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/line"
+            android:dividerHeight="1dp"
+            />
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recycler"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+
+            <include layout="@layout/no_message"/>
+
+        </LinearLayout>
+
+    </com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView>
+
+</LinearLayout>

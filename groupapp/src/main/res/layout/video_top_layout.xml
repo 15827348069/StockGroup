@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/playerTopLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="top"
+    android:background="@drawable/play_top_bg"
+    android:orientation="horizontal"
+    android:visibility="visible"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/backPlayList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="3dp"
+        android:paddingLeft="15dp"
+        android:src="@drawable/icon_video_back" />
+
+    <ImageView
+        android:id="@+id/iv_top_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_video_share" />
+</RelativeLayout>

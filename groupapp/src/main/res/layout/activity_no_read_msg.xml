@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/group_layout_background"
+    tools:context="com.zbmf.StockGroup.activity.NoReadMsgActivity">
+    <include layout="@layout/title_layout"/>
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/noReadMsgScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"
+        tools:ignore="ObsoleteLayoutParam">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/dp_15"-->
+            <!--android:background="@color/et_bg_color"/>-->
+
+            <com.zbmf.StockGroup.view.ListViewForScrollView
+                android:id="@+id/noReadMsgListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:dividerHeight="1dp"
+                android:scrollbars="none"/>
+        </LinearLayout>
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+
+    <include layout="@layout/no_message"/>
+</LinearLayout>

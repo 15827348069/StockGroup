@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_coupon"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/group_layout_background"
+              android:orientation="vertical"
+              tools:context="com.zbmf.groupro.activity.ConponsActivity">
+    <include layout="@layout/activity_group_title_layout"/>
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:tl_indicator_color="@color/red_line"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_width_equal_title="false"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/red_line"
+        app:tl_textUnselectColor="#fa000000"
+        app:tl_textsize="15sp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@drawable/button_select"
+        android:text="前往领券中心"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:id="@+id/to_get_conpons"
+        android:visibility="gone"
+        />
+</LinearLayout>

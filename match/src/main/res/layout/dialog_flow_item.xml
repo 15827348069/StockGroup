@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flow_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/matchTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:lines="1"
+        android:padding="10dp"
+        android:textColor="@color/black_t60"
+        android:textSize="15sp"
+        tools:text="这是一条测试比赛..."/>
+
+    <ImageView
+        android:id="@+id/flowBuy"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="2dp"
+        android:src="@drawable/arrow"/>
+</LinearLayout>

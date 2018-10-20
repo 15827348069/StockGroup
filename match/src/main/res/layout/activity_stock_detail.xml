@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_bag"
+                android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/pull_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout_id"
+        android:layout_above="@+id/ll_bottom"
+        app:ptrMode="both"
+        tools:ignore="UnknownIdInLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kLineChart"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
+                <com.zbmf.StocksMatch.view.WebViewMod
+                    android:id="@+id/stock_web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+                <include
+                    layout="@layout/fragment_dialog_layout"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/answer_dong_mi"
+                    android:textColor="@color/black_33"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_stock_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/icon_pinglun"
+                    android:drawablePadding="5dp"
+                    android:text="@string/stocker_meet"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:layout_alignParentEnd="true"
+                    android:drawableStart="@drawable/icon_pinglun"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <com.zbmf.worklibrary.view.ListViewForScrollView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/line"
+                android:dividerHeight="1dp" />
+        </LinearLayout>
+    </com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ll_bottom"
+        android:background="@color/line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/app_bag"
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+        <com.zbmf.StocksMatch.view.DrawableCenterTextView
+            style="@style/Stock_Bottom_Button_Style"
+            android:drawableLeft="@drawable/icon_wendongmi"
+            android:id="@+id/tv_ask"
+            android:text="@string/ask_dong_mi"
+            android:drawableStart="@drawable/icon_wendongmi"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:background="@color/line" />
+        <com.zbmf.StocksMatch.view.DrawableCenterTextView
+            style="@style/Stock_Bottom_Button_Style"
+            android:drawableLeft="@drawable/icon_celue"
+            android:text="@string/ce_buy"
+            android:id="@+id/tv_buy"
+            android:drawableStart="@drawable/icon_celue"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:background="@color/line" />
+        <com.zbmf.StocksMatch.view.DrawableCenterTextView
+            style="@style/Stock_Bottom_Button_Style"
+            android:id="@+id/tv_match_buy"
+            android:text="@string/moni_buy"
+            android:drawableLeft="@drawable/icon_moni"
+            android:drawableStart="@drawable/icon_moni"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout android:id="@+id/ll_user"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/list_item"
+                android:minHeight="56dp"
+                android:paddingTop="4dp">
+
+                <com.zbmf.StocksMatch.widget.CircleImageView
+                    android:id="@+id/civ"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/default_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/civ"
+                    android:background="@android:color/transparent"
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/TextAppear.Theme.c3_Size19" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:paddingTop="4dp">
+
+                    <include layout="@layout/line_cd" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    style="@style/iv_more"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ca"
+                android:orientation="vertical"
+                android:paddingBottom="32dp"
+                android:paddingLeft="17dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ca"
+                    android:orientation="horizontal"
+                    android:paddingTop="28dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="总收益率："
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                        <TextView
+                            android:id="@+id/shouyi_lv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="总排名："
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                        <TextView
+                            android:id="@+id/total_rank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:paddingBottom="22dp"
+                    android:paddingTop="22dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="周收益率："
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                        <TextView
+                            android:id="@+id/week_lv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="周排名："
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                        <TextView
+                            android:id="@+id/week_rank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="22dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="日收益率："
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                        <TextView
+                            android:id="@+id/day_lv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="日排名："
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                        <TextView
+                            android:id="@+id/day_rank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppear.Theme.c6_Size17"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="22dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总  资  产："
+                        android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                    <TextView
+                        android:id="@+id/moneyunfrozen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可用资金："
+                        android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                    <TextView
+                        android:id="@+id/can_use_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_match"
+                style="@style/ll_operat"
+                android:layout_marginTop="20dp">
+
+                <TextView android:id="@+id/tv_name"
+                    style="@style/tv_operat"
+                    android:text="@string/app_name" />
+
+                <ImageView style="@style/iv_more" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/line_operat">
+
+                <include layout="@layout/line_cd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_award"
+                style="@style/ll_operat"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/tv_operat"
+                    android:text="@string/award" />
+                <TextView android:id="@+id/my_award"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                <ImageView style="@style/iv_more" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/line_operat">
+
+                <include layout="@layout/line_cd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_holder"
+                style="@style/ll_operat">
+
+                <TextView
+                    style="@style/tv_operat"
+                    android:text="@string/holder" />
+                <TextView android:id="@+id/my_holds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppear.Theme.c6_Size17" />
+
+                <ImageView style="@style/iv_more" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/line_operat">
+
+                <include layout="@layout/line_cd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_jyjl"
+                style="@style/ll_operat">
+
+                <TextView
+                    style="@style/tv_operat"
+                    android:text="@string/jyjl" />
+
+                <ImageView style="@style/iv_more" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/line_operat">
+
+                <include layout="@layout/line_cd" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

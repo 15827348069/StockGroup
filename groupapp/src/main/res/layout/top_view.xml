@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sticky_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dp_12">
+    <TextView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nuggets_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/nuggets_time_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_5"
+        android:text="11月24日 10:30"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        tools:ignore="RtlHardcoded"/>
+</LinearLayout>
+

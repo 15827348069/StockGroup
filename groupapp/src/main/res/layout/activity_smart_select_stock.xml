@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StockGroup.activity.SmartSelectStockActivity">
+
+    <include layout="@layout/title_layout"/>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        android:id="@+id/scrollview_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<fragment-->
+                <!--android:id="@+id/fragment_cycle_viewpager"-->
+                <!--android:name="com.zbmf.StockGroup.adapter.CycleViewPager"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="120dp"/>-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/banner" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/smartStockTitle"-->
+                <!--style="@style/home_title"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="智能选股"/>-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:fastScrollEnabled="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:scrollbars="none"/>
+            <include layout="@layout/no_message"/>
+            <!--<include layout="@layout/screen_desc_layout"/>-->
+            <TextView
+                android:id="@+id/smartStockTipTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp"
+                android:text="资本魔方智能选股黑科技产品介绍"
+                android:textStyle="bold"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/sp_16"/>
+            <TextView
+                android:id="@+id/smartStockDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="8dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="5dp"
+                android:text="@string/screen_desc"
+                android:textColor="@color/black_33"
+                android:textSize="14sp"/>
+            <!--android:background="@drawable/icon_screen_desc"-->
+
+            <View
+                android:id="@+id/smartStockLine"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/linen"/>
+            <TextView
+                android:id="@+id/tipTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp"
+                android:text="温馨提示"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_16"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_30"
+                android:paddingRight="@dimen/dp_30"
+                android:text="@string/screen_text"
+                android:textColor="@color/red"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    <!--</ScrollView>-->
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+</LinearLayout>

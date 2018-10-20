@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/chat_head_selector"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="直播室"
+        android:textSize="18sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_msg_num3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_title"
+        android:layout_marginRight="-15dp"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/circle_num"/>
+
+        <TextView
+            android:id="@+id/tv_msg_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxLength="2"
+            android:text="10"
+            android:textColor="@android:color/black"
+            android:textSize="9sp"/>
+    </RelativeLayout>
+</RelativeLayout>

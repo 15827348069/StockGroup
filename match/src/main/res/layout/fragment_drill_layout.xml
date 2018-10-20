@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/app_bag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/fragment_title_layout"/>
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/plv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptrMode="pullFromStart"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="20dp"
+        >
+        <include layout="@layout/drill_title_layout"/>
+        <include layout="@layout/notice_layout"/>
+        <include layout="@layout/dirll_content_layout"/>
+        <include layout="@layout/dirll_hold_layout"/>
+    </LinearLayout>
+    </com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView>
+</LinearLayout>

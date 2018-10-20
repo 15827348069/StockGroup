@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp" android:minHeight="55dp"
+    android:gravity="center_vertical" android:background="@drawable/list_item"
+    android:orientation="horizontal"
+    android:paddingLeft="0dp"
+    android:paddingRight="15dp">
+
+    <TextView
+        android:id="@+id/tv_index"
+        android:layout_width="25dp" android:gravity="right"
+        android:layout_height="wrap_content"
+        android:text="0" />
+
+    <com.zbmf.StocksMatch.widget.CircleImageView
+        android:id="@+id/civ"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="14dp"
+        android:src="@drawable/default_avatar" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppear.Theme.cb_Size14" />
+
+    <TextView
+        android:id="@+id/tv_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="+1.1" />
+
+</LinearLayout>

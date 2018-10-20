@@ -1,0 +1,260 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">"资本魔方炒股圈子"</string>
+
+
+    <string name="head_tipsTextView">下拉更新</string>
+    <string name="head_refresh_release_label">释放更新</string>
+    <string name="head_lastUpdatedTextView">最后更新: 2013/03/11 下午05:07:52</string>
+    <string name="more_data">正在加载数据...</string>
+    <string name="pull_to_refresh_pull_label">加载更多</string>
+    <string name="pull_to_refresh_release_label">释放加载</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+
+
+    <string name="weibosdk_demo_not_support_api_hint">微博客户端不支持 SDK 分享或微博客户端未安装或微博客户端是非官方版本。</string>
+    <!-- 分享成功失败的 Toast -->
+    <string name="weibosdk_demo_toast_share_success">分享成功</string>
+    <string name="weibosdk_demo_toast_share_failed">分享失败</string>
+    <string name="weibosdk_demo_toast_share_canceled">取消分享</string>
+    <string name="weibosdk_demo_toast_share_response_args_success">收到微博发起的请求成功</string>
+    <string name="weibosdk_demo_toast_share_response_args_failed">收到客户端请求消息失败</string>
+    <string name="weibosdk_demo_toast_auth_canceled">取消授权</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="group_chat">群聊</string>
+    <string name="title_activity_big_image">BigImageActivity</string>
+    <string name="tf_zz">"(立即加入铁粉查看)"</string>
+    <string name="tf_commit">"立即订阅"</string>
+    <string name="tf_gift">"&#160;加送"</string>
+    <string name="add_to_tf">此条为铁粉悄悄话</string>
+    <string name="add_tf_ck">立即加入铁粉查看</string>
+
+    <string name="invite_share_title">我在资本魔方分享了一只好股票，点击即可查看！</string>
+    <string name="invite_share_content">随身携带最新资讯，随时了解官方活动，实时知晓直播动态，一切尽在资本魔方！</string>
+    <string name="invite_share_desc">我在资本魔方分享了一只好股票，点击即可查看！</string>
+    <string name="invite_share_img">http://center.zbmf.com/img/share.png</string>
+    <string name="invite_share_url">http://center.zbmf.com/img/share.png</string>
+
+    <string name="screen_message">，详情进入APP查询！\[.+\]</string>
+    <string name="commit_screen">点击进入查看</string>
+    <string name="tf_title">铁粉专区</string>
+
+    <string name="already_add_all">已加载全部数据</string>
+
+    <string name="weibosdk_app_url">http://www.zbmf.com/</string>
+    <string name="weibosdk_share_webpage_template"> %1$s ，分享自 #资本魔方炒股圈子# </string>
+
+    <string name="blog_name">观点</string>
+    <string name="my_blog_name">我的观点</string>
+    <string name="ask_tag">（仅供参考，不构成投资建议）</string>
+
+    <string name="screensize">画面尺寸</string>
+    <string name="definition">清晰度</string>
+    <string name="speed">倍速</string>
+    <string name="video_pecial">已更新[*]期 (未完结)</string>
+    <string name="video_pecial_done">已更新[*]期 (已完结)</string>
+    <string name="video_fans">成为[*]铁粉</string>
+    <string name="pay_video">立即订阅</string>
+    <string name="add_fans">加入铁粉</string>
+    <string name="loading">加载中...</string>
+    <string name="loading_img">正在生成分享图片...</string>
+    <string name="commit">提交中...</string>
+    <string name="commit_fans">订阅中...</string>
+    <string name="commit_success">订阅成功</string>
+    <string name="stock_link"> https://gupiao.baidu.com/stock/sh[*].html</string>
+    <string name="update_hint">更新提醒</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="share_video">【[*]】[**]，一起来看吧</string>
+    <string name="share_video_desc">上资本魔方炒股圈子，学技术，看直播，炒股其实很简单！</string>
+
+    <string name="live_message">订阅后即可观看直播课程</string>
+    <string name="live_dialog_chat">订阅本视频课程后即可加入群聊</string>
+    <string name="send_button">发送</string>
+    <string name="blog_message">说点什么吧！</string>
+
+    <string name="no_point_msg">您可以关注官方活动获得积分</string>
+    <string name="no_mfb_msg">魔方宝可用于订阅服务不可退换</string>
+    <string name="no_coupons_msg">您可以关注圈主优惠活动获得优惠券</string>
+    <string name="no_msg">您可以快速开始</string>
+    <string name="find_stock">智能选股</string>
+    <string name="find_teacher">找老师</string>
+    <string name="find_trader">找高手</string>
+    <string name="only_teacher">独家圈主</string>
+    <string name="fans_coupons">铁粉优惠</string>
+    <string name="message">消息中心</string>
+    <string name="to_study">去学院</string>
+    <string name="to_stock">看股市</string>
+    <string name="to_original">原创文章</string>
+    <string name="to_ask">免费提问</string>
+
+    <string name="fans_discounts">铁粉优惠</string>
+    <string name="ask_success">提问成功，请等待回答！\n进入个人中心-我的提问查看问答提问</string>
+
+    <string name="screen_date">您所选择的服务超过产品提供时限，您是否继续订购？</string>
+
+    <string name="screen_desc">1993年，著名投资人塞勒利用行为金融学理论参与创建了一个基金公司，
+        从0起步，12年后，这只基金管理的资产冲至37亿美元。今天，资本魔方黑科技智能选股产品起航，
+        联合业内知名的行为金融学专家和一批金融市场从业10年以上的研究员，用最前沿的行为金融学理论并结合A股股民人性的特点，
+        用现代科技手段智能解剖盘口强弱特征，第一时间抓住异动起爆机会，利用行为金融分析超短线买卖，供投资者朋友学习交流。</string>
+    <string name="screen_text">
+        1. 产品推送频率：以具体的产品规则为准，若未筛选出符合规则的个股，则当日不推送。\n\n
+        2. 服务辅助通知：产品更新提示以产品页为准。手机短信与APP通知为官方免费提供的辅助通知手段，不保证无遗漏通知到位。\n\n
+        3.服务产品中所提示信息，仅供用户参考，不作投资依据，若用户按此操作造成损失，由个人承担。\n\n
+        4. 订购时限以每月30天自然日计算，自然日包含节假日，小长假等。\n\n
+        5. 产品最终解释权归资本魔方所有。\n\n
+    </string>
+    <string name="my_weituo">我的委托</string>
+    <string name="my_hold">我的持仓</string>
+    <string name="my_order_log">交易记录</string>
+    <string name="trusts_name">名称</string>
+    <string name="trusts_type">委托类型</string>
+    <string name="trusts_count">数量</string>
+    <string name="trusts_price">委托价格</string>
+    <string name="trusts_money">冻结金额</string>
+    <string name="trusts_date">委托时间</string>
+    <string name="trust_tip">没有委托数据</string>
+    <string name="trust_tip1">委托成功</string>
+    <string name="trust_tip2">委托数量不能超过可持仓数量的一半</string>
+    <string name="trust_tip3">正在提交委托</string>
+    <string name="hold_tip">没有持仓数据</string>
+    <string name="record_tip">暂无获奖记录，继续加油哦</string>
+    <string name="record_count">共获奖%1$s次</string>
+    <string name="trans_tip">没有交易记录</string>
+    <string name="can_buy_number">可买:</string>
+    <string name="sear_tip3">请输入要搜索的股票代码</string>
+    <string name="sear_tip2">请输入用户关键字</string>
+    <string name="sear_tip1">请输入要搜索的比赛</string>
+    <string name="rank">排名第</string>
+    <string name="all_money">总资产：</string>
+    <string name="all_money1">总资产</string>
+    <string name="record">获奖记录</string>
+    <string name="all_sy">总收益</string>
+    <string name="paiming">排名</string>
+    <string name="cbj">成本价：</string>
+    <string name="syl">收益率：</string>
+    <string name="cjj">成交价:%1$s</string>
+    <string name="tran_num">数量:%1$s</string>
+    <string name="record_tip1">暂无获奖记录</string>
+    <string name="get1">获得</string>
+    <string name="buy_in">买入</string>
+    <string name="sell_out">卖出</string>
+    <string name="pay_tip1">您已有%1$s个魔方宝</string>
+    <string name="sell_price">卖出价格</string>
+    <string name="sell_volumn">卖出量</string>
+    <string name="symbol">股票代码</string>
+    <string name="sale">卖</string>
+    <string name="buy">买</string>
+
+    <string name="deal">模拟交易</string>
+
+    <string name="voting_teacher">[**](月度)评选</string>
+    <string name="voting">共收到[*]票支持，与前一名还差[**]票</string>
+
+    <string name="no_mode_stock">将在%1$s为您揭晓</string>
+    <string name="ydgl">异动概率</string>
+    <string name="qrld">强弱力度</string>
+    <string name="delete">删除</string>
+    <string name="stock_mode">选股模型利用计算机语言实现了各路高手的盘中择股思路，选出的股票具有以下的特点： \n\t
+1、市盈率低，业绩好的绩优股；\n
+2、始终保持多头趋势，趋势向好； \n
+3、能够利用量能倍增变化和盘中强弱程度，选出每个半点最有可能大涨的股票； \n
+4、经过历史跟踪，80%以上的股票大概率一周内有不错的收益。 \n
+注：本产品中所公布的信息仅供参考，不作投资建议！股市有风险，入市需谨慎。</string>
+    <string name="buy_tip">本人自愿参加资本魔方网站的智能选股机器人测试活动并同意以下声明：\n
+1. 本人自愿义务参加资本魔方网站的智能选股机器人测试活动，并且完全同意资本魔方网的“免责条款”；\n
+2. 本人完全理解并同意本次智能选股机器人测试活动仅限本人参与，并承诺不会以任何方式向他人公开网站的任何内容与信息；\n
+3. 本人完全理解资本魔方网站的智能选股机器人结果仅供测试，并承诺不会将其作为投资参考；\n
+4. 参与网站测试属于本人自愿行为，双方不存在强制性约束力；本人明确知道此次活动不存在合同范畴的权利义务关系；\n
+5. 根据网站内容参与任何投资活动，并因此给自己和第三方造成任何直接和间接损失的，责任一律由本人承担；\n
+6. 本人同意资本魔方网站有权在不通知本人的情况下终止网站测试；\n
+请您认真阅读上述声明条款，慎重选择和参与。如果报名即表示已经阅读和完全同意上述声明的各项条款。</string>
+    <string name="risk_tip">风险提示</string>
+    <string name="agree_risk_tip">我已阅读并同意</string>
+    <string name="mode_stock_zbmf">模型选股-资本魔方</string>
+    <string name="stock">股票</string>
+    <string name="current_price">当前价</string>
+    <string name="gains">涨幅</string>
+    <string name="nuggetsing" tools:ignore="TypographyEllipsis">正在掘金中...</string>
+    <string name="wait_see">等待揭晓</string>
+    <string name="screen_empty">筛选为空</string>
+    <string name="gz_stock">推荐您关注股票</string>
+    <string name="saoma">微信扫描每日领取牛股</string>
+    <string name="tip1">由资本魔方网模型选股选出</string>
+    <string name="tip2">风险提示：数据仅供参考，请自主理性投资！</string>
+    <string name="progress_type">progress</string>
+    <string name="drill_tip">选股能力训练</string>
+    <string name="dm_ask">董秘问答</string>
+    <string name="dm_ask_tip">老司机炒股必备</string>
+    <string name="joinVIP">加入会员</string>
+    <string name="free_ask_stock">免费问股</string>
+    <string name="security_open">证券开户</string>
+    <string name="stock_xy">炒股学院</string>
+    <string name="yd_comment">异动点评</string>
+    <string name="select_stock_match">选股大赛</string>
+    <string name="member">会员</string>
+    <string name="select_stock_match_zbmf">选股大赛-资本魔方</string>
+    <string name="week_rank">周排名</string>
+    <string name="risk_week">本周涨幅</string>
+    <string name="week_integral">本周积分</string>
+    <string name="match_jiesaho">大赛介绍</string>
+    <string name="submit_stock">提交选股</string>
+    <string name="submit_next_week_stock">提交下周选股</string>
+    <string name="submit_stock_1">提交个股:</string>
+    <string name="select_stock_argument">选股理由:</string>
+    <string name="enter">进入</string>
+    <string name="subscribe">订阅</string>
+    <string name="smart_select_stock">智能选股</string>
+    <string name="xf">续费</string>
+    <string name="open_vip">立即开通</string>
+    <string name="vip_tip">*会员功能为虚拟服务，请确认后再订阅\n咨询电话4000607878</string>
+    <string name="load_more">更多</string>
+    <string name="verify_tip">提示</string>
+    <string name="verify_tip_cntent">经验证后才可选股，请联系客服4000607878</string>
+    <string name="call">联系客服</string>
+    <string name="open_vip_tip">加入会员可查看前三名最新选股</string>
+    <string name="submit_name">提交对象:资本魔方第三届T+4选股大赛</string>
+    <string name="t_4">提交对象:资本魔方第三届T+4选股大赛</string>
+    <string name="fensDetailTips">尊敬的魔方用户，您即将使用免费铁粉虚拟订阅服务，特对您作出如下风险提示：\n
+        1、资本魔方为信息技术平台，免费为用户提供服务，功能使用完全免费。
+        提供的所有产品仅供学习参考，不构成投资建议，不能作为实盘投资依据。请在理性分析基础上，自行决策投资！\n
+        2、由平台用户使用资本魔方信息技术功能产生的内容，
+        平台有权采用技术手段和人工检查相结合的方式对违规的内容和用户进行审核处理。
+        所有直播用户不提供代客理财或qq咨询等业务。私下进行收费咨询或推销其他产品服务，
+        属于非法个人行为，与资本魔方无关，切勿轻信。资本魔方平台不对他们所发布的信息的真实性、完整性、及时性和合法性作任何担保。\n
+        3、为了加强风险教育的互动效果，我们支持礼物赞赏、观点发布、表情互动、提问回答、小组讨论、分组内容查看等功能，
+        使用以上功能过程中的所有魔方宝虚拟订阅均是使用用户间的赞赏赠送行为，是用户间的一种相互认可和奖励，
+        订阅即表示同意赞赏赠送行为，期间所使用的魔方宝为虚拟道具，不退不换，请谨慎确认后再操作。\n
+        4、使用即表示认可同意资本魔方《资本魔方用户服务协议》及相关公示风险提示文件。
+        同时，资本魔方将不定期根据主管部门要求进行增补更新。特此申明。</string>
+    <string name="loyalFensDes">铁粉介绍</string>
+    <string name="discountCouponTip">您有新的优惠券未领取</string>
+    <string name="clickGain">领券</string>
+    <string name="zltj">逐浪投机</string>
+    <string name="sgyx">山高月小</string>
+    <string name="jtly">九天揽月</string>
+    <string name="preSubscribe">续订</string>
+    <string name="gain_quan">领取优惠券</string>
+    <string name="gain">领取</string>
+    <string name="quan_tip">该圈当前没有优惠活动</string>
+    <string name="select_saoma">微信扫描下载资本魔方APP\n获取更多选股</string>
+    <string name="user_total_vip_tip">最新选股累计涨幅为+24.22%</string>
+    <string name="selectStockTip">温馨提示:每周选股时间为周五0:00-周日24:00</string>
+    <string name="open_xf_vip_tip">正在申请加入会员,请确认!</string>
+    <string name="total_increase">累计涨幅</string>
+    <string name="join_vip_title">加入资本魔方会员\n尊享特权优惠</string>
+    <string name="send">发送</string>
+    <string name="add_attention">+关注</string>
+    <string name="publish_point">发表观点</string>
+    <string name="contact_dong_mi">联系\n董秘</string>
+    <string name="company_name">公司名称</string>
+    <string name="company_info_tip">*数据仅供参考，请以公司披露为准</string>
+    <string name="no_stock_info_tip">该股未公开相关信息</string>
+    <string name="please_write_nick">请填写昵称</string>
+</resources>

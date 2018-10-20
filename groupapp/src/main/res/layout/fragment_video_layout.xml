@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_play_layout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        >
+        <SurfaceView
+            android:id="@+id/video_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragment_back_view"
+            android:background="@color/black"
+            />
+        <include layout="@layout/video_top_layout"/>
+        <include layout="@layout/video_center_layout"/>
+        <include layout="@layout/video_play_menu" />
+        <ProgressBar
+            android:id="@+id/bufferProgressBar"
+            style="@style/CustomDialog"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <!--<View-->
+        <!--android:id="@+id/transparentView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:alpha="0.7"-->
+        <!--android:background="@color/transparent_black"/>-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_6"
+        android:background="@color/linen"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical|start"
+        android:padding="@dimen/dp_10"
+        android:text="@string/gain_quan"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/sp_16"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_6"
+        android:background="@color/linen"/>
+
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        android:id="@+id/flow_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_260"
+        android:background="@color/white"
+        android:dividerHeight="1dp"
+        app:ptrMode="disabled">
+
+        <com.zbmf.StockGroup.view.ListViewForScrollView
+            android:id="@+id/quan_item_message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_260"
+            android:divider="#ecedf1"
+            android:dividerHeight="10dp"
+            android:visibility="gone"
+            />
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+
+    <TextView
+        android:id="@+id/quan_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dp_20"
+        android:text="@string/quan_tip"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/sp_16"/>
+</LinearLayout>

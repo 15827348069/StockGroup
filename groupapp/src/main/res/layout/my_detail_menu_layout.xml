@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/my_detail_vip"
+            style="@style/menu_button"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawableStart="@drawable/icon_vip"
+            android:text="会员"
+            />
+
+        <TextView
+            style="@style/menu_text"
+            android:text="尊享优惠"
+            />
+
+        <ImageView
+            android:id="@+id/my_vip_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/icon_message_point"
+            android:text="1"
+            android:textSize="9sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f6f6f6"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/my_detail_dingyue_button"
+            style="@style/menu_button"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawableStart="@drawable/my_detail_ding"
+            android:text="订阅"
+            />
+
+        <TextView
+            style="@style/menu_text"
+            android:text="铁粉尊享私密服务"
+            />
+
+        <ImageView
+            android:id="@+id/my_dingyue_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/icon_message_point"
+            android:text="1"
+            android:textSize="9sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f6f6f6"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/my_detail_care_button"
+            style="@style/menu_button"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawableStart="@drawable/my_detail_care"
+            android:text="关注"
+            />
+
+        <TextView
+            style="@style/menu_text"
+            android:text="资本魔方独家直播老师"
+            />
+
+        <ImageView
+            android:id="@+id/my_care_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/icon_message_point"
+            android:text="1"
+            android:textSize="9sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/group_layout_background"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/my_detail_chat_stock_button"
+            style="@style/menu_button"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawableStart="@drawable/icon_mydetail_chat_stock"
+            android:text="@string/deal"
+            />
+
+        <TextView
+            style="@style/menu_text"
+            android:text="与自己比赛"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/group_layout_background"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/my_detail_open_button"
+            style="@style/menu_button"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawableStart="@drawable/my_detail_open"
+            android:text="开户"
+            />
+
+        <TextView
+            style="@style/menu_text"
+            android:text="免费证券开户万2.5低佣"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/group_layout_background"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/my_detail_question_button"
+            style="@style/menu_button"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawableStart="@drawable/my_detail_ask"
+            android:text="问股"
+            />
+
+        <TextView
+            style="@style/menu_text"
+            android:text="免费提问"
+            />
+
+        <ImageView
+            android:id="@+id/my_ask_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/icon_message_point"
+            android:text="1"
+            android:textSize="9sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f6f6f6"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/my_detail_shouc_button"
+            style="@style/menu_button"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawableStart="@drawable/my_detail_shouc"
+            android:text="收藏"
+            />
+
+        <ImageView
+            android:id="@+id/my_blog_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/icon_message_point"
+            android:text="1"
+            android:textSize="9sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f6f6f6"
+        />
+
+    <Button
+        android:id="@+id/my_detail_blog_button"
+        style="@style/menu_button"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableStart="@drawable/my_detail_blog"
+        android:text="@string/blog_name"
+        android:visibility="gone"
+        />
+</LinearLayout>

@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:ptr="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/group_layout_background"
+             tools:context="com.zbmf.StockGroup.fragment.GzFragment">
+
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        android:id="@+id/gzScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"
+        tools:ignore="ObsoleteLayoutParam">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zbmf.StockGroup.view.ListViewForScrollView
+                android:id="@+id/gzListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:dividerHeight="1dp"
+                android:scrollbars="none"/>
+        </LinearLayout>
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+
+    <include layout="@layout/no_message"/>
+</FrameLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_play"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <SurfaceView
+            android:id="@+id/playerSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+
+        <ProgressBar
+            android:id="@+id/bufferProgressBar"
+            style="?android:attr/progressBarStyleSmallInverse"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/iv_center_play"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/smallbeginpaly_ic"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/player_lock_bg"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/playerTopLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/play_top_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/backPlayList"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="4dp"
+                android:src="@mipmap/icon_video_back"/>
+
+            <TextView
+                android:id="@+id/videoIdText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/iv_top_menu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:src="@mipmap/icon_video_share"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/volumeLayout"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="#80000000"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.zbmf.StockGTec.view.VerticalSeekBar
+                android:id="@+id/volumeSeekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:maxHeight="5dp"
+                android:minHeight="5dp"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/volume"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/playerBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#CC000000"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/tv_video_group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="路西法"
+                    android:textColor="@color/item_message"
+                    android:textSize="10sp"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_video_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="K线操作理论精讲K线操作理论（第一讲）"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/video_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:padding="4dp"
+                    android:src="@mipmap/smallstop_ic"/>
+
+                <TextView
+                    android:id="@+id/playDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:textColor="#FFFFFF"/>
+
+                <SeekBar
+                    android:id="@+id/skbProgress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:maxHeight="3dp"
+                    android:minHeight="3dp"
+                    android:progressDrawable="@drawable/seekbar_style"></SeekBar>
+
+                <TextView
+                    android:id="@+id/videoDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="2dp"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageView
+                    android:id="@+id/iv_fullscreen"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="4dp"
+                    android:src="@mipmap/fullscreen_close"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+                    <!-- 倍速播放选择 -->
+
+                    <TextView
+                        android:id="@+id/tv_speed_play"
+                        style="@style/playBottomTextViewStyle"
+                        android:text="倍速"/>
+
+                    <TextView
+                        android:id="@+id/tv_definition"
+                        style="@style/playBottomTextViewStyle"
+                        android:text="清晰度"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+
+</LinearLayout>

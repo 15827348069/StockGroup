@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="header_footer_left_right_padding">12dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="indicator_right_padding">10dp</dimen>
+
+    <dimen name="live_text_size_min_small">14dip</dimen>
+    <dimen name="live_text_size_small">15dip</dimen>
+    <dimen name="live_text_size">16dip</dimen>
+    <dimen name="live_text_size_big">17dip</dimen>
+    <dimen name="live_text_size_max_big">20dip</dimen>
+
+    <dimen name="popmenu_width">100.0dip</dimen>
+    <dimen name="popmenu_height">60.0dip</dimen>
+    <dimen name="popmenu_speed_height">120.0dip</dimen>
+    <dimen name="popmenu_yoff">5.0dip</dimen>
+    <dimen name="dip2pix">1.0dip</dimen>
+
+    <dimen name="top_margin">-10dip</dimen>
+    <dimen name="text_size">16sp</dimen>
+</resources>

@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:ptr="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.zbmf.StockGTec.fragment.QuizFragment">
+
+    <com.zbmf.StockGTec.view.PullToRefreshListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/group_layout_background"
+        android:divider="#ededed"
+        android:dividerHeight="0.5dp"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="pullFromEnd"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_none" android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/pic_warning"
+            android:drawablePadding="4dp"
+            android:text="暂无课程"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="新建课程请联系官方运营人员"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/btn_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/button_select"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="圈主服务专用QQ"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+</FrameLayout>

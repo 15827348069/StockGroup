@@ -1,0 +1,138 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+
+        <!--  设置android.support.v7.widget.SwitchCompat 样式-->
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorSwitchThumbNormal">@color/setting_text_size_line</item>
+        <item name="android:colorForeground">@color/setting_text_size_line</item>
+    </style>
+    <style name="ButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <style name="activity_theme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <style name="CustomDialog"
+        parent="@android:style/Widget.Holo.ProgressBar">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="BrandedSwitch.control" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorSwitchThumbNormal">@color/black</item>
+    </style>
+
+    <style name="myDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="dialoganimstyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/slide_in_down</item>
+    </style>
+    <style name="cons_dialoganimstyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+    <style name="mz_dialoganimstyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/center_out_anim</item>
+    </style>
+
+    <style name="Activity_MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="TextAppear.Theme.C_Size10" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/item_message</item>
+    </style>
+
+    <style name="TextAppear.Theme.C_Size13" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/item_message</item>
+    </style>
+
+    <declare-styleable name="MagicTextView">
+        <attr name="innerShadowColor" format="color"/>
+        <attr name="innerShadowRadius" format="float"/>
+        <attr name="innerShadowDx" format="float"/>
+        <attr name="innerShadowDy" format="float"/>
+        <attr name="outerShadowColor" format="color"/>
+        <attr name="outerShadowRadius" format="float"/>
+        <attr name="outerShadowDx" format="float"/>
+        <attr name="outerShadowDy" format="float"/>
+        <attr name="typeface" format="string"/>
+        <attr name="foreground" format="reference|color"/>
+        <attr name="strokeWidth" format="float"/>
+        <attr name="strokeMiter" format="float"/>
+        <attr name="strokeColor" format="color"/>
+        <attr name="strokeJoinStyle">
+            <enum name="miter" value="0"/>
+            <enum name="bevel" value="1"/>
+            <enum name="round" value="2"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

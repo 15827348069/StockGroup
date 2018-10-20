@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+    <item
+        android:drawable="@drawable/big_progress_1"
+        android:layout_gravity="center"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/big_progress_2"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/big_progress_3"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/big_progress_4"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/big_progress_5"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/big_progress_6"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/big_progress_7"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/big_progress_8"
+        android:duration="150">
+    </item>
+</animation-list>

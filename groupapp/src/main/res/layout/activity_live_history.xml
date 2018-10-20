@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/group_layout_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_layout"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="#333333"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="15dp"
+        android:id="@+id/live_history_title"
+        android:visibility="gone"
+        />
+    <com.zbmf.StockGroup.view.ScrollBottomScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:id="@+id/red_bag_scrollview"
+        >
+    <com.zbmf.StockGroup.view.ListViewForScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/live_history_list"
+        android:divider="@color/linen"
+        android:dividerHeight="0dp"
+        />
+    </com.zbmf.StockGroup.view.ScrollBottomScrollView>
+</LinearLayout>

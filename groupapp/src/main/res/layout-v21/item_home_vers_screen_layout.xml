@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_layout_line_gray_10dp">
+
+    <RelativeLayout
+        android:id="@+id/item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="7.5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7.5dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="九天揽月"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/black_33"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="left"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收益率 "
+                    android:textColor="@color/black_66"
+                    android:textSize="11dp"/>
+
+                <TextView
+                    android:id="@+id/tv_yield"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="+12.44%"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="left"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="同期大盘 "
+                    android:textColor="@color/black_66"
+                    android:textSize="11dp"/>
+
+                <TextView
+                    android:id="@+id/tv_dapan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="12.44%"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.zbmf.StockGroup.view.CustomMyCProgress
+            android:id="@+id/cc_screen_progress"
+            android:visibility="gone"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:custom_progress="10"
+            app:finished_color="#FF5252"
+            app:finished_stroke_width="4dp"
+            app:progress_max="100"
+            app:progress_text_color="@color/black_33"
+            app:progress_text_size="11sp"
+            app:text="胜率"
+            app:text_color="@color/black_33"
+            app:text_size="11sp"
+            app:type="circle"
+            app:unfinished_color="#efefef"
+            app:unfinished_stroke_width="4dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/vipSum"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="588元/月"
+                android:layout_gravity="center"
+                android:textColor="@color/black_33"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_18"/>
+            <Button
+                android:layout_marginTop="@dimen/dp_5"
+                android:id="@+id/subscribeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/subscribe"
+                android:background="@drawable/subbtn"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_18"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

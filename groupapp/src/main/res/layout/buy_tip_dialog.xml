@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/risk_tip_bg">
+
+        <TextView
+            android:id="@+id/tip_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/risk_tip_tv"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/risk_tip"
+            android:textColor="@color/black_66"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/tip_imaginary_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tip_top"
+            android:background="@drawable/risk_tip_imaginary_line"
+            android:layerType="software"/>
+
+        <ScrollView
+            android:id="@+id/risk_tip_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tip_imaginary_line">
+
+            <TextView
+                android:id="@+id/tip_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dp_15"
+                android:paddingLeft="@dimen/dp_13"
+                android:paddingRight="@dimen/dp_13"
+                android:paddingTop="@dimen/dp_10"
+                android:text="@string/buy_tip"
+                android:textColor="@color/black_66"
+                android:textSize="@dimen/sp_15"/>
+        </ScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/agree_risk_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/agree_risk_btn_bg"
+            android:text="@string/agree_risk_tip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"/>
+
+        <ImageView
+            android:id="@+id/risk_no_agree_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@drawable/cancel"
+            tools:ignore="ContentDescription"/>
+    </LinearLayout>
+
+</LinearLayout>

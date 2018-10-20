@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_my_blog_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/group_layout_background"
+    tools:context="com.zbmf.groupro.activity.MyBlogListActivity">
+    <include layout="@layout/activity_group_title_layout"/>
+    <include layout="@layout/no_message"></include>
+    <com.zbmf.groupro.view.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/my_blog_list"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"
+        />
+</LinearLayout>

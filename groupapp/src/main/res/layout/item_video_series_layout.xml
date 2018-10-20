@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:gravity="center"
+    >
+    <com.zbmf.StockGroup.view.RoundedCornerImageView
+        android:layout_width="@dimen/teacher_avatar"
+        android:layout_height="@dimen/teacher_avatar"
+        android:src="@drawable/avatar_default"
+        android:background="@color/transparent"
+        android:id="@+id/home_teacher_avatar"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="首山"
+        android:id="@+id/home_teacher_name"
+        android:textSize="10sp"
+        android:textColor="@color/black_33"
+        android:layout_marginTop="6dp"
+        />
+</LinearLayout>

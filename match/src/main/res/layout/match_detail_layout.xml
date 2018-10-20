@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/notice_layout"/>
+
+    <LinearLayout
+        android:id="@+id/other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bag"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <TextView
+            android:id="@+id/otherUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="7dp"
+            android:textColor="@color/black_t60"
+            android:textSize="16sp"
+            tools:text="这是测试的一场比赛"/>
+
+        <ImageView
+            android:id="@+id/go_to_match"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/arrow"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topTab"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_hold"
+            style="@style/match_detail_tag"
+            android:text="@string/holder"
+            />
+
+        <TextView
+            android:id="@+id/tv_buy"
+            style="@style/match_detail_tag"
+            android:text="@string/buy_enter"
+            />
+
+        <TextView
+            android:id="@+id/tv_sell"
+            style="@style/match_detail_tag"
+            android:text="@string/sell"
+            />
+
+        <TextView
+            android:id="@+id/tv_cause"
+            style="@style/match_detail_tag"
+            android:text="@string/revoke"
+            />
+
+        <TextView
+            android:id="@+id/tv_qure"
+            style="@style/match_detail_tag"
+            android:text="@string/query"
+            />
+
+        <TextView
+            android:id="@+id/tv_cup"
+            style="@style/match_detail_tag"
+            android:text="@string/win"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/line"/>
+
+    <com.zbmf.StocksMatch.view.CustomCircleProgress
+        android:id="@+id/cp_yield"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        app:circle_background_color="@color/transparent"
+        app:circle_custom_progress="36.36"
+        app:circle_finished_color="@color/red"
+        app:circle_finished_default_color="@color/green"
+        app:circle_finished_stroke_width="8dp"
+        app:circle_progress_max="100"
+        app:circle_unfinished_color="#efefef"
+        app:circle_unfinished_stroke_width="8dp"
+        app:progress_text_color="@color/red"
+        app:progress_text_size="12dp"
+        app:show_text="true"
+        app:text="第3000名"
+        app:text_color="@color/black_33"
+        app:text_size="15dp"
+        app:text_title_color="@color/black_99"
+        app:text_title_size="12dp"
+        app:title="总收益率"
+        app:type="tag_text"
+        />
+
+    <TextView
+        android:id="@+id/tv_win_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black_66"
+        android:textSize="15sp"
+        tools:text="在0名选手中战胜0人"
+        />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <TableRow
+            android:background="@color/app_bag"
+            android:orientation="horizontal"
+            android:paddingBottom="1dp"
+            android:paddingLeft="1dip"
+            android:paddingRight="1dip"
+            android:paddingTop="1dip"
+            >
+
+            <TextView
+                style="@style/match_detail_tab"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:text="@string/week_gain_yield"/>
+
+            <TextView
+                android:id="@+id/tv_week_rank"
+                style="@style/match_detail_tab"
+                tools:text="123"
+                />
+
+            <TextView
+                android:id="@+id/tv_week_yield"
+                style="@style/match_detail_tab"
+                tools:text="123"
+                />
+        </TableRow>
+
+        <TableRow
+            android:background="@color/app_bag"
+            android:orientation="horizontal"
+            android:paddingBottom="1dp"
+            android:paddingLeft="1dip"
+            android:paddingRight="1dip"
+            >
+
+            <TextView
+                style="@style/match_detail_tab"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:text="@string/day_gain_yield"/>
+
+            <TextView
+                android:id="@+id/tv_day_rank"
+                style="@style/match_detail_tab"
+                tools:text="123"
+                />
+
+            <TextView
+                android:id="@+id/tv_day_yield"
+                style="@style/match_detail_tab"
+                tools:text="123"
+                />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

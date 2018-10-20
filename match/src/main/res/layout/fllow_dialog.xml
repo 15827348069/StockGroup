@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bag"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/match_buy"
+        android:textColor="@color/black_t60"
+        android:textSize="16sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/line"/>
+    <include layout="@layout/no_message"/>
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/flow_list"
+        android:divider="@color/line"
+        android:dividerHeight="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        app:ptrMode="both">
+
+        <com.zbmf.worklibrary.view.ListViewForScrollView
+            android:id="@+id/myMatchList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/line"
+            android:dividerHeight="1dp"/>
+    </com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/line"/>
+
+    <TextView
+        android:id="@+id/cancelBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/cancel"
+        android:textColor="@color/err_red"
+        android:textSize="16sp"/>
+</LinearLayout>

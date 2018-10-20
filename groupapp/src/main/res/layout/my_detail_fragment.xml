@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_my_backound">
+
+        <LinearLayout
+            android:id="@+id/my_message_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/teacher_avatar"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <com.zbmf.StockGroup.view.RoundedCornerImageView
+                android:id="@+id/my_detail_avatar_id"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_avatar_backound"
+                android:layout_width="@dimen/teacher_avatar"
+                android:layout_height="@dimen/teacher_avatar"
+                android:padding="1dp"
+                android:src="@drawable/avatar_default" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:gravity="center_vertical"
+                >
+            <TextView
+                android:id="@+id/my_detail_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/my_detail_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/qiandao_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/qiandao"
+                android:button="@null"
+                android:checked="false" />
+            <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="43dp"-->
+            <!--android:visibility="gone"-->
+            <!--&gt;-->
+            <!--<ImageButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/icon_my_message"-->
+            <!--android:id="@+id/my_detail_message"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@drawable/button_select_tran_red"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="15dp"-->
+            <!--android:layout_height="15dp"-->
+            <!--android:text=""-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@color/button_text"-->
+            <!--android:background="@drawable/red_point_bg"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:textSize="9sp"-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/message_count_text"-->
+            <!--/>-->
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        android:id="@+id/home_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/group_layout_background"
+        ptr:ptrAnimationStyle="flip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/my_detail_message_layout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/group_layout_background" />
+
+            <include layout="@layout/my_detail_menu_layout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/group_layout_background" />
+
+            <include layout="@layout/my_detail_setting_layout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/group_layout_background" />
+        </LinearLayout>
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+</LinearLayout>

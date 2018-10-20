@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:background="@drawable/search_gp_bj"
+    android:layout_height="match_parent" android:id="@+id/main"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout1" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sear_his_tip"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:id="@+id/tv_tip" android:textSize="15sp"
+        android:textColor="#777674"
+        android:background="#e0000000"
+        />
+
+
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview"
+        android:divider="#161616"
+        android:dividerHeight="0.1dp"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sear_his_notip"
+        android:gravity="center"
+        android:padding="10dp" android:background="#e0000000"
+        android:id="@+id/tv_tip1"
+        android:textSize="15dp"
+        android:textColor="#777674"
+        />
+</LinearLayout>

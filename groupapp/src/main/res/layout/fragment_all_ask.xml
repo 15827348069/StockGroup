@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:background="@color/group_layout_background"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_ask_stock"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black_cc"
+                />
+
+            <RelativeLayout
+                android:id="@+id/searchViewR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f7f7f7"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/aet_stock"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_qure"
+                    android:background="@drawable/shape_layout_line_gray_50dp"
+                    android:drawableLeft="@drawable/icon_search_big"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:hint="请输入股票名称或代码"
+                    android:maxLines="1"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black_33"
+                    android:textColorHint="@color/black_99"
+                    android:textSize="13dp"/>
+
+                <ImageView
+                    android:id="@+id/imv_clear_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/aet_stock"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/icon_close_live"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_qure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="查询"
+                    android:textColor="@drawable/text_select"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black_cc"
+                />
+
+            <!--<com.zbmf.StockGroup.view.PullToRefreshListView-->
+            <com.zbmf.StockGroup.view.ListViewForScrollView
+                android:id="@+id/pull_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/linen"
+                android:dividerHeight="10dp"
+                app:ptrMode="both"/>
+        </LinearLayout>
+
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_no_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_no_setting"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="暂无相关数据"
+            android:textColor="@color/black_66"
+            android:textSize="15dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dong_mi_btn"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/dong_mi_info_bg"
+        android:text="@string/contact_dong_mi"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/dp_90"
+        android:layout_marginEnd="@dimen/dp_15"/>
+
+    <com.zbmf.StockGroup.view.DrawableCenterTextView
+        android:id="@+id/tv_ask_stock"
+        style="@style/Bottom_Button_Style"
+        android:drawableLeft="@drawable/icon_button_dong_ask"
+        android:text="向董秘提问"/>
+</RelativeLayout>

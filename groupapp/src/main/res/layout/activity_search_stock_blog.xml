@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <include layout="@layout/title_layout" />
+
+    <EditText
+        android:id="@+id/search_edittext"
+        style="@style/search_text"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="搜索更多入门知识" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/group_layout_background" />
+
+    <RelativeLayout
+        android:id="@+id/stock_blog_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="炒股入门"
+            android:textColor="@color/black_33"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_num"
+            android:layout_toRightOf="@+id/tv_title"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="14dp"
+            android:textColor="@color/black_66"
+            android:text="共10000条"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.zbmf.StockGroup.view.PullToRefreshListView
+        android:id="@+id/list_stock_study"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp" />
+        <include layout="@layout/no_message"/>
+    </RelativeLayout>
+</LinearLayout>

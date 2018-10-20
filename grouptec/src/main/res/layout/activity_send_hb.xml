@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_send_hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ecedf1"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/activity_group_title_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="41dp"
+                android:background="@drawable/round_rec_white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="红包数："
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/ed_hongbao"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="最多100"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#b2b2b2"
+                    android:textCursorDrawable="@null"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="    个    "
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="14dp"
+                android:text="红包数量不得超过100哦！"
+                android:textColor="#b3b3b3"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/round_rec_white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="金    额："
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/ed_mfb"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="最多2000"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#b2b2b2"
+                    android:textCursorDrawable="@null"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="魔方宝"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="14dp"
+                android:text="魔方宝数额不得超过2000哦！"
+                android:textColor="#b3b3b3"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/round_rec_white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="留    言："
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/ed_liuyan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="祝大家天天涨停板啊！"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#b2b2b2"
+                    android:textCursorDrawable="@null"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_pays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
+                android:drawableLeft="@drawable/mfb_hb"
+                android:drawablePadding="6dp"
+                android:text="0.00"
+                android:textColor="@color/black"
+                android:textSize="40sp"/>
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="42dp"
+                android:background="@drawable/send_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="  发送   "
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="未领取的红包，将于24小时候后发起退款"
+                android:textColor="#b3b3b3"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

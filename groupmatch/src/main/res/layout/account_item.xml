@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:gravity="center_vertical" android:background="@drawable/list_item"
+    android:paddingBottom="4dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="4dp">
+
+    <com.zbmf.StocksMatch.widget.CircleImageView
+        android:id="@+id/civ"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/default_avatar" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppear.Theme.cb_Size14" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp">
+
+        <ImageView
+            android:id="@+id/iv_choose"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/chouse_user"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button_layout_red"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/del"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</LinearLayout>

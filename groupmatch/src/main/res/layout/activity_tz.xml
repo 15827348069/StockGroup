@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/b"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/tabHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/match_title_layout" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/mProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-7dip" android:layout_below="@id/tabHead"
+            android:visibility="gone" />
+
+        <com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/myscrllview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_below="@id/tabHead"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrMode="both">
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+        </com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView>
+
+
+    </RelativeLayout>
+
+    <!--<include layout="@layout/bottombar" />-->
+</LinearLayout>

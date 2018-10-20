@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        >
+    <com.zbmf.StockGroup.view.RoundedCornerImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/avatar_default"
+        android:id="@+id/change_user_avatar"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/change_user_avatar"
+        android:layout_centerVertical="true"
+        android:text="名字"
+        android:layout_marginLeft="15dp"
+        android:textColor="#999999"
+        android:textSize="15dp"
+        android:id="@+id/change_user_name"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:id="@+id/change_user_check_box"
+        android:background="@drawable/check"
+        />
+    </RelativeLayout>
+</RelativeLayout>

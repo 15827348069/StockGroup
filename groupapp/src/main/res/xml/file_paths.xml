@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path path="." name="download" />
+    <external-path path="." name="GROUP_STOCK" />
+    <external-path path="Android/data/com/pgyersdk" name="files_root" />
+</paths>

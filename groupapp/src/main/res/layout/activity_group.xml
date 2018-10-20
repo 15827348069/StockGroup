@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/group_layout_background"
+    tools:context="com.zbmf.StockGroup.GroupActivity">
+    <com.zbmf.StockGroup.view.HomeViewPage
+        android:id="@+id/home_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <include layout="@layout/group_buttom_layout"></include>
+</LinearLayout>

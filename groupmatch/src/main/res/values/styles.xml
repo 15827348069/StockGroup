@@ -1,0 +1,269 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#f36c60</item>
+        <item name="colorPrimaryDark">@color/main_head_title_layout</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="myDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="popwindowanimstyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/slide_out_down</item>
+        <item name="@android:windowExitAnimation">@anim/slide_out_up</item>
+    </style>
+
+    <style name="Activity_MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+    </style>
+
+    <style name="dialoganimstyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/slide_in_down</item>
+    </style>
+
+    <style name="Activity_MyDialog1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/transparent</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/anim_dialog</item>
+    </style>
+    <style name="anim_dialog" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_down</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+
+    <style name="TextAppear.Theme.ca_Size9" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/ca</item>
+    </style>
+    <style name="TextAppear.Theme.ca_Size12" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/ca</item>
+    </style>
+    <style name="TextAppear.Theme.ca_Size14" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/ca</item>
+    </style>
+    <style name="TextAppear.Theme.ca_Size17" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/ca</item>
+    </style>
+
+    <style name="TextAppear.Theme.ca_Size19" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/ca</item>
+    </style>
+
+    <style name="TextAppear.Theme.ca_Size21" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/ca</item>
+    </style>
+    <style name="TextAppear.Theme.cr_Size10" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/cr</item>
+    </style>
+    <style name="TextAppear.Theme.cr_Size15" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/cr</item>
+    </style>
+    <style name="TextAppear.Theme.cr_Size16" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/match_all_money</item>
+    </style>
+    <style name="TextAppear.Theme.cr_Size19" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/cr</item>
+    </style>
+
+
+    <style name="TextAppear.Theme.cr_Size22" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/cr</item>
+    </style>
+
+    <style name="TextAppear.Theme.cg_Size10" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/cg</item>
+    </style>
+    <style name="TextAppear.Theme.cb_Size14" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/cb</item>
+    </style>
+
+    <style name="TextAppear.Theme.cb_Size15" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/cb</item>
+    </style>
+    <style name="TextAppear.Theme.cb_Size17" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/cb</item>
+    </style>
+    <style name="TextAppear.Theme.cb_Size18" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/cb</item>
+    </style>
+    <style name="TextAppear.Theme.cb_Size20" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/cb</item>
+    </style>
+    <style name="TextAppear.Theme.cb_Size23" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textColor">@color/cb</item>
+    </style>
+
+
+    <style name="TextAppear.Theme.c6_Size14" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/c6</item>
+    </style>
+    <style name="TextAppear.Theme.main_Size14" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/main_head_title_layout</item>
+    </style>
+
+    <style name="TextAppear.Theme.c6_Size15" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/c6</item>
+    </style>
+    <style name="TextAppear.Theme.c6_Size17" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/c6</item>
+    </style>
+
+    <style name="TextAppear.Theme.ca2_Size14" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/ca2</item>
+    </style>
+    <style name="TextAppear.Theme.ca2_Size15" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/ca2</item>
+    </style>
+    <style name="TextAppear.Theme.ca2_Size16" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/ca2</item>
+    </style>
+
+
+    <style name="TextAppear.Theme.c3_Size15" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/c3</item>
+    </style>
+    <style name="TextAppear.Theme.c3_Size16" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/c3</item>
+    </style>
+
+    <style name="TextAppear.Theme.c3_Size17" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/c3</item>
+    </style>
+    <style name="TextAppear.Theme.c3_Size18" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/c3</item>
+    </style>
+    <style name="TextAppear.Theme.c3_Size19" parent="android:TextAppearance.Theme">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/c3</item>
+    </style>
+
+
+    <!--  报名参加比赛样式-->
+    <style name="tv_apply">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textAppearance">@style/TextAppear.Theme.cb_Size15</item>
+    </style>
+
+    <!-- 更多里样式-->
+    <style name="ll_more">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@drawable/list_item</item>
+    </style>
+
+    <style name="tv_more">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:textAppearance">@style/TextAppear.Theme.c3_Size17</item>
+    </style>
+
+    <style name="iv_more">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:background">@drawable/a_icon_right</item>
+    </style>
+    <style name="iv_more1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ll_operat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@drawable/list_item</item>
+    </style>
+
+    <style name="tv_operat">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAppearance">@style/TextAppear.Theme.c3_Size19</item>
+    </style>
+
+    <style name="line_operat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="TrustsCellTextViewStyle">
+        <item name="android:layout_width">80dip</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/row_border_background</item>
+    </style>
+</resources>

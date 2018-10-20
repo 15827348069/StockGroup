@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="46dp"
+        android:gravity="center"
+        android:lineSpacingExtra="12dp"
+        android:text="注册成功啦，完成个人信息\n让大家更好地认识你"
+        android:textColor="@color/black_33"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/ed_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="35dp"
+        android:maxLength="10"
+        android:background="@drawable/shape_layout_line_gray_3dp"
+        android:drawableLeft="@drawable/zhanghao"
+        android:drawablePadding="15dp"
+        android:hint="请写一个帅气的昵称吧"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:textColor="@color/black_33"
+        android:textColorHint="@color/black_66"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_name_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="41dp"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        />
+
+
+    <com.zbmf.StockGroup.view.GridViewForScrollView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/transparent"
+        android:horizontalSpacing="28dp"
+        android:numColumns="3" android:layout_marginTop="18dp"
+        android:verticalSpacing="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_header_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="41dp"
+        android:padding="5dp" android:layout_marginTop="17dp"
+        android:text="还没有选择头像"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_background_10dp"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cd"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout" />
+
+    <com.zbmf.StocksMatch.widget.CircleImageView
+        android:id="@+id/civ"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/default_avatar" />
+
+    <include layout="@layout/line_cd" />
+
+    <LinearLayout
+        android:id="@+id/ll_sel"
+        style="@style/ll_operat"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tp" />
+
+        <TextView
+            style="@style/tv_operat"
+            android:layout_marginLeft="15dp"
+            android:text="@string/selectphoto" />
+    </LinearLayout>
+
+    <include layout="@layout/line_cd" />
+
+    <LinearLayout
+        android:id="@+id/ll_take"
+        style="@style/ll_operat">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone" />
+
+        <TextView
+            style="@style/tv_operat"
+            android:layout_marginLeft="15dp"
+            android:text="@string/takephoto" />
+    </LinearLayout>
+
+    <include layout="@layout/line_cd" />
+
+
+    <LinearLayout android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/line_cd" />
+    </LinearLayout>
+    <LinearLayout style="@style/ll_operat">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nickname" />
+        <EditText
+            android:id="@+id/ed_nickname"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="@string/inputnickname"
+            android:lines="1"
+            android:paddingLeft="10dp"
+            android:textAppearance="@style/TextAppear.Theme.c3_Size19"
+            android:textColorHint="@color/cg" />
+    </LinearLayout>
+    <include layout="@layout/line_cd" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_button_layout_red_line"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/save"
+        android:textColor="@color/ca"
+        android:textSize="17sp" />
+
+</LinearLayout>

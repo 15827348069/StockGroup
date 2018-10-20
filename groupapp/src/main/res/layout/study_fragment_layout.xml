@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/group_layout_background"
+    android:orientation="vertical">
+    <include layout="@layout/title_layout"/>
+    <RadioGroup
+        android:id="@+id/video_select_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/live_video"
+            style="@style/main_menu"
+            android:checked="true"
+            android:drawableTop="@drawable/radio_video_live"
+            android:text="精选" />
+
+        <RadioButton
+            android:id="@+id/series_video"
+            style="@style/main_menu"
+            android:drawableTop="@drawable/radio_video_teacher"
+            android:text="专辑" />
+
+        <RadioButton
+            android:id="@+id/time_you"
+            style="@style/main_menu"
+            android:drawableTop="@drawable/radio_video_time"
+            android:text="限时免费" />
+
+        <RadioButton
+            android:id="@+id/video_you"
+            style="@style/main_menu"
+            android:drawableTop="@drawable/radio_video_youhui"
+            android:text="优惠" />
+
+        <RadioButton
+            android:id="@+id/all_video"
+            style="@style/main_menu"
+            android:drawableTop="@drawable/radio_all_video"
+            android:text="全部" />
+
+    </RadioGroup>
+    <FrameLayout
+        android:id="@+id/study_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="visible" />
+</LinearLayout>

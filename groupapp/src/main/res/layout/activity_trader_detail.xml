@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        android:id="@+id/trader_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/trader_bottom_line"
+        android:layout_below="@+id/title_layout_id"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_trander_bgm" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/icon_trander_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/black_33"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black_66"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/tv_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black_99"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <com.zbmf.StockGroup.view.RoundedCornerImageView
+                    android:id="@+id/imv_avatar"
+                    android:layout_width="@dimen/teacher_avatar"
+                    android:layout_height="@dimen/teacher_avatar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_avatar_backound" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/home_title_icon"
+                android:text="操盘战绩" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="存续期（天）" />
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="交易次数" />
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="right|center_vertical"
+                    android:text="胜率" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/tv_deal_days"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_deal_total"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                   />
+
+                <TextView
+                    android:id="@+id/tv_deal_success"
+                    style="@style/trader_content"
+                    android:gravity="right|center_vertical"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="总收益率" />
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="累计跑赢大盘" />
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="right|center_vertical"
+                    android:text="周期大盘增长" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/tv_total_yield"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_win_index"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_index_yield"
+                    style="@style/trader_content"
+                    android:gravity="right|center_vertical"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="账户资产" />
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="当前持仓数" />
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="right|center_vertical"
+                    android:text="持仓比" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/tv_total_money"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_hold_num"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_position"
+                    style="@style/trader_content"
+                    android:gravity="right|center_vertical"
+                  />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/linen" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:gravity="right|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingRight="15dp"
+                android:text="数据更新规则：交易日18时后更新"
+                android:textColor="@color/black_cc"
+                android:textSize="12dp" />
+
+            <TextView
+                style="@style/home_title_icon"
+                android:layout_marginTop="10dp"
+                android:text="持仓股票" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="120dp">
+
+                <TextView
+                    android:id="@+id/tv_commit_look"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/buy_follow_c"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="订阅后可查看"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/hold_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/group_layout_background"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            style="@style/trader_title"
+                            android:layout_weight="0.4"
+                            android:gravity="left|center_vertical"
+                            android:text="股票名称" />
+
+                        <TextView
+                            style="@style/trader_title"
+                            android:layout_weight="0.2"
+                            android:gravity="left|center_vertical"
+                            android:text="总股数" />
+
+                        <TextView
+                            style="@style/trader_title"
+                            android:layout_weight="0.2"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="成本价" />
+
+                        <TextView
+                            style="@style/trader_title"
+                            android:layout_weight="0.2"
+                            android:gravity="right|center_vertical"
+                            android:text="盈亏比例" />
+                    </LinearLayout>
+
+                    <com.zbmf.StockGroup.view.ListViewForScrollView
+                        android:id="@+id/trader_deal_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/layout_commit_look_hold"
+                        >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/linen"
+                        />
+                    <TextView
+                        android:id="@+id/tv_commit_look_hold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/buy_follow_c"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:text="查看完整持仓"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14dp"
+                       />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_no_hold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="暂无持仓"
+                        android:textColor="@color/black_99"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/home_title_icon"
+                android:layout_marginTop="10dp"
+                android:text="最新成交记录" />
+
+            <com.zbmf.StockGroup.view.ListViewForScrollView
+                android:id="@+id/trader_deal_history_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:id="@+id/layout_commit_look_history"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/linen"
+                    />
+                <TextView
+                    android:id="@+id/tv_commit_look_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/buy_follow_c"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="查看完整记录"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14dp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                style="@style/home_title_icon"
+                android:layout_marginTop="10dp"
+                android:text="名词解释" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_trander_desc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="免责声明："
+                android:textColor="@color/black_66"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:text="数据来源于资本魔方模拟炒股训练场"
+                android:textColor="@color/black_66"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:text="所有操作仅供参考交流，订阅不退不换"
+                android:textColor="@color/black_66"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+
+    <View
+        android:id="@+id/trader_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/trader_bottom_layout"
+        android:background="@color/linen" />
+
+    <LinearLayout
+        android:id="@+id/trader_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/group_layout_background">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/tv_commit_content"
+            android:layout_weight="3"
+            android:text="订阅后可查看操盘记录"
+            android:textColor="@color/black_66" />
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/button_select"
+            android:gravity="center"
+            android:text="订阅"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </LinearLayout>
+</RelativeLayout>

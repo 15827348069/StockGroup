@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:animateLayoutChanges="true"
+              android:background="@color/group_layout_background"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/imb_ask_stock"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热门:"
+                    android:textColor="@color/black_66"
+                    android:textSize="14sp"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ask_stock_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/linen"
+                />
+
+            <com.zbmf.StockGroup.view.PullToRefreshListView
+                android:id="@+id/list_ask_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/linen"
+                android:dividerHeight="10dp"
+                />
+        </LinearLayout>
+
+        <com.zbmf.StockGroup.view.DrawableCenterTextView
+            android:id="@+id/imb_ask_stock"
+            style="@style/Bottom_Button_Style"
+            android:drawableLeft="@drawable/icon_button_ask"
+            android:text="免费问股"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/ca"
+        android:paddingBottom="6dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="12dp" >
+
+        <EditText
+            android:id="@+id/ed_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="@string/feedback_tip"
+            android:imeOptions="actionDone"
+            android:minHeight="125dp"
+            android:scrollbars="vertical"
+            android:textAppearance="@style/TextAppear.Theme.c3_Size15"
+            android:textColorHint="#999999" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ed_text"
+            android:text="@string/input_tip22" android:textSize="10sp" android:textColor="#999999"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

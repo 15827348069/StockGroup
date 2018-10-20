@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bag"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StocksMatch.activity.AddStockActivity">
+
+    <include layout="@layout/activity_title"/>
+
+    <!--<EditText-->
+        <!--android:id="@+id/add_stock_et_name"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginLeft="30dp"-->
+        <!--android:layout_marginRight="30dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:textSize="16sp"-->
+        <!--android:background="@drawable/add_stock_et_bg"-->
+        <!--android:ellipsize="end"-->
+        <!--android:gravity="left|center_vertical"-->
+        <!--android:hint="@string/add_stock_et_hint"-->
+        <!--android:lines="1"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:paddingRight="5dp"-->
+        <!--android:textColorHint="@color/black_cd"-->
+        <!--tools:ignore="RtlHardcoded"-->
+        <!--android:visibility="gone"-->
+        <!--android:imeOptions="actionSearch"/>-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="@string/no_repeat_add"
+        android:gravity="center"
+        android:textColor="@color/black_cd"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7f7f7"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/aet_stock"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_qure"
+            android:background="@drawable/add_stock_et_bg"
+            android:drawablePadding="5dp"
+            android:textColorHint="@color/black_cd"
+            android:gravity="center_vertical"
+            android:hint="请输入股票名称或代码"
+            android:maxLines="1"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColor="@color/black_t60"
+            android:paddingStart="15dp"
+            tools:ignore="RtlSymmetry"/>
+
+        <ImageView
+            android:id="@+id/imv_clear_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/aet_stock"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/clear"
+            android:visibility="gone"
+            android:layout_alignRight="@+id/aet_stock"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_qure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/query"
+            android:textColor="@drawable/text_select"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/add_stock_et_remark"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="15dp"
+            android:textSize="16sp"
+            android:background="@drawable/add_stock_et_bg"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:hint="@string/add_stock_remark"
+            android:lines="1"
+            android:textColor="@color/black_t60"
+            android:textColorHint="@color/black_cc"
+            tools:ignore="RtlHardcoded,RtlSymmetry"/>
+        <ImageView
+            android:id="@+id/imv_clear_et_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/clear"
+            android:visibility="gone"
+            android:layout_alignRight="@+id/add_stock_et_remark"
+            android:layout_marginEnd="15dp"
+            android:layout_alignEnd="@+id/add_stock_et_remark"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StockGroup.activity.NextSelectStockActivity">
+
+    <include layout="@layout/title_layout"/>
+
+    <TextView
+        android:id="@+id/submitCycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:padding="@dimen/dp_10"
+        android:text="提交周期:2018-06-01~2018-06-04"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/sp_16"/>
+    <TextView
+        android:id="@+id/submitObject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:text="@string/submit_name"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/sp_16"/>
+
+</LinearLayout>

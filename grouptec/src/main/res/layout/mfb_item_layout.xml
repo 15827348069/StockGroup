@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_select"
+                android:paddingBottom="12dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="11dp"
+    >
+
+    <TextView
+        android:id="@+id/item_mfb_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:lineSpacingExtra="5dp"
+        android:lineSpacingMultiplier="1"
+        android:text="11-23\n12:23"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_type"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/item_mfb_date">
+
+        <com.zbmf.StockGTec.view.RoundedCornerImageView
+            android:id="@+id/rci"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff8989"/>
+
+        <TextView
+            android:id="@+id/item_mfb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="签到"
+            android:textColor="@color/white"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/rl_type"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_mfb_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+20"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/item_mfb_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="签到获得"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

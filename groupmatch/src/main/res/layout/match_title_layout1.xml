@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_title"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/main_head_title_layout"
+    android:gravity="bottom"
+    android:orientation="horizontal">
+
+    <ImageView android:visibility="gone"
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:paddingLeft="4dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp" android:paddingBottom="8dp"
+        android:src="@drawable/icon_return"
+          />
+
+    <LinearLayout
+        android:id="@+id/ll_type"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="16dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.95"
+            android:text="比赛"
+            android:textAppearance="@style/TextAppear.Theme.ca_Size17" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sj" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="bottom">
+
+        <EditText android:textColor="@color/cb"
+            android:id="@+id/ed_sear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:gravity="bottom" android:paddingBottom="1dp"
+            android:hint="请输入对应的搜索内容"
+            android:imeOptions="actionSearch"
+            android:singleLine="true" android:textColorHint="@color/gray81"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ca"></View>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:gravity="bottom"
+        android:paddingLeft="2dp"
+        android:paddingRight="5dp"
+        android:text="@string/cancel"
+        android:textColor="@color/ca"
+        android:textSize="@dimen/title_text_size" />
+
+
+</LinearLayout>

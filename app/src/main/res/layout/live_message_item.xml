@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="34dp"
+    >
+    <com.zbmf.groupro.view.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#66000000"
+        android:textSize="@dimen/live_text_size_small"
+        android:paddingLeft="15dp"
+        android:paddingRight="35dp"
+        android:gravity="center_vertical|left"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/chat_new_live_message"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close_yellow"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/transparent"
+        android:layout_marginRight="15dp"
+        android:id="@+id/close_live_img_button"
+        />
+</RelativeLayout>

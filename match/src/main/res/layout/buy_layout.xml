@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="5dp"
+              android:layout_marginRight="5dp"
+              android:orientation="vertical">
+
+    <AutoCompleteTextView
+        android:id="@+id/buy_edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:background="@drawable/shape_layout_line_red"
+        android:hint="@string/stock_code"
+        android:textColor="@color/black_33"
+        android:textColorHint="@color/black_66"
+        android:paddingLeft="16dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:nextFocusForward="@+id/buy_price"
+        android:paddingStart="16dp"
+        tools:ignore="RtlSymmetry"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_layout_line_red"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/delete_price"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="@color/main_head_title_layout"
+            android:drawableTop="@drawable/delete_zxg"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/add_allite"
+            android:textColor="@drawable/button_select_red_line"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/buy_price"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_weight="2"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:hint="@string/buy_price"
+            android:textColorHint="@color/black_66"
+            android:textColor="@color/black_33"
+            android:inputType="numberDecimal"
+            android:textSize="13sp"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/buy_number"
+            />
+
+        <TextView
+            android:id="@+id/add_price"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="@color/main_head_title_layout"
+            android:drawableTop="@drawable/add_zxg_icon"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/add_allite"
+            android:textColor="@drawable/button_select_red_line"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_layout_line_red">
+
+        <EditText
+            android:id="@+id/buy_number"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:inputType="number"
+            android:textSize="16sp"
+            android:textColor="@color/black_33"
+            android:paddingLeft="15dp"
+            android:hint="@string/buy_enter_count"
+            android:textColorHint="@color/black_66"
+            android:paddingStart="15dp"
+            tools:ignore="RtlSymmetry"/>
+
+        <TextView
+            android:id="@+id/can_buy_number"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            tools:text="可买-"
+            android:textColor="@drawable/button_text_select_red_gray"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/all_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_layout_line_red"
+            android:text="@string/all"
+            android:textColor="@drawable/button_text_select_red_gray"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/half_id"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_layout_line_red"
+            android:text="@string/half"
+            android:textColor="@drawable/button_text_select_red_gray" />
+
+        <Button
+            android:id="@+id/three_id"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_layout_line_red"
+            android:text="@string/one_three"
+            android:textColor="@drawable/button_text_select_red_gray"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buy_code_id"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button_layout_red_line_10dp"
+        android:text="@string/buy_enter"
+        android:textColor="@drawable/button_select_red_line" />
+</LinearLayout>

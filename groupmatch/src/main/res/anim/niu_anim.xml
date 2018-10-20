@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"
+    >
+    <item android:drawable="@drawable/niu01" android:duration="150"></item>
+    <item android:drawable="@drawable/niu02" android:duration="150"></item>
+    <item android:drawable="@drawable/niu03" android:duration="150"></item>
+    <item android:drawable="@drawable/niu04" android:duration="150"></item>
+    <item android:drawable="@drawable/niu05" android:duration="150"></item>
+</animation-list>

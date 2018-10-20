@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/group_layout_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:hint="说点什么吧"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:drawablePadding="8dp"
+            android:textColorHint="#a5a5a5"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:gravity="top"
+            android:id="@+id/blog_detail_pinglun_edit"
+            android:background="@drawable/shape_layout_gray_tran"
+            android:textCursorDrawable="@drawable/edit_color"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            >
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:text="私密提问"
+                    android:background="@drawable/button_select_round"
+                    android:visibility="gone"
+                    android:layout_marginRight="15dp"
+                    android:textSize="13sp"
+                    android:id="@+id/send_private_layout"
+                    android:layout_toLeftOf="@+id/send_pinglun_layout"
+                    />
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:text="发送"
+                    android:textSize="13sp"
+                    android:background="@drawable/button_select_round"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/send_pinglun_layout"
+                    />
+        </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_bag"
+    tools:context="com.zbmf.StocksMatch.activity.RemarkListActivity">
+
+    <include layout="@layout/activity_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        android:background="@drawable/stock_remark_top_bg"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/remark_stock_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:padding="1dp"
+            android:textColor="@color/black_t60"
+            android:textSize="14sp"
+            tools:text="资本魔方"/>
+
+        <TextView
+            android:id="@+id/stock_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/remark_stock_name"
+            android:layout_marginLeft="10dp"
+            android:padding="1dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black_99"
+            android:textSize="13sp"
+            tools:text="024432"/>
+
+        <TextView
+            android:id="@+id/remark_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black_t60"
+            android:textSize="14sp"
+            tools:text="共1条备注"
+            tools:ignore="RelativeOverlap"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"/>
+
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshListView
+        android:id="@+id/plv_match_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/line"
+        android:dividerHeight="1dp"
+        app:ptrMode="both"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stock_remark_top_bg"
+        android:padding="13dp">
+        <TextView
+            android:id="@+id/input_remark"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/add_stock_et_bg"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:hint="@string/input_remark"
+            android:textColor="@color/black_t60"
+            android:textColorHint="@color/black_d4"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical|left"
+            android:paddingStart="5dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry"/>
+    </LinearLayout>
+</LinearLayout>

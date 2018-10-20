@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_live_setting"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/group_layout_background"
+              android:orientation="vertical"
+              tools:context="com.zbmf.StockGTec.activity.LiveSettingActivity">
+
+    <include layout="@layout/activity_group_title_layout"/>
+
+    <EditText
+        android:id="@+id/live_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:hint="今日直播主题"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textSize="16sp"
+        android:visibility="gone"
+        />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/sc_set"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:checked="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="以圈主名义发言"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        />
+
+
+    <EditText
+        android:id="@+id/live_notice"
+        android:layout_width="match_parent"
+        android:layout_height="177dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="top"
+        android:hint="直播室公告"
+        android:paddingBottom="12dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="12dp"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textSize="16sp"
+        />
+</LinearLayout>

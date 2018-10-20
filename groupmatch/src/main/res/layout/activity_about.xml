@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/main"
+    android:orientation="vertical">
+<include layout="@layout/match_title_layout"/>
+    <LinearLayout
+        android:layout_width="fill_parent" android:gravity="center"
+        android:layout_height="156dp"
+        android:background="@color/main_head_title_layout"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_about"
+        style="@style/ll_more">
+
+        <ImageView
+            style="@style/iv_more1"
+            android:background="@drawable/a" />
+
+        <TextView
+            style="@style/tv_more"
+            android:text="@string/about_us" />
+
+        <ImageView style="@style/iv_more" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray81" />
+
+    <LinearLayout
+        android:id="@+id/ll_question"
+        style="@style/ll_more">
+
+        <ImageView
+            style="@style/iv_more1"
+            android:background="@drawable/c" />
+
+        <TextView
+            style="@style/tv_more"
+            android:text="@string/cjwt" />
+
+        <ImageView style="@style/iv_more" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray81" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_feed"
+        style="@style/ll_more">
+
+        <ImageView
+            style="@style/iv_more1"
+            android:background="@drawable/d" />
+
+        <TextView
+            style="@style/tv_more"
+            android:text="@string/feedback" />
+
+        <ImageView style="@style/iv_more" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray81" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_share"
+        style="@style/ll_more">
+
+        <ImageView
+            style="@style/iv_more1"
+            android:background="@drawable/icon_fenxiang" />
+
+        <TextView
+            style="@style/tv_more"
+            android:text="@string/share" />
+
+        <ImageView style="@style/iv_more" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray81" />
+
+</LinearLayout>

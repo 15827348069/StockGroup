@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">资本魔方老师</string>
+
+
+    <string name="head_tipsTextView">下拉即可更新</string>
+    <string name="head_lastUpdatedTextView">最后更新: 2013/03/11 下午05:07:52</string>
+    <string name="more_data">正在加载数据...</string>
+    <string name="pull_to_refresh_pull_label">加载更多数据…</string>
+    <string name="pull_to_refresh_release_label">松开刷新数据…</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新…</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+
+
+    <string name="weibosdk_demo_not_support_api_hint">微博客户端不支持 SDK 分享或微博客户端未安装或微博客户端是非官方版本。</string>
+    <!-- 分享成功失败的 Toast -->
+    <string name="weibosdk_demo_toast_share_success">分享成功</string>
+    <string name="weibosdk_demo_toast_share_failed">分享失败</string>
+    <string name="weibosdk_demo_toast_share_canceled">取消分享</string>
+    <string name="weibosdk_demo_toast_share_response_args_success">收到微博发起的请求成功</string>
+    <string name="weibosdk_demo_toast_share_response_args_failed">收到客户端请求消息失败</string>
+    <string name="weibosdk_demo_toast_auth_canceled">取消授权</string>
+
+    <string name="weibosdk_app_url">http://www.zbmf.com/</string>
+    <string name="weibosdk_share_webpage_template"> %1$s ，分享自 #资本魔方炒股圈子# </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="group_chat">群聊</string>
+    <string name="title_activity_big_image">BigImageActivity</string>
+    <string name="tf_zz">"(立即加入铁粉查看)"</string>
+    <string name="add_to_tf">此条为铁粉悄悄话  立即加入铁粉查看</string>
+
+    <string name="tf_title">铁粉专区</string>
+    <string name="send_hb">炒股圈子红包</string>
+    <string name="already_add_all">已加载全部数据</string>
+</resources>

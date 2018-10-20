@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StockGroup.activity.FB_GD_Activity">
+
+    <!--<include layout="@layout/title_layout"/>-->
+    <include layout="@layout/activity_group_title_layout"/>
+
+    <EditText
+        android:id="@+id/shareGD"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="start|top"
+        android:hint="分享观点"
+        android:padding="@dimen/dp_10"
+        android:textColor="@color/black_33"
+        android:textColorHint="@color/cg"
+        android:textSize="@dimen/sp_16"/>
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/ll_repayment_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="2dp">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_common_possword"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    >
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/topicName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="#Topic Name"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_16"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1024"
+                android:textColor="@color/cg"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:background="@color/white_tab"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_50"
+            android:paddingStart="@dimen/dp_50"
+            android:paddingTop="@dimen/dp_5">
+
+            <ImageView
+                android:id="@+id/select_emoj_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/emoj_icon"/>
+
+            <ImageView
+                android:id="@+id/select_pic_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/select_pic_icon"/>
+
+            <ImageView
+                android:id="@+id/take_photo_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/take_phone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fans_tag">
+        <item>直播室</item>
+        <item>群聊</item>
+        <item>铁粉</item>
+    </string-array>
+    <string-array name="chat_tag">
+        <item>直播室</item>
+        <item>群聊</item>
+    </string-array>
+    <string-array name="find_teacher">
+        <item>特别推荐</item>
+        <item>正在直播</item>
+        <item>独家</item>
+        <item>人气排行</item>
+    </string-array>
+    <string-array name="dong_ask">
+        <item>互动平台</item>
+        <item>我的提问</item>
+        <item>实时监控</item>
+    </string-array>
+    <string-array name="time_setting">
+        <item>个股管理</item>
+        <item>关键词管理</item>
+    </string-array>
+    <string-array name="care_teacher">
+        <item>最新铁粉</item>
+        <item>最新观点</item>
+        <item>原创文章</item>
+        <item>魔方薇薇</item>
+    </string-array>
+    <string-array name="look_stock">
+        <item>7x24快讯</item>
+        <item>魔方头条</item>
+        <item>原创文章</item>
+    </string-array>
+    <string-array name="adBlockDiv">
+        <item>top-info rel</item>
+        <item>box mt gdt</item>
+        <item>stock-detail mt</item>
+        <item>tool-bar</item>
+        <item>share-box</item>
+        <item>news</item>
+        <item>current</item>
+        <item>tab mt box rel</item>
+        <item>tab-list news-list</item>
+        <!--<item>vpage reprot</item>-->
+        <!--<item>vpage my</item>-->
+        <!--<item>vpage edit</item>-->
+        <!--<item>vpage search</item>-->
+        <!--<item>vpage news</item>-->
+        <!--<item>vpage hotspot-industryan</item>-->
+        <item>app-down-fix</item>
+        <item>app-ad</item>
+        <item>bottom-toast</item>
+    </string-array>
+
+</resources>

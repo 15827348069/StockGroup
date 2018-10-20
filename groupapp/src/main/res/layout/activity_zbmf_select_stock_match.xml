@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StockGroup.activity.ZbmfSelectStockMatch">
+
+    <include layout="@layout/title_layout"/>
+    <!--设置图片-->
+    <!--<fragment-->
+    <!--android:id="@+id/fragment_cycle_viewpager_content"-->
+    <!--android:name="com.zbmf.StockGroup.adapter.CycleViewPager"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="120dp"/>-->
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        android:id="@+id/stock_match_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:background="@color/group_layout_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/t4Img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_120"
+                android:scaleType="centerCrop"
+                android:src="@drawable/t4"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/match_jiesaho"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/submit_stock"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="RtlHardcoded"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/dp_95"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:padding="@dimen/dp_2"
+                    />
+
+                <TextView
+                    android:id="@+id/weekTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="2018-05-28~2018-06-04"
+                    android:textColor="@color/black_t80"
+                    android:textSize="@dimen/sp_16"/>
+            </LinearLayout>
+
+            <include layout="@layout/detail_tab"/>
+
+            <include layout="@layout/shade_view"/>
+
+            <com.zbmf.StockGroup.view.ListViewForScrollView
+                android:id="@+id/stock_match_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+</LinearLayout>

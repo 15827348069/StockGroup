@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@drawable/search_gp_bj"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout" />
+
+
+    <com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/myscrllview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout android:id="@+id/ll_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="黄金A段"
+                            android:textColor="@color/white"
+                            android:textSize="26sp" />
+
+                        <TextView
+                            android:id="@+id/tv_symbol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/gp_name"
+                            android:layout_alignTop="@+id/current_close"
+                            android:layout_marginTop="5dp"
+                            android:text="6000000"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/gray81" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_current"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="35.78"
+                            android:textColor="@color/white"
+                            android:textSize="28dp" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_max_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.00"
+                                android:textAppearance="@style/TextAppear.Theme.ca_Size9" />
+
+                            <TextView
+                                android:id="@+id/tv_min_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="21dp"
+                                android:text="0.00"
+                                android:textAppearance="@style/TextAppear.Theme.ca_Size9" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"></LinearLayout>
+                <com.zbmf.StocksMatch.widget.CustomListView
+                    android:id="@+id/content_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="1dp" />
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:collapseColumns="*">
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:text="@string/close_p"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+                            <TextView
+                                android:id="@+id/tv_close_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:text="@string/open_p"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+                            <TextView
+                                android:id="@+id/tv_open_price"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="none"
+                                android:maxLines="100"
+                                android:scrollHorizontally="false"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:text="@string/amount"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+                            <TextView
+                                android:id="@+id/tv_total_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="1"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:collapseColumns="*">
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:text="@string/high_p"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+                            <TextView
+                                android:id="@+id/tv_high_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:text="@string/low_p"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+                            <TextView
+                                android:id="@+id/tv_low_price"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="none"
+                                android:maxLines="100"
+                                android:scrollHorizontally="false"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:text="@string/volumn"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+                            <TextView
+                                android:id="@+id/tv_total_volumn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="1"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:layout_gravity="bottom"
+                    android:orientation="horizontal" android:layout_marginBottom="15dp" android:layout_marginTop="15dp"
+                    android:padding="15dp">
+
+                    <Button
+                        android:id="@+id/btn_buy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_button_layout_red"
+                        android:text="@string/buy"
+                        android:textColor="@drawable/button_select_red_line" />
+
+                    <Button
+                        android:id="@+id/btn_sale"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_button_layout_green"
+                        android:text="@string/sale"
+                        android:textColor="@drawable/button_select_red_line" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView>
+
+</LinearLayout>

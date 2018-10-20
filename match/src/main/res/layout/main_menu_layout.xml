@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_alignParentBottom="true"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e3e3e3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <TextView
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/home_drawable"
+            android:clickable="true"
+            style="@style/main_menu"
+            android:text="@string/home"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/rb_match"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/match_drawable"
+            android:clickable="true"
+            style="@style/main_menu"
+            android:text="@string/match"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/rb_drill"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/drill_drawable"
+            android:clickable="true"
+            style="@style/main_menu"
+            android:text="@string/drill"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/rb_stock"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/stock_drawable"
+            android:clickable="true"
+            style="@style/main_menu"
+            android:text="@string/stock"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/rb_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/mine_drawable"
+            android:clickable="true"
+            style="@style/main_menu"
+            android:text="@string/mine"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/rg_main_menu"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_home"-->
+            <!--style="@style/main_menu"-->
+            <!--android:drawableTop="@drawable/home_drawable"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:checked="true"-->
+            <!--android:text="首页" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_match"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:drawableTop="@drawable/match_drawable"-->
+            <!--style="@style/main_menu"-->
+            <!--android:text="比赛" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_drill"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:drawableTop="@drawable/drill_drawable"-->
+            <!--style="@style/main_menu"-->
+            <!--android:text="训练" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_stock"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:drawableTop="@drawable/stock_drawable"-->
+            <!--style="@style/main_menu"-->
+            <!--android:text="自选股" />-->
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_mine"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:drawableTop="@drawable/mine_drawable"-->
+            <!--style="@style/main_menu"-->
+            <!--android:text="我的" />-->
+    <!--</RadioGroup>-->
+</LinearLayout>

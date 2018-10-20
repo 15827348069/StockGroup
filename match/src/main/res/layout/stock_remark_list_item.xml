@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="6dp">
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="5dp">-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stock_remark_time"
+        tools:text="2018-03-29 17:13:24 添加自选股(当时41.5元/股)"
+        android:textColor="@color/black_99"
+        android:textSize="13sp"
+        android:padding="2dp"
+        android:lines="1"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stock_remark_name"
+        tools:text="海康"
+        android:padding="2dp"
+        android:textColor="@color/black_t60"
+        android:textSize="13sp"
+        android:maxLines="50"
+        android:ellipsize="end"
+        />
+<!--</LinearLayout>-->
+</LinearLayout>

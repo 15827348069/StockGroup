@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/search_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@drawable/tv_select_color"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry"
+        tools:text="2018年上半年江西财经大学证券投资技术分析课程模拟炒股大赛"/>
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingTop="20dp">
+    <!--android.support.design:hintAnimationEnabled | 是否显示hint的动画,默认true-->
+    <!--android.support.design:hintEnabled | 是否使用hint属性,默认true-->
+    <!--android.support.design:hintTextAppearance | 设置hint的文字样式(指运行动画效果之后的样式)-->
+    <!--android.support.design:counterEnabled | 是否显示计数器-->
+    <!--android.support.design:counterMaxLength | 设置计数器的最大值-->
+    <!--android.support.design:counterOverflowTextAppearance | 输入字符大于我们限定个数字符时的样式-->
+    <!--app:theme 设置浮动标签的颜色主题-->
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="请输入手机号或用户名"
+        android:textColorHint="@color/black_99"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/login_et_bg"
+            android:drawableLeft="@drawable/icon_user"
+            android:drawablePadding="10dp"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_user_pass"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/clear_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:src="@drawable/icon_close_live"/>
+        </RelativeLayout>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="94dp">
+        <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/it_user_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:hint="请输入密码"
+            android:textColorHint="@color/black_99"
+            app:counterEnabled="true"
+            app:counterMaxLength="18"
+            app:counterOverflowTextAppearance="@style/EditErrTextStyle"
+            app:counterTextAppearance="@style/EditTextCountStyle"
+            app:hintTextAppearance="@style/EditTextHintStyle"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_user_pass"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/login_et_bg"
+                android:drawableLeft="@drawable/icon_pwd"
+                android:drawablePadding="10dp"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                />
+        <!--<ImageView-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/clear_pw"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginEnd="13dp"-->
+            <!--android:layout_marginRight="13dp"-->
+            <!--android:src="@drawable/icon_close_live"/>-->
+    <!--</RelativeLayout>-->
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/forgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="2dp"
+            android:text="@string/forget_password"
+            android:textColor="@color/black_99"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/clear_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/dp_size_2"
+            android:layout_marginEnd="@dimen/dp_size_43"
+            android:layout_marginRight="@dimen/dp_size_43"
+            android:src="@drawable/icon_close_live"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_reg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/login_button"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+</LinearLayout>

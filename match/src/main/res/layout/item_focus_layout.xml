@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:minHeight="55dp"
+    android:background="@drawable/list_item_select"
+    android:paddingLeft="15dp" android:paddingRight="15dp"
+    android:paddingTop="4dp">
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppear.Theme.cb_Size14" />
+
+    <LinearLayout android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="4dp">
+
+        <include layout="@layout/line_cd" />
+    </LinearLayout>
+</RelativeLayout>

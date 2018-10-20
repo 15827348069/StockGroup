@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@drawable/tabbar_bottom"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/llBtn1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivBtn1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/gc2" />
+
+        <TextView
+            android:id="@+id/tvBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/gc"
+            android:textAppearance="@style/TextAppear.Theme.cr_Size10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivBtn2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/hq" />
+
+        <TextView
+            android:id="@+id/tvBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/hq"
+            android:textAppearance="@style/TextAppear.Theme.cg_Size10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBtn3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivBtn3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/wdbs" />
+
+        <TextView
+            android:id="@+id/tvBtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/wdbs"
+            android:textAppearance="@style/TextAppear.Theme.cg_Size10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBtn4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivBtn4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tz" />
+
+        <TextView
+            android:id="@+id/tvBtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/tz"
+            android:textAppearance="@style/TextAppear.Theme.cg_Size10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBtn5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivBtn5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/tvBtn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/more"
+            android:textAppearance="@style/TextAppear.Theme.cg_Size10" />
+    </LinearLayout>
+
+</LinearLayout>

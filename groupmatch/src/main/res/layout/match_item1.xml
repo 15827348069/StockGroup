@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/list_item"
+    android:orientation="vertical"
+    android:paddingBottom="18dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/match_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.95"
+            android:singleLine="true"
+            android:text="千万实盘炒股大赛"
+            android:textAppearance="@style/TextAppear.Theme.cb_Size18" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/t" />
+
+        <TextView
+            android:id="@+id/match_people_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baseline="@id/match_name"
+            android:text="1111"
+            android:textColor="#bdbabd"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="正在进行"
+            android:textAppearance="@style/TextAppear.Theme.c6_Size14" />
+
+        <TextView
+            android:id="@+id/match_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="排名第2"
+            android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+        <TextView
+            android:id="@+id/match_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_status"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/all_money"
+            android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+        <TextView
+            android:id="@+id/all_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_status"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="1000" android:layout_toRightOf="@id/match_money"
+            android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+        <TextView
+            android:id="@+id/tv_paiming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/match_money"
+            android:layout_toLeftOf="@+id/match_yield"
+            android:text="收益率:"
+            android:textAppearance="@style/TextAppear.Theme.c6_Size15" />
+
+        <TextView
+            android:id="@+id/match_yield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/match_money"
+            android:text="10%"
+            android:textAppearance="@style/TextAppear.Theme.cr_Size16" />
+    </RelativeLayout>
+
+</LinearLayout>

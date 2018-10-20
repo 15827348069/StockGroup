@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/b"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout"/>
+
+
+    <com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/myscrllview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.zbmf.StocksMatch.widget.CustomListView
+                    android:id="@+id/content_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="#c2c2c2"
+                    android:dividerHeight="1dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/c6"
+                    android:gravity="center" android:visibility="invisible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_marginRight="5dp"
+                        android:src="@drawable/ss" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/find_more"
+                        android:textAppearance="@style/TextAppear.Theme.ca2_Size15" />
+                </LinearLayout>
+
+            </LinearLayout>
+    </com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView>
+
+    <!--<include layout="@layout/bottombar" />-->
+</LinearLayout>

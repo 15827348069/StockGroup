@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/kf_diaolog_bg"
+    android:paddingBottom="15dp">
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="1.5dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:background="@color/err_red"
+    android:layout_gravity="bottom"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/kf"
+        android:textSize="16sp"
+        android:textColor="@color/black_t60"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+    <TextView
+        android:id="@+id/qq_kefu_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_gravity="center"
+        android:text="@string/qq_kf"
+        android:textColor="@color/black_t60"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/line"/>
+
+    <TextView
+        android:id="@+id/phone_id_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingBottom="6dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="@string/dh_kf"
+        android:textColor="@color/black_t60"/>
+</LinearLayout>

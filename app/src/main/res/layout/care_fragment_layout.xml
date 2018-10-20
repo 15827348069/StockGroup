@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <include layout="@layout/action_title_layout"/>
+    <include layout="@layout/activity_group_title_layout"/>
+
+    <include layout="@layout/notip"/>
+
+    <com.zbmf.groupro.view.PullToRefreshScrollView
+        android:id="@+id/sc_focus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:background="#f7f7f7"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="关注"
+                    android:textColor="#666666"
+                    android:textSize="15sp"/>
+
+                <TextView android:id="@+id/tv_mfoucus"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_select_tran"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="更多"
+                    android:textColor="#999999"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <com.zbmf.groupro.view.ListViewForScrollView
+                android:id="@+id/lv_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="#ededed"
+                android:dividerHeight="0.5dp"
+                >
+            </com.zbmf.groupro.view.ListViewForScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:background="#f7f7f7"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="铁粉"
+                    android:textColor="#666666"
+                    android:textSize="15sp"/>
+
+                <TextView android:id="@+id/tv_mtief"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_select_tran"
+                    android:gravity="center"
+                    android:text="更多"
+                    android:textColor="#999999"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <com.zbmf.groupro.view.ListViewForScrollView
+                android:id="@+id/lv_tief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="#ededed"
+                android:dividerHeight="0.5dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="#f7f7f7"
+                android:paddingLeft="16dp"
+                android:text="观点"
+                android:textColor="#666666"
+                android:textSize="15sp"/>
+
+            <com.zbmf.groupro.view.ListViewForScrollView
+                android:id="@+id/lv_dynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="#ededed"
+                android:dividerHeight="0.5dp"
+                />
+        </LinearLayout>
+    </com.zbmf.groupro.view.PullToRefreshScrollView>
+</LinearLayout>

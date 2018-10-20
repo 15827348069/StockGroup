@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:paddingRight="15dp">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:id="@+id/tv_week_stock"-->
+            <!--android:background="@drawable/shape_layout_line_gray"-->
+            <!--&gt;-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="选股大赛"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--android:textSize="16sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:text="周涨幅超10%"-->
+                <!--android:textColor="@color/black_99"-->
+                <!--android:textSize="12sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:background="@drawable/text_background"-->
+                <!--android:gravity="center"-->
+                <!--android:text="本周牛股"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="16sp" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:id="@+id/tv_fans_discounts"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:background="@drawable/shape_layout_line_gray"-->
+            <!--&gt;-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="魔方有约"-->
+                <!--android:textColor="@color/red_ffa189"-->
+                <!--android:textSize="16sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:text="每周炒股牛人访谈"-->
+                <!--android:textColor="@color/black_99"-->
+                <!--android:textSize="12sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:background="@drawable/text_background_2"-->
+                <!--android:gravity="center"-->
+                <!--android:text="投资机会"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="16sp" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/home_title"
+            android:text="官方活动" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/transparent"
+                android:id="@+id/imv_voting"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginBottom="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#ffe992"
+                android:id="@+id/tv_voting"
+                android:text="2017年11月(月度)评选"
+                />
+        </RelativeLayout>
+
+
+        <fragment
+            android:id="@+id/fragment_home_zbmf_content"
+            android:name="com.zbmf.StockGroup.adapter.CycleViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp" />
+
+        <!--<fragment-->
+            <!--android:id="@+id/fragment_cycle_viewpager_content"-->
+            <!--android:name="com.zbmf.StockGroup.adapter.CycleViewPager"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="130dp" />-->
+
+        <!--<com.zbmf.StockGroup.view.ListViewForScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/home_activity_list"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:divider="@color/transparent"-->
+            <!--android:dividerHeight="0dp"-->
+            <!--/>-->
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp"
+           android:padding="15dp"
+           android:background="@drawable/home_menu_background"
+           android:orientation="horizontal"
+           >
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_weight="1"
+               android:layout_marginRight="5dp"
+               android:id="@+id/tv_find_teacher"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="你是炒股新手？"
+                   android:textSize="16sp"
+                   android:textColor="@color/white"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="股市直播免费问股"
+                   android:textSize="14sp"
+                   android:textColor="@color/white"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:text="找老师"
+                   android:background="@drawable/shape_layout_line_white"
+                   android:textSize="14sp"
+                   android:textColor="@color/white"
+                   />
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_weight="1"
+               android:id="@+id/tv_strategy_button"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="你想找牛股？"
+                   android:textSize="16sp"
+                   android:textColor="@color/white"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="智能选股高收益"
+                   android:textSize="14sp"
+                   android:textColor="@color/white"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:text="找股票"
+                   android:background="@drawable/shape_layout_line_white"
+                   android:textSize="14sp"
+                   android:textColor="@color/white"
+                   />
+           </LinearLayout>
+       </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

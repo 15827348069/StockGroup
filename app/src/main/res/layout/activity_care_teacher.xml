@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_care_teacher"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/group_layout_background"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/activity_group_title_layout"/>
+
+    <include layout="@layout/notip"/>
+    <com.zbmf.groupro.view.PullToRefreshListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="#ededed"
+        android:dividerHeight="0.5dp"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        tools:listitem="@layout/item_message">
+    </com.zbmf.groupro.view.PullToRefreshListView>
+
+</LinearLayout>

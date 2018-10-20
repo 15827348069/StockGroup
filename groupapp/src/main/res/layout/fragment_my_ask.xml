@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_ask_stock"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/linen" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="right"
+            android:id="@+id/radio_group"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/my_ask"
+                android:drawablePadding="5dp"
+                android:text="全部"
+                android:textColor="@drawable/text_select_color"
+                android:id="@+id/radio_all"
+                android:textSize="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/my_ask"
+                android:drawablePadding="5dp"
+                android:text="已回复"
+                android:textColor="@drawable/text_select_color"
+                android:id="@+id/radio_replay"
+                android:textSize="15dp" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/linen" />
+
+        <com.zbmf.StockGroup.view.PullToRefreshListView
+            android:id="@+id/pull_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:divider="@color/linen"
+            android:dividerHeight="5dp"
+            app:ptrMode="both" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/ll_no_setting"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_no_setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="暂无相关数据"
+            android:textColor="@color/black_66"
+            android:textSize="15dp" />
+    </LinearLayout>
+    <com.zbmf.StockGroup.view.DrawableCenterTextView
+        style="@style/Bottom_Button_Style"
+        android:drawableLeft="@drawable/icon_button_dong_ask"
+        android:id="@+id/tv_ask_stock"
+        android:text="向董秘提问"
+        />
+</RelativeLayout>

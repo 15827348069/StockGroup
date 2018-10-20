@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginRight="30dp"
+              android:layout_marginLeft="30dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white_50"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/banner_tv"
+        tools:text="广东创新科技学院"
+        android:padding="5dp"
+        android:textSize="13sp"
+        android:textColor="@color/black_t60"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/banner_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gdcxkj"/>
+</LinearLayout>

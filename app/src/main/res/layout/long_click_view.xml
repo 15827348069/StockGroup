@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <TextView android:id="@+id/tv_item1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/pao_sel_l"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="复制" android:textColor="@color/white"
+            android:textSize="13sp"/>
+
+        <View
+            android:layout_width="0.5dp" android:id="@+id/view1"
+            android:layout_height="match_parent"
+            android:background="@color/c38"/>
+
+        <TextView android:id="@+id/tv_item2"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/pao_sel"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="回复" android:textColor="@color/white"
+            android:textSize="13sp"/>
+
+        <View
+            android:layout_width="0.5dp" android:id="@+id/view2"
+            android:layout_height="match_parent"
+            android:background="@color/c38"/>
+
+        <TextView android:id="@+id/tv_item3"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/pao_sel_r"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="举报" android:textColor="@color/white"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sanj"/>
+
+</LinearLayout>

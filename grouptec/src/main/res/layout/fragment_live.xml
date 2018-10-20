@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ecedf1"
+    >
+
+    <TextView
+        android:id="@+id/live_message_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        />
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/button_layout_visible"
+        android:layout_width="20dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/live_new_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/buttom_layout2"
+        android:background="@drawable/tishi"
+        android:gravity="center" android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="9dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/buttom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd"
+            />
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ebebeb"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+            <Button
+                android:id="@+id/send_gift_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.12"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/gift"
+                android:paddingTop="5dp"
+                android:text="送礼"
+                android:textColor="@color/item_message"
+                android:textSize="10dp"
+                />
+
+            <Button
+                android:id="@+id/send_vote"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.12"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/toup"
+                android:paddingTop="5dp"
+                android:text="投票"
+                android:textColor="@color/item_message"
+                android:textSize="10dp"
+                />
+
+            <Button
+                android:id="@+id/send_ask_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.12"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/tiwen"
+                android:paddingTop="5dp"
+                android:text="提问"
+                android:textColor="@color/item_message"
+                android:textSize="10dp"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:background="#dddddd"/>
+
+            <LinearLayout
+                android:id="@+id/just_look_button_layout"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/just_look_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/just_look_qiaoqiao"
+                    android:button="@null"
+                    android:checked="false"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="只看悄悄话"
+                    android:textColor="@color/item_message"
+                    android:textSize="10dp"
+                    android:visibility="visible"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add_tf_message"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_weight="0.3"
+                android:background="@color/colorAccent"
+                android:text="加入铁粉"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/scanHorizontalLineImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_line_saom"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/scanHorizontalLineImageView_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_line_top_saom"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/live_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/buttom_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView android:visibility="gone"
+            android:id="@+id/iv_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tupian"/>
+
+        <ImageView
+            android:id="@+id/iv_hongbao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/hongbo"/>
+
+        <ImageView
+            android:id="@+id/iv_fasong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/fasong"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

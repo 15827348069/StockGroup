@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="11dp"
+    android:paddingRight="11dp">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:padding="5dp"
+        android:text="今天 18:22"
+        android:textColor="#8e8e91"
+        android:textSize="11sp"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/round_rec_cccdd1"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="帅哥 你被禁言了"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_msg1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingRight="60dp"
+        android:visibility="gone"
+        >
+
+        <com.zbmf.StockGroup.view.RoundedCornerImageView
+            android:id="@+id/rcv1"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="6dp"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_content1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@id/rcv1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="你真的很笨"
+                android:textColor="#8e8e91"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.95"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/iv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_content1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@id/rcv1"
+            android:background="@drawable/tv_content1_selector"
+            android:paddingBottom="13dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="13dp"
+            android:text="当达到"
+            android:textColor="@color/black"
+            android:textSize="14dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_msg2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="60dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="9dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_type1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView android:layout_marginLeft="5dp"
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#8e8e91"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="right">
+
+                <LinearLayout
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:indeterminate="false"
+                        android:indeterminateDrawable="@drawable/dialog_style_xml_icon"
+                        android:visibility="gone"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_error"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/pic_warning"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/tv_content2_selector"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="13dp"
+                    android:text="渠道请@哈哈哈哈发哈大合肥按说"
+                    android:textAppearance="@style/TextAppear.Theme.C_Size13"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.zbmf.StockGroup.view.RoundedCornerImageView
+            android:id="@+id/rcv2"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/ic_launcher"
+            />
+    </LinearLayout>
+</LinearLayout>

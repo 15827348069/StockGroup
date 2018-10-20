@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StockGTec.activity.RelDateActivity">
+
+    <include layout="@layout/activity_group_title_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#44b0e3"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="粉丝数"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_follow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#60c4f3"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#fe5569"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="今日人气"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_hot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ff7686"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#fe5569"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="当前在线"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_online"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ff7686"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#efbc17"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="铁粉数"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_tie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fad237"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#efbc17"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="年粉数"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_jin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fad237"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#efbc17"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="即将到期铁粉"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_expiring"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fad237"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#efbc17"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="已过期铁粉"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_expired"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fad237"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

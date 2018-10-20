@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.zbmf.groupro.activity.LaunchActivity">
+    <ImageView
+        android:id="@+id/launch_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_launch"
+        android:scaleType="fitXY"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:scaleType="fitXY"
+        android:text="资本魔方出品"
+        android:textColor="#999999"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        />
+</FrameLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/black_f7"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_title_layout" />
+
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/home_pull_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptrMode="pullFromStart">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/home_cycleViewPage"
+                android:name="com.zbmf.worklibrary.view.CycleViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <include layout="@layout/home_yield_layout" />
+
+            <include layout="@layout/home_create_match_layout" />
+
+            <include layout="@layout/home_superme_match_layout" />
+
+            <include layout="@layout/home_trader_layout" />
+
+            <include layout="@layout/home_city_layout" />
+
+            <include layout="@layout/home_hot_match_layout" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/app_bag"/>
+            <include layout="@layout/arrange_img_layout"/>
+
+            <include layout="@layout/home_kf_layout"/>
+        </LinearLayout>
+    </com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView>
+</LinearLayout>

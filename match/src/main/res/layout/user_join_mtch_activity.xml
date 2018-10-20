@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_bag"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_title"/>
+
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshListView
+        android:id="@+id/plv_match_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line"
+        android:dividerHeight="1dp"
+        app:ptrMode="both"
+        />
+</LinearLayout>

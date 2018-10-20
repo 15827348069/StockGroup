@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/joinVIP"
+            style="@style/home_menu_no"
+            android:drawableStart="@drawable/vip"
+            android:text="@string/joinVIP" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/linen" />
+
+        <Button
+            android:id="@+id/btn_stock_match"
+            style="@style/home_menu_no"
+            android:drawableStart="@drawable/icon_stock_match"
+            android:text="@string/select_stock_match" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/linen" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_stock_comment"
+            style="@style/home_menu_no"
+            android:drawableStart="@drawable/icon_wengu"
+            android:text="@string/yd_comment" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/linen" />
+
+        <Button
+            android:id="@+id/btn_school"
+            style="@style/home_menu_no"
+            android:drawableStart="@drawable/icon_school"
+            android:text="@string/stock_xy" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/linen" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_wengu"
+            style="@style/home_menu_no"
+            android:drawableStart="@drawable/wenhao"
+            android:text="@string/free_ask_stock" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/linen" />
+
+        <Button
+            android:id="@+id/btn_open"
+            style="@style/home_menu_no"
+            android:drawableStart="@drawable/icon_open"
+            android:text="@string/security_open" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/linen" />
+
+</LinearLayout>

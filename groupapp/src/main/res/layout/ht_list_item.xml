@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/gd_item"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_3"
+        android:paddingTop="@dimen/dp_3">
+
+        <ImageView
+            android:id="@+id/avatar_id"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/shape_avatar_backound"
+            android:src="@drawable/avatar_default"
+            tools:ignore="ContentDescription"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:gravity="center"
+                tools:text="userNAme"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="RtlHardcoded"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                tools:ignore="ObsoleteLayoutParam"/>
+
+            <TextView
+                android:id="@+id/commentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:padding="@dimen/dp_3"
+                tools:text="4.21"
+                android:textColor="@color/black_t80"
+                android:textSize="@dimen/sp_12"
+                tools:ignore="RelativeOverlap,RtlHardcoded"/>
+
+            <TextView
+                android:id="@+id/userTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_marginStart="@dimen/dp_5"
+                android:gravity="center"
+                tools:text="title"
+                android:textColor="@color/black_t80"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/companyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_toRightOf="@+id/userTitle"
+                android:gravity="center"
+                tools:text="公司"
+                android:textColor="@color/black_t80"
+                android:textSize="12sp"
+                tools:ignore="RtlHardcoded"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--   伸缩   -->
+    <!--<com.ms.square.android.expandabletextview.ExpandableTextView-->
+        <!--xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/expand_text_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--expandableTextView:maxCollapsedLines="2"-->
+        <!--android:minHeight="@dimen/dp_25"-->
+        <!--expandableTextView:animDuration="200">-->
+
+        <TextView
+            android:id="@+id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_marginRight="@dimen/dp_7"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="内容"
+            android:textColor="@color/black_33"
+            android:textSize="@dimen/sp_16"/>
+
+        <!--<ImageButton-->
+            <!--android:id="@id/expand_collapse"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="@dimen/dp_5"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--tools:ignore="ContentDescription"/>-->
+    <!--</com.ms.square.android.expandabletextview.ExpandableTextView>-->
+
+    <TextView
+        android:id="@+id/commentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_7"
+        android:visibility="gone"
+        tools:text="内容"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/sp_16"/>
+
+    <ImageView
+        android:id="@+id/imgGd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_7"
+        android:layout_gravity="left"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        tools:ignore="ContentDescription,RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/topicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_7"
+        android:padding="@dimen/dp_3"
+        tools:text="#topic name"
+        android:textColor="@color/red_bg"
+        android:textSize="@dimen/sp_14"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_3"
+        android:paddingTop="@dimen/dp_3"
+        tools:ignore="RtlSymmetry">
+
+        <TextView
+            android:id="@+id/dzBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableStart="@drawable/dz_xx_icon"
+            android:padding="@dimen/dp_3"
+            tools:text="34"
+            android:textColor="@color/black_33"
+            android:textSize="@dimen/sp_13"/>
+
+        <TextView
+            android:id="@+id/commentBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_2"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableStart="@drawable/comment_xx_icon"
+            android:padding="@dimen/dp_3"
+            tools:text="34"
+            android:textColor="@color/black_33"
+            android:textSize="@dimen/sp_13"
+            tools:ignore="RtlHardcoded"/>
+    </LinearLayout>
+</LinearLayout>

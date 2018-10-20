@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/no_msg_list_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="65.37dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/no_msg_icon" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/no_match"
+        android:textColor="#aaaaaa"
+        android:textSize="@dimen/title_text_size" />
+
+    <Button
+        android:id="@+id/add_match_button_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_button_layout_red_line_10dp"
+        android:padding="10dp"
+        android:text="@string/add_match"
+        android:textColor="@drawable/button_select_red_line"
+        android:textSize="@dimen/title_text_size" />
+
+</LinearLayout>

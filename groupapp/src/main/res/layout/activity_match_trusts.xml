@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_activity_layout"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/trusts_cell_name"
+            style="@style/TrustsCellTextViewStyle"
+            android:text="@string/trusts_name" />
+
+        <com.zbmf.StockGroup.view.SyncHorizontalScrollView
+            android:id="@+id/matchOperate_rightTitleScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+        </com.zbmf.StockGroup.view.SyncHorizontalScrollView>
+    </LinearLayout>
+    <include layout="@layout/no_message"/>
+
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/myscrllview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.zbmf.StockGroup.view.ListViewForScrollView
+                            android:id="@+id/matchOperate_leftTitleListView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:cacheColorHint="#00000000"
+                            android:dividerHeight="0dp"
+                            android:scrollbars="none"/>
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.zbmf.StockGroup.view.SyncHorizontalScrollView
+                        android:id="@+id/matchOperate_rightContentScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <com.zbmf.StockGroup.view.ListViewForScrollView
+                                android:id="@+id/matchOperate_rightContentListView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:dividerHeight="0dp" android:listSelector="@color/transparent"
+                                android:scrollbars="none"></com.zbmf.StockGroup.view.ListViewForScrollView>
+                        </LinearLayout>
+                    </com.zbmf.StockGroup.view.SyncHorizontalScrollView>
+                </LinearLayout>
+            </LinearLayout>
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+
+</LinearLayout>

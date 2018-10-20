@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_bag"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_title"/>
+
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/pull_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        app:ptrMode="pullFromStart"
+        tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_bag"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            >
+
+            <include layout="@layout/match_detail_title"/>
+
+            <include layout="@layout/match_detail_layout"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/app_bag"/>
+
+            <include layout="@layout/match_detail_content"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/app_bag"/>
+            <fragment
+                android:id="@+id/home_cycleViewPage"
+                android:name="com.zbmf.worklibrary.view.CycleViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                />
+            <!--<TextView-->
+            <!--android:id="@+id/tv_share_friend"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--android:drawableLeft="@drawable/icon_share_friend"-->
+            <!--android:drawablePadding="10dp"-->
+            <!--android:drawableStart="@drawable/icon_share_friend"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="@string/invite_friends_match"-->
+            <!--android:textColor="@color/black_33"-->
+            <!--android:textSize="18sp"/>-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/app_bag"/>
+            <include layout="@layout/match_detail_hold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/app_bag"/>
+            <LinearLayout
+                android:id="@+id/bottomItemRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <LinearLayout
+                    android:id="@+id/lGotoDeals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="@string/deal_record"
+                        android:textSize="16sp"
+                        android:textColor="@color/black_t60"
+                        android:layout_gravity="left|center_vertical"
+                        tools:ignore="RtlHardcoded"/>
+                    <ImageView
+                        android:id="@+id/ivGoToDeals"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/arrow"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"/>
+                <LinearLayout
+                    android:id="@+id/lGotoWinRecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="@string/win_prize"
+                        android:textSize="16sp"
+                        android:textColor="@color/black_t60"
+                        android:layout_gravity="left|center_vertical"
+                        tools:ignore="RtlHardcoded"/>
+                    <ImageView
+                        android:id="@+id/ivGotoWinRecord"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/arrow"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        tools:ignore="RtlHardcoded"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/app_bag"/>
+            <include layout="@layout/arrange_img_layout"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/app_bag"/>
+        </LinearLayout>
+    </com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView>
+</LinearLayout>

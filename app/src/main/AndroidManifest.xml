@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zbmf.groupro">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 支持iBeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 支持个推3.0 电子围栏功能 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <permission
+        android:name="getui.permission.GetuiService.${applicationId}"
+        android:protectionLevel="normal" />
+
+    <!-- 个推SDK权限配置结束 -->
+    <application
+        android:name="com.zbmf.groupro.GroupApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.zbmf.groupro.activity.LaunchActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.zbmf.groupro.service.DemoPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <service android:name="com.zbmf.groupro.service.DemoIntentService" />
+        <service android:name="com.zbmf.groupro.service.ScoketService" />
+
+        <!-- Webchat -->
+        <activity
+            android:name="com.zbmf.groupro.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog" />
+        <activity
+            android:name="com.zbmf.groupro.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Activity_MyDialog" />
+        <!-- share QQ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent205998" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 新浪回调页 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 百度统计APIKEY -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="4803af8206" />
+
+        <!-- 以下是可选的 -->
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" />
+        <!-- 上面的日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔。取值为1-24（小时）的整数，默认为1 -->
+        <!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false" />
+        <!-- 是否获取基站位置信息，默认为true(获取基站位置) -->
+        <!-- <meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="true" /> -->
+        <!-- 是否获取GPS位置信息，默认为获取GPS位置但需开启FINE_LOCATION权限 -->
+        <!-- <meta-data android:name="BaiduMobAd_GPS_LOCATION" android:value="true" /> -->
+        <!-- 是否获取WIFI位置信息，默认为true(获取WIFI位置) -->
+        <!-- <meta-data android:name="BaiduMobAd_WIFI_LOCATION" android:value="true" /> -->
+
+
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="FOGD7WZ0KS78D4epgVX9W" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="QffhZoeLty6yAzZSWgioJ5" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="koC7CGQtfz86ainxOskCx5" />
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.${applicationId}"
+            android:exported="true"
+            android:process=":pushservice" />
+
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 个推SDK配置结束 -->
+
+        <activity
+            android:name="com.zbmf.groupro.activity.Chat1Activity"
+            android:theme="@style/activity_theme" />
+        <activity
+            android:name="com.zbmf.groupro.activity.BigImageActivity"
+            android:theme="@style/activity_theme" />
+        <activity android:name="com.zbmf.groupro.activity.GroupUserActivity" />
+        <activity
+            android:name="com.zbmf.groupro.activity.FansActivity"
+            android:theme="@style/activity_theme" />
+        <activity
+            android:name="com.zbmf.groupro.activity.AddFansActivity"
+            android:theme="@style/activity_theme" />
+        <activity android:name="com.zbmf.groupro.activity.RedPackgedActivity" />
+        <activity
+            android:name="com.zbmf.groupro.activity.BoxDetailActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.zbmf.groupro.activity.WebViewActivity" />
+        <activity android:name="com.zbmf.groupro.activity.ThirdPartyLogin" />
+        <activity android:name="com.zbmf.groupro.activity.LoginActivity" />
+        <activity android:name="com.zbmf.groupro.activity.ForgetActivity" />
+        <activity
+            android:name="com.zbmf.groupro.activity.RegInfoActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name="com.zbmf.groupro.activity.ChangeUserActivity" />
+        <activity android:name="com.zbmf.groupro.activity.LiveHistoryActivity" />
+        <activity android:name="com.zbmf.groupro.activity.MyMessageActivity" />
+        <activity android:name="com.zbmf.groupro.activity.ConponsActivity" />
+        <activity android:name="com.zbmf.groupro.activity.MyQuestionActivity" />
+        <activity android:name="com.zbmf.groupro.activity.SettingActivity" />
+        <activity android:name="com.zbmf.groupro.activity.MySubscripActivity" />
+        <activity android:name="com.zbmf.groupro.activity.HistoryDateActivity" />
+        <activity android:name="com.zbmf.groupro.activity.PointActivity" />
+        <activity android:name="com.zbmf.groupro.activity.MfbActivity" />
+        <activity android:name="com.zbmf.groupro.activity.MyDetailActivity" />
+        <activity
+            android:name="com.zbmf.groupro.activity.PayDetailActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity android:name="com.zbmf.groupro.activity.AccountBindActivity" />
+        <activity android:name="com.zbmf.groupro.activity.MyBlogListActivity" />
+        <activity
+            android:name="com.zbmf.groupro.activity.BlogDetailActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zbmf.groupro.activity.BlogPingActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity android:name="com.zbmf.groupro.activity.SearchActivity" />
+        <activity android:name="com.zbmf.groupro.activity.UserCollectsActivity" />
+        <activity android:name="com.zbmf.groupro.activity.RecommendActivity" />
+        <activity android:name="com.zbmf.groupro.activity.CareTeacherActivity" />
+        <activity android:name="com.zbmf.groupro.activity.GroupDetailActivity" />
+        <activity android:name="com.zbmf.groupro.activity.TieFActivity" />
+        <activity android:name="com.zbmf.groupro.activity.ResetPwdActivity"></activity>
+        <activity android:name="com.zbmf.groupro.activity.BindPhoneActivity"></activity>
+        <activity android:name="com.zbmf.groupro.activity.BindInfoActivity"></activity>
+        <activity android:name="com.zbmf.groupro.activity.BoxDetailWebActivity" />
+        <activity android:name="com.zbmf.groupro.activity.TopTicActivity" />
+        <activity android:name="com.zbmf.groupro.GroupActivity"></activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.zbmf.groupro.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

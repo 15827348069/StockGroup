@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_bag"
+                android:orientation="vertical">
+
+    <include layout="@layout/activity_title"/>
+
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/trader_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/trader_bottom_line"
+        android:layout_below="@+id/title_layout_id"
+        android:scrollbars="none"
+        tools:ignore="UnknownIdInLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+            <!--操盘高手的个人信息-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_trander_bgm"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/icon_trander_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/black_33"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black_66"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black_99"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imv_avatar"
+                    android:layout_width="@dimen/teacher_avatar"
+                    android:layout_height="@dimen/teacher_avatar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_avatar_backound"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/TraderTitleTextViewStyle"
+                android:text="@string/combat_gains"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/saveTime"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/dealCount"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/win_rate"
+                    tools:ignore="RtlHardcoded"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/tv_deal_days"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_deal_total"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_deal_success"
+                    style="@style/trader_content"
+                    android:gravity="right|center_vertical"
+                    tools:ignore="RtlHardcoded"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/totle_earn_rate"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/count_win_pan"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/period_rise_pan"
+                    tools:ignore="RtlHardcoded"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/tv_total_yield"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_win_index"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_index_yield"
+                    style="@style/trader_content"
+                    android:gravity="right|center_vertical"
+                    tools:ignore="RtlHardcoded"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/account_asset"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/current_holder_position_count"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    style="@style/trader_title"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/holder_position_rate"
+                    tools:ignore="RtlHardcoded"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/tv_total_money"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_hold_num"
+                    style="@style/trader_content"
+                    android:gravity="left|center_vertical"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_position"
+                    style="@style/trader_content"
+                    android:gravity="right|center_vertical"
+                    tools:ignore="RtlHardcoded"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:gravity="right|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingRight="15dp"
+                android:text="@string/data_update_rule"
+                android:textColor="@color/black_cc"
+                android:textSize="13sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry"/>
+            <!-- 持仓股票-->
+            <TextView
+                style="@style/TraderTitleTextViewStyle"
+                android:layout_marginTop="10dp"
+                android:text="@string/holder_position_stock"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="80dp">
+                <!---->
+                <LinearLayout
+                    android:id="@+id/hold_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/app_bag"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            style="@style/trader_title"
+                            android:layout_weight="0.4"
+                            android:gravity="left|center_vertical"
+                            android:text="@string/stock_name"
+                            tools:ignore="RtlHardcoded"/>
+
+                        <TextView
+                            style="@style/trader_title"
+                            android:layout_weight="0.2"
+                            android:gravity="left|center_vertical"
+                            android:text="@string/stock_count"
+                            tools:ignore="RtlHardcoded"/>
+
+                        <TextView
+                            style="@style/trader_title"
+                            android:layout_weight="0.2"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="@string/cost_price"/>
+
+                        <TextView
+                            style="@style/trader_title"
+                            android:layout_weight="0.2"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/break_even"
+                            tools:ignore="RtlHardcoded"/>
+                    </LinearLayout>
+                    <!--持仓列表-->
+                    <com.zbmf.worklibrary.view.ListViewForScrollView
+                        android:id="@+id/trader_deal_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_commit_look_hold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/line"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_no_hold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/no_holder_position"
+                            android:textColor="@color/black_99"
+                            android:textSize="14sp"
+                            android:visibility="gone"/>
+                        <!-- 订阅后查看持仓-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_commit_look"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center"-->
+                            <!--android:background="@drawable/buy_follow_c"-->
+                            <!--android:gravity="center"-->
+                            <!--android:paddingBottom="6dp"-->
+                            <!--android:paddingLeft="15dp"-->
+                            <!--android:paddingRight="15dp"-->
+                            <!--android:paddingTop="6dp"-->
+                            <!--android:text="@string/subscrib_after_check"-->
+                            <!--android:textColor="@color/colorAccent"-->
+                            <!--android:textSize="14sp"-->
+                            <!--/>-->
+
+                        <!--查看持仓的完整记录-->
+                        <TextView
+                            android:id="@+id/tv_commit_look_hold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/buy_follow_c"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/pay_after_check"
+                            android:textColor="@color/red"
+                            android:textSize="14sp"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/TraderTitleTextViewStyle"
+                android:layout_marginTop="10dp"
+                android:text="@string/last_record"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                />
+            <!--历史交易记录列表-->
+            <com.zbmf.worklibrary.view.ListViewForScrollView
+                android:id="@+id/trader_deal_history_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/layout_commit_look_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                >
+                <TextView
+                    android:id="@+id/tv_commit_look_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/buy_follow_c"
+                    android:gravity="center"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/pay_after_check"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TraderTitleTextViewStyle"
+                android:layout_marginTop="10dp"
+                android:text="@string/noun_explain"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_trander_desc"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/no_duty"
+                android:textColor="@color/black_66"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/data_from_drill"
+                android:textColor="@color/black_66"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:text="所有操作仅供参考交流，订阅不退不换"
+                android:textColor="@color/black_66"
+                android:textSize="13sp"/>
+        </LinearLayout>
+    </com.zbmf.worklibrary.pulltorefresh.PullToRefreshScrollView>
+
+    <View
+        android:id="@+id/trader_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/trader_bottom_layout"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:id="@+id/trader_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_bag">
+
+        <TextView
+            android:id="@+id/tv_commit_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_weight="3"
+            android:text="@string/subscrib_after_check_record"
+            android:textColor="@color/black_66"/>
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/red_button_no_radius"
+            android:gravity="center"
+            android:text="@string/subscrib"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal" android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout" />
+
+    <ImageView android:id="@+id/iv_niu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@anim/niu_anim" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="移动端积分商城正在建设中..."
+        android:textAppearance="@style/TextAppear.Theme.cb_Size20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="请在网页端登陆"
+        android:textAppearance="@style/TextAppear.Theme.cb_Size20" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="查看积分和商城产品"
+        android:textAppearance="@style/TextAppear.Theme.cb_Size20" />
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bj"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/login_bj_img"
+            android:hint="@string/phone_num_tip"
+            android:inputType="phone" android:singleLine="true"
+            android:paddingLeft="10dp"  android:textColorHint="@color/cg"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_bj_img"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText  android:textColorHint="@color/cg"
+                android:id="@+id/ed_code"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="@string/yzm_tip"
+                android:inputType="number"
+                android:maxEms="4" android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="@color/cb" />
+
+            <Button
+                android:id="@+id/btn_getyzm"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:text="@string/get_yzm"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/ed_pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"  android:textColorHint="@color/cg"
+            android:background="@drawable/login_bj_img"
+            android:hint="@string/pwd_tip"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp" android:singleLine="true"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_reg"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape_button_layout_red_line" android:textSize="14sp"
+            android:text="@string/registe" android:textColor="@color/ca"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/btn_return"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/transparent"
+                android:text="@string/return_login" android:textSize="12sp" android:textColor="@color/ca" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

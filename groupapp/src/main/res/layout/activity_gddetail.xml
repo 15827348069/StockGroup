@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StockGroup.activity.GDDetailActivity">
+
+    <include layout="@layout/title_layout"/>
+
+    <!--<com.zbmf.StockGroup.view.PullToRefreshScrollView-->
+        <!--xmlns:ptr="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/gdScrollview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/title_layout_id"-->
+        <!--android:scrollbars="none"-->
+        <!--android:fillViewport="true"-->
+        <!--ptr:ptrAnimationStyle="flip"-->
+        <!--ptr:ptrMode="both"-->
+        <!--tools:ignore="ObsoleteLayoutParam">-->
+        <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/title_layout_id"-->
+        <!--android:fillViewport="true">-->
+    <com.zbmf.StockGroup.view.MyScrollView
+        android:id="@+id/my_sc"
+        android:layout_below="@+id/title_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="UnknownIdInLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/avatarIV"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_5"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tou_xiang"
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_toEndOf="@+id/avatarIV"
+                android:gravity="center"
+                tools:text="userName"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/sp_16"/>
+
+            <TextView
+                android:id="@+id/commentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_5"
+                android:padding="@dimen/dp_3"
+                android:textColor="@color/black_t80"
+                android:textSize="@dimen/sp_12"
+                tools:text="2017-09-17 12:20"
+                tools:ignore="RelativeOverlap"/>
+
+            <TextView
+                android:id="@+id/userTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_toEndOf="@+id/avatarIV"
+                android:textColor="@color/black_t80"
+                android:textSize="@dimen/sp_12"
+                tools:text="title"/>
+
+            <TextView
+                android:id="@+id/companyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_toEndOf="@+id/userTitle"
+                android:textColor="@color/black_t80"
+                android:textSize="@dimen/sp_12"
+                tools:text="公司"/>
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avatarIV"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_3"
+                android:scaleType="center"
+                tools:ignore="ContentDescription"/>
+            <!--   伸缩   -->
+            <!--<com.ms.square.android.expandabletextview.ExpandableTextView-->
+            <!--xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/expand_text_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/iv"-->
+            <!--expandableTextView:animDuration="200"-->
+            <!--expandableTextView:maxCollapsedLines="2">-->
+
+            <TextView
+                android:id="@+id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_2"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/sp_15"
+                tools:text="内容...."/>
+
+            <!--<ImageButton-->
+            <!--android:id="@id/expand_collapse"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center|bottom"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:padding="5dp"-->
+            <!--tools:ignore="ContentDescription"/>-->
+            <!--</com.ms.square.android.expandabletextview.ExpandableTextView>-->
+
+            <TextView
+                android:id="@+id/topicName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/expandable_text"
+                android:layout_marginStart="@dimen/dp_10"
+                android:textColor="@color/red_light"
+                android:textSize="@dimen/sp_13"
+                tools:text="#topic_name"/>
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/dz_rate_ly"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@+id/topicName"-->
+                <!--android:layout_marginTop="@dimen/dp_3"-->
+                <!--android:orientation="vertical">-->
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_layout_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@+id/topicName"
+                    android:background="@color/white_tab"
+                    android:paddingTop="@dimen/dp_3"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/red"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/red"
+                    app:tabTextColor="@color/black_33"/>
+
+                <com.zbmf.StockGroup.view.WrapContentHeightViewPager
+                    android:id="@+id/vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tab_layout_view"/>
+
+            <!--</LinearLayout>-->
+
+        </RelativeLayout>
+        <!--</ScrollView>-->
+    </com.zbmf.StockGroup.view.MyScrollView>
+    <!--</com.zbmf.StockGroup.view.PullToRefreshScrollView>-->
+    <include layout="@layout/dz_view"/>
+</RelativeLayout>

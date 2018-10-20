@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bag"
+    >
+    <include layout="@layout/fragment_title_layout"/>
+
+    <com.zbmf.worklibrary.pulltorefresh.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line"
+        android:dividerHeight="1dp"
+        app:ptrMode="both"
+        android:id="@+id/pull_listview"
+        />
+
+    <include layout="@layout/no_message"/>
+    <!--<com.zbmf.worklibrary.pullrefreshrecycle.recycler.SwipeMenuRecyclerView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:divider="@color/line"-->
+        <!--android:dividerHeight="1dp"-->
+        <!--app:ptrMode="both"-->
+        <!--android:id="@+id/pull_listview"/>-->
+</LinearLayout>

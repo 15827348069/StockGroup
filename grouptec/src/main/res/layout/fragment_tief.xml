@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:ptr="http://schemas.android.com/apk/res-auto"
+             tools:context="com.zbmf.StockGTec.fragment.QuizFragment">
+
+    <com.zbmf.StockGTec.view.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="#ededed"
+        android:dividerHeight="0.5dp"
+        android:id="@+id/listview"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="pullFromEnd"
+        />
+
+
+</FrameLayout>

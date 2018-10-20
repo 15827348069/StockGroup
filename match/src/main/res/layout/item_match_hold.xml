@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <!-- 持仓股数/类型 -->
+    <TextView
+        android:id="@+id/holds_textView_count"
+        style="@style/TrustsCellTextViewStyle"/>
+
+    <!-- 可用股/数量 -->
+    <TextView
+        android:id="@+id/holds_textView_available"
+        style="@style/TrustsCellTextViewStyle"/>
+
+    <!-- 成交价/成交价格 -->
+    <TextView
+        android:id="@+id/holds_textView_transactionPrice"
+        style="@style/TrustsCellTextViewStyle"/>
+
+    <!-- 当前价/单笔盈亏额 -->
+    <TextView
+        android:id="@+id/holds_textView_currentPrice"
+        style="@style/TrustsCellTextViewStyle"/>
+
+    <!-- 浮动盈亏 /单笔盈亏比-->
+    <TextView
+        android:id="@+id/holds_textView_floating"
+        style="@style/TrustsCellTextViewStyle"/>
+
+    <!-- 盈亏比率 /成交时间-->
+    <TextView
+        android:id="@+id/holds_textView_rate"
+        style="@style/TrustsCellTextViewStyle"
+        android:background="@drawable/icon_row_border_background"/>
+
+</LinearLayout>

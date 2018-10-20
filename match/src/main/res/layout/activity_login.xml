@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingTop="20dp"
+                tools:context="com.zbmf.StocksMatch.activity.LoginActivity"
+    >
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:src="@drawable/icon_close_img"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo"
+        tools:ignore="ContentDescription"/>
+
+    <RadioGroup
+        android:id="@+id/rg_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logo"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/menu_button_select_tran"
+            android:button="@null"
+            android:checked="true"
+            android:padding="@dimen/login_register"
+            android:text="@string/login"
+            android:textColor="@drawable/menu_text_select_color"/>
+
+        <RadioButton
+            android:id="@+id/rb_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:background="@drawable/menu_button_select_tran"
+            android:button="@null"
+            android:padding="@dimen/login_register"
+            android:text="@string/register"
+            android:textColor="@drawable/menu_text_select_color"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fragment_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_login"
+        />
+
+    <include layout="@layout/login_third_login_ayout"/>
+</RelativeLayout>

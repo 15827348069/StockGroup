@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="match_tag">
+        <item >城市</item>
+        <item >高校</item>
+        <item >券商</item>
+        <item >最新比赛</item>
+        <item >全部</item>
+    </array>
+    <array name="match_rank_tag">
+        <item >最新交易</item>
+        <item >日榜</item>
+        <item >周榜</item>
+        <item >月榜</item>
+        <item >总榜</item>
+        <item >@string/match_trader_info</item>
+    </array>
+    <array name="match_hold">
+        <item >持仓股数</item>
+        <item >可用股</item>
+        <item >成本价</item>
+        <item >当前价</item>
+        <item >浮动盈亏</item>
+        <item >盈亏比率</item>
+    </array>
+    <array name="match_deals">
+        <item>类型</item>
+        <item>数量</item>
+        <item>成交价格</item>
+        <item>单笔盈亏额</item>
+        <item>单笔盈亏比</item>
+        <item>成交时间</item>
+    </array>
+    <array name="order_list">
+        <item>委托类型</item>
+        <item>数量</item>
+        <item>委托价格</item>
+        <item>冻结金额</item>
+        <item>委托时间</item>
+    </array>
+    <string-array name="adBlockDiv">
+        <item>top-info rel</item>
+        <item>box mt gdt</item>
+        <item>stock-detail mt</item>
+        <item>tool-bar</item>
+        <item>share-box</item>
+        <item>news</item>
+        <item>current</item>
+        <item>tab mt box rel</item>
+        <item>tab-list news-list</item>
+        <!--<item>vpage reprot</item>-->
+        <!--<item>vpage my</item>-->
+        <!--<item>vpage edit</item>-->
+        <!--<item>vpage search</item>-->
+        <!--<item>vpage news</item>-->
+        <!--<item>vpage hotspot-industryan</item>-->
+        <item>app-down-fix</item>
+        <item>app-ad</item>
+        <item>bottom-toast</item>
+    </string-array>
+</resources>

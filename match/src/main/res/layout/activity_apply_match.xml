@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/app_bag"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="30dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bag"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/apply_tip1"
+            android:textAppearance="@style/TextAppear.Theme.black_Size17"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/apply_tip2"
+            android:textColor="@color/black_66"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/phone_or_username"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding"
+        android:textColorHint="@color/black_99"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:enabled="false"
+            android:background="@drawable/login_et_bg"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_true_name"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/it_true_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/real_name"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding"
+        android:textColorHint="@color/black_99"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_true_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_et_bg"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_emil"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/it_emil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/emil"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding"
+        android:textColorHint="@color/black_99"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_emil"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_et_bg"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_school"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/it_school"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/school"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding"
+        android:textColorHint="@color/black_99"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_school"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_et_bg"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_student_number"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/it_student_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/student_number"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding"
+        android:textColorHint="@color/black_99"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_student_number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_et_bg"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_code"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_question"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black_99"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_question"
+            android:text="@string/question"
+            android:textColor="@color/black_t60"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.8dp"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:background="@color/line" />-->
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_user_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/answer"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding"
+        android:textColorHint="@color/black_99"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_user_answer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_et_bg"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_true_name"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/invite_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/invite_code"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding"
+        android:textColorHint="@color/black_99"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_invite_code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_et_bg"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_code"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/it_user_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/phone_no"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding"
+        android:textColorHint="@color/black_99"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_user_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_et_bg"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_code"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_get_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/it_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="@string/code"
+            android:textColorHint="@color/black_99"
+            app:hintTextAppearance="@style/EditTextHintStyle">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_code"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/login_et_bg"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_code"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:background="@drawable/red_button"
+            android:text="@string/get_code"
+            android:textAppearance="@style/TextAppear.Theme.red_Size15" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/red_button"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/match_join"
+        android:textColor="@color/err_red"
+        android:textSize="17sp" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

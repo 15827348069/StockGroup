@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/b"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout"></include>
+
+
+
+    <com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/myscrllview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/home_header" />
+
+            <TextView android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="推荐比赛"
+                android:textAppearance="@style/TextAppear.Theme.cb_Size20" />
+
+            <include layout="@layout/line_cd" />
+
+            <com.zbmf.StocksMatch.widget.CustomListView
+                android:id="@+id/content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="#c2c2c2"
+                android:dividerHeight="0.5dp" />
+        </LinearLayout>
+
+    </com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView>
+
+    <!--<include layout="@layout/bottombar" />-->
+</LinearLayout>

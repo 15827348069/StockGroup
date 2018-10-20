@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:background="@drawable/list_item_select"
+        >
+        <TextView
+            android:id="@+id/tv_live_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-11-21 09:32:33"
+            android:textColor="@color/black_99"
+            android:layout_marginLeft="31dp"
+            android:textSize="12dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/content_layout"
+            android:layout_toRightOf="@+id/imv_icon_living"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imv_icon_living"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                />
+            <TextView
+                android:id="@+id/tv_live_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="致力于汽车领域的发展"
+                android:textColor="@color/black_33"
+                android:layout_marginLeft="11dp"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

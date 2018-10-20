@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/group_layout_background"
+    tools:context="com.zbmf.groupro.activity.SearchActivity">
+    <include layout="@layout/activity_group_title_layout"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="33dp"
+        android:id="@+id/search_edittext"
+        android:background="@drawable/shape_layout_search_white"
+        android:hint="输入昵称搜索"
+        android:drawableLeft="@drawable/icon_search"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="13dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:textColor="#999999"
+        />
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/linen"
+        android:dividerHeight="0.5dp"
+        />
+</LinearLayout>

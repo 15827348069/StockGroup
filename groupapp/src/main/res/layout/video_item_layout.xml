@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    >
+    <ImageView
+        android:id="@+id/video_img"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/dia_loading" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="10dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/video_img"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="15sp"
+            android:gravity="top"
+            android:id="@+id/video_title"
+            android:textColor="@color/black_33"
+            android:maxLines="2"
+            android:text="123123123123"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_33"
+                android:textSize="13sp"
+
+                android:text="100"
+                android:id="@+id/video_group_name"
+                android:layout_alignBaseline="@+id/video_date"
+                android:layout_alignBottom="@+id/video_date"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_33"
+                android:textSize="13sp"
+                android:text="12-12"
+                android:id="@+id/video_date"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

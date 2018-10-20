@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--组名布局-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dip"
+    android:layout_marginTop="5dip"
+    android:background="#1D1C1A">
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/a_icon_bottom" />
+
+    <TextView
+        android:id="@+id/tv_groupname"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/iv_arrow"
+        android:background="#1D1C1A"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="黄金"
+        android:textColor="#777674"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:src="@drawable/add_zixuan_gu"
+        android:textSize="15dp"/>
+</RelativeLayout>

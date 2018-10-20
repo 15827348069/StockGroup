@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+   >
+    <include layout="@layout/no_message"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_above="@+id/blog_bottom_layout_line">
+    <include layout="@layout/title_layout"/>
+    <com.zbmf.StockGroup.view.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/my_blog_ping_list"
+        android:divider="@color/linen"
+        android:dividerHeight="1dp"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"
+        android:visibility="visible"
+        />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/blog_bottom_layout_line"
+        android:background="#d5d5d5"
+        android:layout_above="@+id/blog_detail_pinglun"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fbfbfb"
+        android:layout_alignParentBottom="true"
+        android:text="说点什么吧"
+        android:paddingLeft="15dp"
+        android:drawablePadding="8dp"
+        android:drawableLeft="@drawable/icon_blog_say_some"
+        android:textColor="#a5a5a5"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:id="@+id/blog_detail_pinglun"
+        />
+</RelativeLayout>

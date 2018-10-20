@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/b"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout"></include>
+
+    <com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshExpandableListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/myscrllview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@drawable/search_gp_bj"
+        android:cacheColorHint="#00000000"
+        android:childDivider="#161616"
+        android:divider="@color/black"
+        android:dividerHeight="0.5dp"
+        ptr:ptrAnimationStyle="flip" android:groupIndicator="@null"
+        ptr:ptrMode="both">
+
+    </com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshExpandableListView>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"  android:background="@color/black"></LinearLayout>-->
+</LinearLayout>

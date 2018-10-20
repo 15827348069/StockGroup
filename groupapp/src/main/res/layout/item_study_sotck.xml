@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@drawable/list_item_select"
+        android:id="@+id/tv_name"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:textSize="16dp"
+        android:textColor="@color/black_33"
+        android:drawableLeft="@drawable/icon_study_stock"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+</LinearLayout>

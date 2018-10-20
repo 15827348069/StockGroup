@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="25dp"
+    android:paddingTop="17dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="今天 12：21"
+        android:textColor="@color/item_message"
+        android:textSize="12dp"
+        android:id="@+id/box_countent_data"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="15dp"
+        android:layout_marginTop="17dp"
+        android:lineSpacingExtra="9dp"
+        android:lineSpacingMultiplier="1"
+        android:id="@+id/box_countent_id"
+        />
+</LinearLayout>

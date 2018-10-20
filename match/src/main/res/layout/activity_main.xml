@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_cc"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StocksMatch.MainActivity">
+    <include layout="@layout/action_title_layout"/>
+    <com.zbmf.worklibrary.view.ViewPageNoScroll
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/vp_main"
+        />
+    <include
+        layout="@layout/main_menu_layout"
+      />
+</LinearLayout>

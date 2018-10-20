@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/group_layout_background"
+              android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/my_detail_nickname_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:hint="请输入购买金额"
+        android:imeOptions="actionDone"
+        android:maxLength="16"
+        android:maxLines="8"
+        android:paddingStart="15dp"
+        android:singleLine="true"
+        android:textColor="@color/rb_text_check"
+        android:textColorHint="#999999"
+        android:textCursorDrawable="@drawable/edit_color"
+        android:textSize="16sp"
+        android:visibility="visible"
+        tools:ignore="RtlSymmetry"/>
+</LinearLayout>

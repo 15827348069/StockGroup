@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/list_item_select"
+    android:orientation="horizontal">
+
+    <!--<style name="StockModelCellTextViewStyle">-->
+        <!--<item name="android:layout_width">100dp</item>-->
+        <!--<item name="android:layout_height">45dp</item>-->
+        <!--<item name="android:gravity">center_vertical|right</item>-->
+        <!--<item name="android:textSize">14sp</item>-->
+        <!--<item name="android:textColor">@color/black_33</item>-->
+        <!--&lt;!&ndash;<item name="android:textColor">@color/nuggets_top_color</item>&ndash;&gt;-->
+    <!--</style>-->
+
+    <TextView
+        android:id="@+id/tv_item_price"
+        style="@style/StockModelCellTextViewStyle"
+        android:paddingRight="10dp"
+        android:text="66.34" />
+
+    <TextView
+        android:id="@+id/tv_item_yield"
+        style="@style/StockModelCellTextViewStyle"
+        android:paddingRight="10dp"
+        android:text="140.00%" />
+
+    <TextView
+        android:id="@+id/tv_item_all_yield"
+        style="@style/StockModelCellTextViewStyle"
+        android:paddingRight="10dp"
+        android:text="32.00%" />
+
+    <TextView
+        android:id="@+id/tv_item_yellow_white"
+        style="@style/StockModelCellTextViewStyle"
+        android:paddingRight="10dp"
+        android:text="32.00%" />
+
+    <!--<LinearLayout-->
+    <!--style="@style/ModeTrustsCellTextViewStyle"-->
+    <!--android:orientation="vertical"-->
+    <!--android:gravity="center_vertical|left"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_before_yesterday_price"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="@color/black_33"-->
+    <!--android:text="100.00" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_before_yesterday_yield"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12dp"-->
+    <!--android:textColor="@color/red"-->
+    <!--android:text="66.00%" />-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+    <!--style="@style/ModeTrustsCellTextViewStyle"-->
+    <!--android:orientation="vertical"-->
+    <!--android:gravity="center_vertical|left"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_yesterday_price"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="@color/black_33"-->
+    <!--android:text="股票" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_yesterday_yield"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12dp"-->
+    <!--android:textColor="@color/red"-->
+    <!--android:text="603308" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--style="@style/ModeTrustsCellTextViewStyle"-->
+    <!--android:orientation="vertical"-->
+    <!--android:gravity="center_vertical|left"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_today_price"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="@color/black_33"-->
+    <!--android:text="130.00" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_today_yield"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12dp"-->
+    <!--android:textColor="@color/red"-->
+    <!--android:text="13.00%" />-->
+    <!--</LinearLayout>-->
+</LinearLayout>

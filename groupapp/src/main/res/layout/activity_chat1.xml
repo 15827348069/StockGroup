@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StockGroup.activity.Chat1Activity">
+
+    <LinearLayout
+        android:id="@+id/layout_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/action_title_layout" />
+
+        <include layout="@layout/group_head_avatar_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title_layout"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llgiftcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title_layout"
+        android:animateLayoutChanges="true"
+        android:gravity="top|right"
+        android:orientation="vertical"
+        android:paddingRight="15dp" />
+
+    <LinearLayout
+        android:id="@+id/live_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title_layout"
+        android:animateLayoutChanges="true"
+        android:gravity="top"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/imv_layout_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="15dp"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_share"
+            android:gravity="center"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/headbg"
+                >
+
+            <com.zbmf.StockGroup.view.RoundedCornerImageView
+                android:id="@+id/imv_avatar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/avatar_default" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="分享码"
+                android:textColor="@color/black_33"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imv_voting"
+            android:layout_width="50dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/icon_live_voting" />
+
+        <ImageView
+            android:id="@+id/imv_close"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignRight="@+id/imv_voting"
+            android:src="@drawable/icon_close_img" />
+    </LinearLayout>
+</RelativeLayout>

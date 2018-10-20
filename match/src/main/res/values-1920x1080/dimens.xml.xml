@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_match_city_height">50dp</dimen>
+    <dimen name="tab_max_width">90dp</dimen>
+    <dimen name="layout_padding">10dp</dimen>
+
+    <dimen name="teacher_avatar">59dp</dimen>
+    <dimen name="teacher_avatar_line">60dp</dimen>
+    <dimen name="login_register">8dp</dimen>
+    <dimen name="grid_expected_size">80dp</dimen>
+    <dimen name="match_text_size_32">12dp</dimen>
+    <dimen name="match_text_size_36">13dp</dimen>
+
+    <!--字体的大小-->
+    <dimen name="tv_size_3">3sp</dimen>
+    <dimen name="tv_size_3_half">3.5sp</dimen>
+    <dimen name="tv_size_4">4sp</dimen>
+    <dimen name="tv_size_4_5">4.5sp</dimen>
+    <dimen name="tv_size_5">5sp</dimen>
+    <dimen name="tv_size_6">6sp</dimen>
+    <dimen name="tv_size_7">7sp</dimen>
+    <dimen name="tv_size_7_half">7.5sp</dimen>
+    <dimen name="tv_size_7_7">7.7sp</dimen>
+    <dimen name="tv_size_8">8sp</dimen>
+    <dimen name="tv_size_8_3">8.3sp</dimen>
+    <dimen name="tv_size_8_6">8.6sp</dimen>
+    <dimen name="tv_size_9">9sp</dimen>
+    <dimen name="tv_size_10">10sp</dimen>
+    <dimen name="tv_size_11">11sp</dimen>
+    <dimen name="tv_size_12">12sp</dimen>
+    <dimen name="tv_size_13">13sp</dimen>
+    <dimen name="tv_size_14">14sp</dimen>
+    <dimen name="tv_size_15">15sp</dimen>
+    <dimen name="tv_size_16">16sp</dimen>
+    <dimen name="tv_size_17">17sp</dimen>
+    <dimen name="tv_size_18">18sp</dimen>
+    <dimen name="tv_size_19">19sp</dimen>
+    <dimen name="tv_size_20">20sp</dimen>
+    <dimen name="tv_size_21">21sp</dimen>
+
+    <!--其他大小-->
+    <dimen name="dp_size_1">1dp</dimen>
+    <dimen name="dp_size_2">2dp</dimen>
+    <dimen name="dp_size_3">3dp</dimen>
+    <dimen name="dp_size_4">4dp</dimen>
+    <dimen name="dp_size_5">5dp</dimen>
+    <dimen name="dp_size_6">6dp</dimen>
+    <dimen name="dp_size_7">7dp</dimen>
+    <dimen name="dp_size_8">8dp</dimen>
+    <dimen name="dp_size_9">9dp</dimen>
+    <dimen name="dp_size_10">10dp</dimen>
+    <dimen name="dp_size_11">11dp</dimen>
+    <dimen name="dp_size_12">12dp</dimen>
+    <dimen name="dp_size_13">13dp</dimen>
+    <dimen name="dp_size_14">14dp</dimen>
+    <dimen name="dp_size_15">15dp</dimen>
+    <dimen name="dp_size_16">16dp</dimen>
+    <dimen name="dp_size_17">17dp</dimen>
+    <dimen name="dp_size_18">18dp</dimen>
+    <dimen name="dp_size_19">19dp</dimen>
+    <dimen name="dp_size_20">20dp</dimen>
+    <dimen name="dp_size_21">21dp</dimen>
+    <dimen name="dp_size_22">22dp</dimen>
+    <dimen name="dp_size_23">23dp</dimen>
+    <dimen name="dp_size_24">24dp</dimen>
+    <dimen name="dp_size_25">25dp</dimen>
+    <dimen name="dp_size_26">26dp</dimen>
+    <dimen name="dp_size_27">27dp</dimen>
+    <dimen name="dp_size_28">28dp</dimen>
+    <dimen name="dp_size_29">29dp</dimen>
+    <dimen name="dp_size_45">45dp</dimen>
+</resources>

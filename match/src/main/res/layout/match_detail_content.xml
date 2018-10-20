@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+       >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_all_money"
+                android:drawablePadding="5dp"
+                android:text="总资产（元）"
+                android:textColor="@color/black_99"
+                android:textSize="@dimen/tv_size_14"
+                android:drawableStart="@drawable/icon_all_money"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10022220.00"
+                android:id="@+id/tv_all_money"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/tv_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_stock_money"
+                android:drawablePadding="5dp"
+                android:text="@string/stock_value"
+                android:textColor="@color/black_99"
+                android:textSize="@dimen/tv_size_14"
+                android:drawableStart="@drawable/icon_stock_money"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10022220.00"
+                android:id="@+id/tv_stock_money"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/tv_size_15" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            tools:ignore="RtlSymmetry">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@color/match_detail_red" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/useable_sum"
+                    android:textColor="@color/black_99"
+                    android:textSize="@dimen/tv_size_15"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/sum_turnround_rate_v"
+                    android:id="@+id/tv_can_use_money"
+                    android:textColor="@color/black_33"
+                    android:textSize="@dimen/tv_size_15"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@color/match_detail_yellow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/freeze_sum"
+                    android:textColor="@color/black_99"
+                    android:textSize="@dimen/tv_size_15"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/sum_turnround_rate_v"
+                    android:id="@+id/tv_close_money"
+                    android:textColor="@color/black_33"
+                    android:textSize="@dimen/tv_size_15"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@color/match_detail_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/holder_position"
+                    android:textColor="@color/black_99"
+                    android:textSize="@dimen/tv_size_15"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/sum_turnround_rate_v"
+                    android:id="@+id/tv_stock_num"
+                    android:textColor="@color/black_33"
+                    android:textSize="@dimen/tv_size_15"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@color/match_detail_qing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/sum_turnround_rate"
+                    android:textColor="@color/black_99"
+                    android:textSize="@dimen/tv_size_15"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/sum_turnround_rate_v"
+                    android:id="@+id/tv_money_yield"
+                    android:textColor="@color/black_33"
+                    android:textSize="@dimen/tv_size_15"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:layout_gravity="center">
+
+            <com.zbmf.StocksMatch.view.CustomCircleProgress
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_centerInParent="true"
+                app:circle_background_color="@color/transparent"
+                app:circle_custom_progress="45"
+                app:circle_finished_color="@color/match_detail_qing"
+                app:circle_finished_stroke_width="6dp"
+                app:circle_progress_max="100"
+                app:circle_unfinished_color="#efefef"
+                app:circle_unfinished_stroke_width="6dp"
+                android:id="@+id/cp_money"
+                />
+
+            <com.zbmf.StocksMatch.view.CustomCircleProgress
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerInParent="true"
+                app:circle_background_color="@color/transparent"
+                app:circle_custom_progress="30"
+                app:circle_finished_color="@color/match_detail_blue"
+                app:circle_finished_stroke_width="6dp"
+                app:circle_progress_max="100"
+                app:circle_unfinished_color="#efefef"
+                app:circle_unfinished_stroke_width="6dp"
+                android:id="@+id/cp_stock"
+                />
+
+            <com.zbmf.StocksMatch.view.CustomCircleProgress
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                app:circle_background_color="@color/transparent"
+                app:circle_custom_progress="90"
+                app:circle_finished_color="@color/match_detail_yellow"
+                app:circle_finished_stroke_width="6dp"
+                app:circle_progress_max="100"
+                app:circle_unfinished_color="#efefef"
+                app:circle_unfinished_stroke_width="6dp"
+                android:id="@+id/cp_close_money"
+                />
+
+            <com.zbmf.StocksMatch.view.CustomCircleProgress
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerInParent="true"
+                app:circle_background_color="@color/transparent"
+                app:circle_custom_progress="70"
+                app:circle_finished_color="@color/match_detail_red"
+                app:circle_finished_stroke_width="6dp"
+                app:circle_progress_max="100"
+                app:circle_unfinished_color="#efefef"
+                app:circle_unfinished_stroke_width="6dp"
+                android:id="@+id/cp_can_use_money"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:text="@string/share_grade"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:background="@drawable/red_button"
+            android:id="@+id/tv_share"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:text="@string/reset_btn_tv"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:background="@drawable/red_button"
+            android:id="@+id/tv_reload"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</LinearLayout>

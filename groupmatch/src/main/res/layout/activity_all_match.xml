@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/b"
+    android:orientation="vertical">
+
+    <include layout="@layout/match_title_layout"/>
+
+      <com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"
+        android:divider="#c2c2c2" ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"
+        android:dividerHeight="0.5dp" />
+
+    <LinearLayout android:visibility="gone"
+    android:id="@+id/ll_search"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/c6"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ss" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quick_search"
+        android:textAppearance="@style/TextAppear.Theme.ca2_Size15" />
+</LinearLayout>
+        <!--<com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView android:id="@+id/myscrllview" xmlns:ptr="http://schemas.android.com/apk/res-auto"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrMode="both">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout android:visibility="gone"
+                    android:id="@+id/rl_top"
+                    android:layout_width="fill_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/new_match" >
+
+                    <TextView
+                        android:id="@+id/qw_sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" android:visibility="gone"
+                        android:text="@string/match_game"
+                        android:textAppearance="@style/TextAppear.Theme.cb_Size23" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/qw_sp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:text="@string/new_heigh" android:visibility="gone"
+                        android:textAppearance="@style/TextAppear.Theme.cb_Size23" />
+                </RelativeLayout>
+
+                <com.zbmf.StocksMatch.widget.CustomListView
+                    android:id="@+id/content_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="#c2c2c2"
+                    android:dividerHeight="0.5dp" />
+
+                <LinearLayout android:visibility="gone"
+                    android:id="@+id/ll_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/c6"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ss" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quick_search"
+                        android:textAppearance="@style/TextAppear.Theme.ca2_Size15" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.zbmf.StocksMatch.widget.pulltorefresh.PullToRefreshScrollView>-->
+
+
+</LinearLayout>

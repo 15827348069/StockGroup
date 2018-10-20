@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_publish_notice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/activity_group_title_layout"/>
+
+    <EditText android:layout_below="@id/title"
+        android:id="@+id/ed_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="请输入公告内容"
+        android:lineSpacingExtra="6dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:paddingTop="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="#b2b2b2"
+        android:textCursorDrawable="@null"
+        android:textSize="16sp"/>
+</RelativeLayout>

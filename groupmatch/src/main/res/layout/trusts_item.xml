@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <!-- 委托类型 -->
+    <TextView
+        android:id="@+id/trusts_cell_type"
+        style="@style/TrustsCellTextViewStyle" />
+
+    <!-- 委托数量 -->
+    <TextView
+        android:id="@+id/trusts_textView_count"
+        style="@style/TrustsCellTextViewStyle"/>
+
+    <!-- 委托价格 -->
+    <TextView
+        android:id="@+id/trusts_textView_price"
+        style="@style/TrustsCellTextViewStyle" />
+
+    <!-- 冻结金额 -->
+    <TextView
+        android:id="@+id/trusts_textView_money"
+        style="@style/TrustsCellTextViewStyle" />
+
+    <!-- 委托时间 -->
+    <TextView
+        android:id="@+id/trusts_textView_date"
+        style="@style/TrustsCellTextViewStyle" />
+
+</LinearLayout>

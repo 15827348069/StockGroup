@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_title"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/main_head_title_layout">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:paddingBottom="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:src="@drawable/icon_return" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text_size" />
+
+
+    <Button
+        android:id="@+id/title_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_layout_line_tran"
+        android:text="@string/edit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/match_text_size_32"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ll_right"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/add" android:visibility="gone"
+        android:textColor="@color/ca"
+        android:textSize="@dimen/title_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:src="@drawable/sousuo"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_refresh"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:src="@drawable/refreshing"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

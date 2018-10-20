@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="b">#efeff4</color>
+
+    <color name="ca">#FFFFFF</color><!-- white -->
+    <color name="white">#FFFFFF</color>
+    <color name="cb">#000000</color> <!-- black -->
+    <color name="black">#000000</color>
+    <color name="cg">#aaaaaa</color><!-- gray -->
+    <color name="light_blue">#6593cb</color>
+    <color name="cr">#ff0000</color><!-- red -->
+    <color name="red">#ff0000</color>
+    <color name="c6">#666666</color>
+    <color name="cd">#dddddd</color>
+    <color name="c3">#333333</color>
+    <color name="ca2">#a2a2a2</color>
+    <color name="main_head_title_layout">#E8564D</color>
+    <color name="match_all_money">#ff3a3a</color>
+    <color name="match_all_money_green">#25b31d</color>
+    <color name="main_activity_layout">#F2EEED</color>
+    <color name="main_activity_layout_text_color">#8C8C8C</color>
+    <color name="hold_blue">#ff33b5e5</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey">#808080</color>
+    <color name="gray81">#DEDEDE</color>
+    <color name="green">#008000</color>
+    <color name="translucent_background">#80000000</color>
+</resources>

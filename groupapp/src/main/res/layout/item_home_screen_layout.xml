@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_screen_layout_id"
+    android:layout_width="137dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="7.5dp"
+    android:layout_marginRight="7.5dp"
+    android:background="@drawable/shape_layout_line_gray_10dp"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看更多"
+        android:textColor="@color/black_66"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_more_button"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:id="@+id/item_content_layout"
+        >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="九天揽月"
+            android:textColor="@color/black_33"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收益率"
+                android:textColor="@color/black_99"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_yield"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="12.44%"
+                android:textColor="@color/colorAccent"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <com.zbmf.StockGroup.view.CustomMyCProgress
+            android:id="@+id/cc_screen_progress"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_centerInParent="true"
+            app:custom_progress="10"
+            app:finished_color="#FF5252"
+            app:finished_stroke_width="8dp"
+            app:unfinished_color="#efefef"
+            app:unfinished_stroke_width="8dp"
+            app:progress_max="100"
+            app:progress_text_color="@color/black_33"
+            app:progress_text_size="12sp"
+            app:text="胜率"
+            app:text_color="@color/black_33"
+            app:text_size="12sp"
+            app:type="circle"
+         />
+    </LinearLayout>
+</RelativeLayout>

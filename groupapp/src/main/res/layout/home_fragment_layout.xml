@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/title_background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/home_logo" />
+    </RelativeLayout>
+
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        android:id="@+id/home_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/group_layout_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/fragment_cycle_viewpager_content"
+                android:name="com.zbmf.StockGroup.adapter.CycleViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="130dp" />
+
+            <include
+                android:id="@+id/home_menu"
+                layout="@layout/home_menu_layout" />
+
+            <include layout="@layout/home_new_menu_layout" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/imv_chose_stock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                 />
+                <ImageView
+                    android:id="@+id/imv_reg_trader"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                   />
+            </LinearLayout>
+            <!--<TextView-->
+            <!--style="@style/home_title"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="股市直播" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/homt_tuijian"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="4"-->
+            <!--android:background="@color/white"-->
+            <!--android:cacheColorHint="@android:color/transparent"-->
+            <!--android:divider="@null"-->
+            <!--android:fastScrollEnabled="true"-->
+            <!--android:scrollbars="none" />-->
+
+            <!--<View-->
+            <!--android:layout_width="0.5dp"-->
+            <!--android:layout_height="61dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:background="@color/linen" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/more_teacher_button"-->
+            <!--style="@style/ButtonStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="61dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/button_select_tran"-->
+            <!--android:text="更多"-->
+            <!--android:textColor="@color/black_66"-->
+            <!--android:textSize="15sp" />-->
+            <!--</LinearLayout>-->
+           <include layout="@layout/smart_list_view"/>
+            <!--<TextView-->
+            <!--style="@style/home_title"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="操盘高手" />-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/home_trader"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--android:cacheColorHint="@android:color/transparent"-->
+            <!--android:divider="@null"-->
+            <!--android:fastScrollEnabled="true"-->
+            <!--android:paddingBottom="15dp"-->
+            <!--android:paddingLeft="7.5dp"-->
+            <!--android:scrollbars="none" />-->
+
+            <include layout="@layout/home_blog_layout" />
+
+            <include layout="@layout/home_more_layout" />
+            <!--<include layout="@layout/home_video_layout"/>-->
+            <include layout="@layout/home_kf_layout" />
+        </LinearLayout>
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+</LinearLayout>

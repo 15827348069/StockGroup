@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_head_title_layout"
+                android:orientation="vertical">
+
+                <com.zbmf.StocksMatch.widget.CircleImageView
+                    android:id="@+id/civ"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/default_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/ca"
+                    android:textSize="27sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_focus"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gzrs"
+                            android:textAppearance="@style/TextAppear.Theme.ca_Size14" />
+
+                        <TextView
+                            android:id="@+id/tv_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:textAppearance="@style/TextAppear.Theme.ca_Size21" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/mfb_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mfb"
+                                android:textAppearance="@style/TextAppear.Theme.ca_Size14" />
+
+                            <TextView
+                                android:id="@+id/tv_mum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:textAppearance="@style/TextAppear.Theme.ca_Size21" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_activity"
+                style="@style/ll_more">
+
+                <ImageView
+                    style="@style/iv_more1"
+                    android:background="@drawable/a" />
+
+                <TextView
+                    style="@style/tv_more"
+                    android:text="@string/activity" />
+
+                <ImageView style="@style/iv_more" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray81" />
+
+            <LinearLayout
+                android:id="@+id/ll_store"
+                style="@style/ll_more">
+
+                <ImageView
+                    style="@style/iv_more1"
+                    android:background="@drawable/c" />
+
+                <TextView
+                    style="@style/tv_more"
+                    android:text="@string/appstore" />
+
+                <ImageView style="@style/iv_more" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray81" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_about"
+                style="@style/ll_more">
+
+                <ImageView
+                    style="@style/iv_more1"
+                    android:background="@drawable/d" />
+
+                <TextView
+                    style="@style/tv_more"
+                    android:text="@string/about" />
+
+                <ImageView style="@style/iv_more" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray81" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_clear"
+                style="@style/ll_more">
+
+                <ImageView
+                    style="@style/iv_more1"
+                    android:background="@drawable/icon_clear" />
+
+                <TextView
+                    style="@style/tv_more"
+                    android:text="@string/clear_cache" />
+
+                <ImageView style="@style/iv_more" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray81" />
+
+            <LinearLayout
+                android:id="@+id/ll_change"
+                style="@style/ll_more">
+
+                <ImageView
+                    style="@style/iv_more1"
+                    android:background="@drawable/icon_change_user" />
+
+                <TextView
+                    style="@style/tv_more"
+                    android:text="@string/change_user" />
+
+                <ImageView style="@style/iv_more" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray81" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<include layout="@layout/bottombar" />-->
+</LinearLayout>

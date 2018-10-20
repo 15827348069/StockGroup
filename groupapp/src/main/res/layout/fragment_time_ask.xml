@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_layout_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_ask_setting"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/linen" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前内容"
+                android:textColor="@color/black_33"
+                android:textSize="15dp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/radio_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/radio_check"
+                    android:button="@null"
+                    android:checked="true"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="全部"
+                    android:textColor="@drawable/text_select_color"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_check"
+                    android:button="@null"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/radio_down"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:text="个股"
+                    android:textColor="@drawable/text_select_color"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/radio_check"
+                    android:button="@null"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/radio_down"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:text="关键词"
+                    android:textColor="@drawable/text_select_color"
+                    android:textSize="15dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/ll_tag"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/linen" />
+
+        <com.zbmf.StockGroup.view.PullToRefreshListView
+            android:id="@+id/pull_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/linen"
+            android:dividerHeight="5dp"
+            android:layout_marginTop="5dp"
+            app:ptrMode="both" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/ll_no_setting"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_no_setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="暂无相关数据"
+            android:textColor="@color/black_66"
+            android:textSize="15dp" />
+    </LinearLayout>
+    <com.zbmf.StockGroup.view.DrawableCenterTextView
+        style="@style/Bottom_Button_Style"
+        android:drawableLeft="@drawable/icon_button_dong_setting"
+        android:id="@+id/tv_ask_setting"
+        android:text="监控管理"
+        />
+
+</RelativeLayout>

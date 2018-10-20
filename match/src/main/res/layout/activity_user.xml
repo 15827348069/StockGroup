@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bag"
+    android:orientation="vertical"
+    tools:context="com.zbmf.StocksMatch.activity.UserActivity">
+
+    <include layout="@layout/activity_title"/>
+
+    <LinearLayout
+        android:id="@+id/ll_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/user_tv_style"
+            android:text="@string/avatar"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_margin="10dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginEnd="6dp"
+            android:padding="5dp"
+            tools:ignore="RtlHardcoded"/>
+    </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.4dp"
+    android:background="@color/line"/>
+    <LinearLayout
+        android:id="@+id/ll_nick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/user_tv_style"
+            android:text="@string/nick"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/nickName"
+            style="@style/user_tv_style"
+            android:text="@string/nick"
+            android:background="@null"
+            android:inputType="textPersonName"
+            android:hint="@string/add_nick"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userSaveBtn"
+        android:text="@string/save"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/pay_btn_bg"/>
+</LinearLayout>

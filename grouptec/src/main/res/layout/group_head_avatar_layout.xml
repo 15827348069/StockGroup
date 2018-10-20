@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/colorAccent"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.zbmf.StockGTec.view.RoundedCornerImageView
+            android:id="@+id/group_head_avatar"
+            android:layout_width="30dp" android:visibility="gone"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/group_head_return"
+            android:background="@color/transparent"
+            android:src="@drawable/avatar_default"
+            />
+
+        <TextView
+            android:id="@+id/group_head_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/group_head_avatar"
+            android:text="我喜欢"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            />
+    </LinearLayout>
+
+    <com.zbmf.StockGTec.view.TabLayout
+        android:id="@+id/tablayoutdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fillViewport="false"
+        android:visibility="gone"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabIndicatorHeight="1dp"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        app:tabTextColor="#aaaaaa"
+        />
+
+    <LinearLayout
+        android:id="@+id/setting_layout_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        >
+
+        <ImageButton
+            android:id="@+id/group_head_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/icon_msg"
+            android:visibility="visible"
+            />
+
+        <ImageButton
+            android:id="@+id/group_head_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/icon_group_setting"
+            />
+
+        <ImageButton
+            android:id="@+id/care_about_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/care_about"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/group_head_return"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/icon_return"/>
+
+</RelativeLayout>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout"/>
+
+    <com.zbmf.StockGroup.view.PullToRefreshScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mPullToRefreshScrollView"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="20dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_background"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="15dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_stock_chat"
+                    android:layout_width="309dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/niu_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp">
+
+                    <TextView
+                        android:id="@+id/tv_all_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#f3d443"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:text="人在玩"
+                        android:textColor="#f3d443"
+                        android:textSize="13dp" />
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_niuc"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@drawable/niu_bg_anim" />-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="排行"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:drawablePadding="5dp"
+                        android:background="@drawable/shape_yellow"
+                        android:drawableRight="@drawable/icon_arrow_red"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="309dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/biu_bg1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-4dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="持仓"
+                            android:id="@+id/tv_hold"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/white" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_buy"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="买入"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="卖出"
+                        android:id="@+id/tv_sell_id"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="撤单"
+                        android:id="@+id/tv_match_trusts"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="查询"
+                        android:id="@+id/tv_log_list"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="获奖"
+                        android:textColor="@color/white"
+                        android:id="@+id/tv_record"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/notice_layout" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="19dp">
+
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总资产"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_all_asset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_all"
+                    android:layout_marginTop="6dp"
+                    android:text="0"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_can"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_toRightOf="@id/tv_all"
+                    android:text="可用资金"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_can_use"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_can"
+                    android:layout_below="@id/tv_can"
+                    android:layout_marginTop="6dp"
+                    android:text="0"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_aprofit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="总收益率"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_profit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/tv_aprofit"
+                    android:layout_below="@id/tv_aprofit"
+                    android:layout_marginTop="6dp"
+                    android:text="0.00%"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="32dp"
+                android:paddingTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日收益"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="+0.00%"
+                        android:textColor="#ea3535"
+                        android:textSize="12sp"
+                        android:id="@+id/tv_day_yield"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="今日跑赢"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                    <com.zbmf.StockGroup.view.MyIncreaseView
+                        android:id="@+id/tv_day_reached"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:text="0人"
+                        android:textColor="#ea3535"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <com.zbmf.StockGroup.view.CustomMyProgress
+                    android:id="@+id/custom_day_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingTop="10dp"
+                    app:cus_inner_drawable="@drawable/niu1"
+                    app:cus_progress_reached_bar_height="14dp"
+                    app:cus_progress_reached_color="#efefef"
+                    app:cus_progress_reached_end_color="#ff754b"
+                    app:cus_progress_reached_start_color="#ea3535"
+                    app:cus_progress_unreached_bar_height="14dp"
+                    app:cus_progress_unreached_color="#efefef"
+                    app:cus_run_rate="fast"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="周收益"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="+0.00%"
+                        android:textColor="#ea3535"
+                        android:textSize="12sp"
+                        android:id="@+id/tv_week_yield"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="本周跑赢"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                    <com.zbmf.StockGroup.view.MyIncreaseView
+                        android:id="@+id/tv_week_reached"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="0人"
+                        android:textColor="#ea3535"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <com.zbmf.StockGroup.view.CustomMyProgress
+                    android:id="@+id/custom_week_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingTop="10dp"
+                    app:cus_inner_drawable="@drawable/niu1"
+                    app:cus_progress_reached_bar_height="14dp"
+                    app:cus_progress_unreached_bar_height="14dp"
+                    app:cus_progress_reached_color="#efefef"
+                    app:cus_progress_reached_end_color="#ff754b"
+                    app:cus_progress_reached_start_color="#ea3535"
+                    app:cus_progress_unreached_color="#efefef"
+                    app:cus_run_rate="fast" />
+
+                <Button
+                    android:id="@+id/btn_reset"
+                    style="@style/ButtonStyle"
+                    android:layout_width="195dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/buy_follow_c"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:visibility="gone"
+                    android:text="收益太差?可以重置帐户"
+                    android:textColor="#ff5252"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="16dp"
+                    android:background="#ea3535" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="我的持仓"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="#e8e8e8"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="名称"
+                    android:textColor="@color/black_99"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="成本价"
+                    android:textColor="@color/black_99"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="当前价"
+                    android:textColor="@color/black_99"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="收益率"
+                    android:textColor="@color/black_99"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <com.zbmf.StockGroup.view.ListViewForScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/simulate_hold_list"
+                android:divider="@color/linen"
+                android:dividerHeight="1dp"
+                />
+            <Button
+                android:id="@+id/btn_all_hold"
+                style="@style/ButtonStyle"
+                android:layout_width="195dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/buy_follow_c"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="查看完整持仓"
+                android:textColor="#ff5252"
+                android:textSize="14dp"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </com.zbmf.StockGroup.view.PullToRefreshScrollView>
+</LinearLayout>

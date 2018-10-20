@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:id="@+id/mylistview"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_head_title_layout"
+        android:orientation="vertical">
+        <include layout="@layout/match_title_layout"/>
+        <com.zbmf.StocksMatch.widget.CircleImageView
+            android:id="@+id/civ"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/default_avatar" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppear.Theme.ca_Size17" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="45dp">
+
+            <LinearLayout
+                android:id="@+id/ll_focus"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bgz"
+                    android:textAppearance="@style/TextAppear.Theme.ca_Size14" />
+
+                <TextView
+                    android:id="@+id/tv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="@style/TextAppear.Theme.ca_Size21" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/mfb_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mfb"
+                        android:textAppearance="@style/TextAppear.Theme.ca_Size14" />
+
+                    <TextView
+                        android:id="@+id/tv_mum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="@style/TextAppear.Theme.ca_Size21" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp" android:paddingLeft="10dp" android:paddingRight="10dp"
+                    android:background="@drawable/shape_layout"
+                    android:text="@string/focus"
+                    android:textColor="#de4138"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+        <com.zbmf.StocksMatch.widget.CustomListView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/transparent"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+</ScrollView>

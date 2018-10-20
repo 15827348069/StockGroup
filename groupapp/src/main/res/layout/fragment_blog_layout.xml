@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/group_layout_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.zbmf.StockGroup.view.PullToRefreshListView
+        android:id="@+id/lv_focus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@color/transparent"
+        android:dividerHeight="0.5dp"
+       />
+</RelativeLayout>

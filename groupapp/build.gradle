@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'stockgroup'
+            keyPassword 'lujiafeng'
+            storeFile file('F:/kubo.keystore')//签名文件可照G盘，apk也可输出到此处
+            storePassword 'kubo@mac--7878'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    useLibrary 'org.apache.http.legacy'
+    //正式版本 50  3.2.8
+    //测试版本 109  测试版 3.6.5
+    defaultConfig {
+        applicationId 'com.zbmf.StockGroup'
+        minSdkVersion 17
+        targetSdkVersion 26
+        multiDexEnabled true
+        versionCode 56
+        versionName "3.3.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "GmO2cYSBRR90bbSTEv1Yf7",
+                GETUI_APP_KEY   : "DiWohBqx546wnKoVfewxv8",
+                GETUI_APP_SECRET: "luRBRlBpCL7OIspUD9yRb"
+        ]
+//        <!--测试_PUSH_APPID：6BVWnmh8tk60sV1h2fkAf8   正式版本：GmO2cYSBRR90bbSTEv1Yf7-->
+//        <!--测试_PUSH_APPKEY：r38cyljSDB6LqLqMQhCO11   正式版本：DiWohBqx546wnKoVfewxv8-->
+//        <!--测试_PUSH_APPSECRET：6uEL86HuatA7vPNryPEGA6   正式版本：luRBRlBpCL7OIspUD9yRb-->
+    }
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+//            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+            applicationVariants.all {
+                variant ->
+                    variant.outputs.all {
+                        def fileName = "mcc_pro"
+                        outputFileName = "${variant.name}-${fileName}.apk"
+                    }
+            }
+        }
+    }
+    productFlavors {
+    }
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'org.apache.httpcomponents:httpcore:4.4.2'
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.2'
+    compile('io.socket:socket.io-client:0.7.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    dependencies {
+        compile 'com.ms-square:expandableTextView:0.1.4'
+    }
+    compile 'com.orhanobut:logger:2.1.1'
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    compile 'com.google.zxing:core:3.2.0'
+    compile project(':FlycoTabLayout_Lib')
+    implementation files('libs/nineoldandroids-2.4.0.jar')
+    compile 'com.android.support:multidex:1.0.0'
+}

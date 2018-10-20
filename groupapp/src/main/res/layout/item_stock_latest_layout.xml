@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <com.zbmf.StockGroup.view.RoundedCornerImageView
+            android:id="@+id/iv_rcv"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_rcv"
+            android:text="userNAME"
+            android:id="@+id/tv_nickname"
+            android:textColor="@color/item_message"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:id="@+id/tv_date"
+            android:text="12-07 10:33"
+            android:textColor="@color/black_99"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="14dp"
+        android:includeFontPadding="false"
+        android:lineSpacingMultiplier="1.4"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:id="@+id/tv_content"
+        android:text="很蓝的股票爱很蓝的股票爱很蓝的股票爱很蓝的股票爱很蓝的股票爱很蓝的股票爱很蓝的股票爱很蓝的股票爱"
+        android:textColor="@color/black_33"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="600000"
+        android:background="@drawable/icon_stock_common"
+        android:id="@+id/tv_symbol"
+        android:textColor="#ba882c"
+        android:textSize="14sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <include layout="@layout/follow_buy_comment" />
+    </LinearLayout>
+</LinearLayout>

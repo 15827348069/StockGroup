@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/group_layout_background" >
+
+        <WebView
+            android:id="@+id/box_webView_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@color/transparent"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="#f0f0f0"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip">
+
+            <!-- 首页 -->
+            <Button
+                android:id="@+id/box_button_firstPage"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:padding="5dp"
+                android:layout_marginLeft="18dp"
+                android:background="@drawable/button_firstpage_selector"/>
+
+            <!-- 上一页 -->
+            <Button
+                android:id="@+id/box_button_priorPage"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:padding="5dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/button_priorpage_selector"/>
+
+            <TextView
+                android:id="@+id/box_textView_pageStatus"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0 / 0"
+                android:textSize="13sp"
+                android:textColor="@color/item_message"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <!-- 下一页 -->
+            <Button
+                android:id="@+id/box_button_nextPage"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:padding="5dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_nextpage_selector"/>
+
+            <!-- 末页 -->
+            <Button
+                android:id="@+id/box_button_endPage"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:padding="5dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/button_endpage_selector"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/list_item_select"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_rank_layout"
+            android:layout_alignParentLeft="true"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_gold"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:id="@+id/imv_rank_img"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="1"
+                android:id="@+id/tv_rank"
+                android:textColor="#cccccc"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+
+        <com.zbmf.StockGroup.view.RoundedCornerImageView
+            android:id="@+id/iv_rcv"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_rank_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_nickname"
+            android:layout_toRightOf="@+id/iv_rcv"
+            android:text="小狼王12312123"
+            android:layout_marginLeft="10dp"
+            android:maxEms="5"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black_33"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_nickname"
+            android:id="@+id/tv_yield"
+            android:text="12.99%"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_symbol"
+            android:id="@+id/tv_action"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_symbol"
+            android:textColor="@color/colorAccent"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_common"
+            android:background="@drawable/buy_follow_s"
+            android:drawableLeft="@drawable/siliao"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="0"
+            android:visibility="gone"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

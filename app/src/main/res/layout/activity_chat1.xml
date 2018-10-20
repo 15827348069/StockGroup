@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/group_layout_background"
+              tools:context="com.zbmf.groupro.activity.Chat1Activity">
+    <include  layout="@layout/group_head_avatar_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/title_layout"
+        >
+    <com.zbmf.groupro.view.NoViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llgiftcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="top|right"
+        android:paddingRight="15dp"
+        android:layout_below="@+id/title_layout"
+        android:orientation="vertical" />
+    <LinearLayout
+        android:id="@+id/live_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="top"
+        android:layout_below="@+id/title_layout"
+        android:orientation="vertical" />
+</RelativeLayout>
