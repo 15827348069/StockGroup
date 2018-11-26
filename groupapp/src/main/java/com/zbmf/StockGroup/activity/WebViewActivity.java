@@ -22,6 +22,7 @@ import com.bokecc.sdk.mobile.live.pojo.PublishInfo;
 import com.bokecc.sdk.mobile.live.pojo.RoomInfo;
 import com.bokecc.sdk.mobile.live.pojo.TemplateInfo;
 import com.bokecc.sdk.mobile.live.pojo.Viewer;
+import com.thinkive.mobile.account.base.IfassPluginManager;
 import com.zbmf.StockGroup.R;
 import com.zbmf.StockGroup.api.AppUrl;
 import com.zbmf.StockGroup.beans.BlogBean;
@@ -41,6 +42,8 @@ import com.zbmf.StockGroup.utils.ShowWebShareLayout;
 import com.zbmf.StockGroup.utils.WebClickUitl;
 import com.zbmf.StockGroup.webclient.GroupWebViewClient;
 
+import java.util.HashMap;
+
 /**
  * Created by xuhao
  * on 2016/6/20.
@@ -51,6 +54,7 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     private String share_title;
     private boolean isFinish;
     private ShowWebShareLayout showWebShareLayout;
+
     @Override
     public int getLayoutResId() {
         return R.layout.webview_layout;
@@ -59,8 +63,8 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        if(showWebShareLayout==null){
-            showWebShareLayout=new ShowWebShareLayout(this);
+        if (showWebShareLayout == null) {
+            showWebShareLayout = new ShowWebShareLayout(this);
         }
         showWebShareLayout.onNewIntent(intent);
     }
@@ -68,8 +72,8 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void initView() {
         initTitle(getIntent().getStringExtra("web_title"));
-        if(showWebShareLayout==null){
-            showWebShareLayout=new ShowWebShareLayout(this);
+        if (showWebShareLayout == null) {
+            showWebShareLayout = new ShowWebShareLayout(this);
         }
         jianghu_webview = (WebView) findViewById(R.id.jianghu_webview);
         final WebSettings settings = jianghu_webview.getSettings();
@@ -150,20 +154,23 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void UriClick(String url) {
-        isFinish=true;
+        isFinish = true;
         WebClickUitl.UrlClick(this, url);
     }
+
     /**
      * 设置Cookie
-     * @param cookie  格式：uid=21233 如需设置多个，需要多次调用
+     *
+     * @param cookie 格式：uid=21233 如需设置多个，需要多次调用
      */
-    private void synCookies(String url,String cookie) {
+    private void synCookies(String url, String cookie) {
         CookieSyncManager.createInstance(this);
         CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptCookie(true);
         cookieManager.setCookie(url, cookie);//指定要修改的cookies
         CookieSyncManager.getInstance().sync();
     }
+
     private void remoCookies() {
         CookieSyncManager.createInstance(this);
         CookieManager cookieManager = CookieManager.getInstance();
@@ -171,6 +178,7 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
         cookieManager.removeSessionCookie();//移除
         CookieSyncManager.getInstance().sync();
     }
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -231,7 +239,7 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void onGroup(Group group) {
         ShowActivity.showGroupDetailActivity(WebViewActivity.this, group);
-        if(isFinish){
+        if (isFinish) {
             finish();
         }
     }
@@ -239,38 +247,38 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void onBolg(BlogBean blogBean) {
         ShowActivity.showBlogDetailActivity(WebViewActivity.this, blogBean);
-        if(isFinish){
+        if (isFinish) {
             finish();
         }
     }
 
     @Override
     public void onStock(Stock stock) {
-        Bundle bundle=new Bundle();
-        bundle.putSerializable(IntentKey.STOCKHOLDER,stock);
-        ShowActivity.showActivity(this,bundle, SimulateOneStockCommitActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(IntentKey.STOCKHOLDER, stock);
+        ShowActivity.showActivity(this, bundle, SimulateOneStockCommitActivity.class);
     }
 
     @Override
     public void onScreen() {
-        ShowActivity.showActivity(this,ScreenActivity.class);
+        ShowActivity.showActivity(this, ScreenActivity.class);
     }
 
     @Override
     public void onScreenDetail(Screen screen) {
-        Bundle bundle=new Bundle();
-        bundle.putSerializable(IntentKey.SCREEN,screen);
-        ShowActivity.showActivity(this,bundle,ScreenDetailActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(IntentKey.SCREEN, screen);
+        ShowActivity.showActivity(this, bundle, ScreenDetailActivity.class);
     }
 
     @Override
     public void onModeStock() {
-        ShowActivity.showActivity(this,StockModeActivity.class);
+        ShowActivity.showActivity(this, StockModeActivity.class);
     }
 
     @Override
     public void onDongAsk() {
-        ShowActivity.showActivity(this,DongAskActivity.class);
+        ShowActivity.showActivity(this, DongAskActivity.class);
     }
 
     @Override
@@ -281,25 +289,27 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void onVideo(Video video) {
         toVideo(video);
-        if(isFinish){
+        if (isFinish) {
             finish();
         }
     }
 
     @Override
     public void onWeb(String url) {
-        if(url.startsWith("http://a.app.qq.com")){
+        if (url.startsWith("http://a.app.qq.com")) {
             Intent intent = new Intent();
             intent.setAction("android.intent.action.VIEW");
             Uri content_url = Uri.parse(url);
             intent.setData(content_url);
             startActivity(intent);
             finish();
-        }else{
-            isFinish=false;
+        } else if (url.equals(AppUrl.OPEN_URL)){
+            startPlugin();
+        }else {
+            isFinish = false;
             remoCookies();
-            synCookies(url,"token="+SettingDefaultsManager.getInstance().authToken());
-            synCookies(url,"api_key="+ AppUrl.API_KEY);
+            synCookies(url, "token=" + SettingDefaultsManager.getInstance().authToken());
+            synCookies(url, "api_key=" + AppUrl.API_KEY);
             jianghu_webview.loadUrl(url);
         }
     }
@@ -307,7 +317,7 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void onImage(String url) {
         ShowActivity.ShowBigImage(WebViewActivity.this, url);
-        if(isFinish){
+        if (isFinish) {
             finish();
         }
     }
@@ -315,15 +325,35 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void onPay() {
         ShowActivity.showPayDetailActivity(WebViewActivity.this);
-        if(isFinish){
+        if (isFinish) {
             finish();
         }
     }
+
     public class JsOperation {
         @JavascriptInterface
         public void login() {
-            ShowActivity.showActivity(WebViewActivity.this,LoginActivity.class);
+            ShowActivity.showActivity(WebViewActivity.this, LoginActivity.class);
         }
     }
+
+    /**
+     * 启动开户插件
+     */
+    private void startPlugin() {
+        // 用于接收第三方需要传入到券商端的参数，key value 自行定义就行 非必需
+        HashMap<String, String> params = new HashMap<>();
+        // --like--
+//		params.put("token", "100868686");// 自定义扩展参数--可不传
+        // --like--
+        // h5地址,
+        String url = "http://218.17.195.36:8030/SZ/m/open/index.html?short_code=HZWZYW90Ha7YP5D";
+        String targetUrl = "http://218.17.195.36:8030/SZ/m/open/index.html";
+//		String targetUrl = "https://kaihu.china-invs.cn/H5/m/open/index.html";
+//	    String targetUrl = "http://218.17.195.36:8030/h5/m/ygt/index.html#!/account/index.html";
+        // 启动开户sdk
+        IfassPluginManager.call(WebViewActivity.this, url, params);
+    }
+
 
 }

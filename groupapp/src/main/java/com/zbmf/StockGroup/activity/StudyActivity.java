@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.zbmf.StockGroup.GroupActivity;
 import com.zbmf.StockGroup.R;
 import com.zbmf.StockGroup.constans.Constants;
 import com.zbmf.StockGroup.fragment.study.StudyChouseFragment;
@@ -22,10 +21,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by xuhao on 2017/2/13.
+ * Created by xuhao
+ * on 2017/2/13.
  */
 
-public class StudyActivity extends BaseActivity implements  RadioGroup.OnCheckedChangeListener, StudyVideoFragment.GroupRadioGone, StudyChouseFragment.GroupRadioGone{
+public class StudyActivity extends BaseActivity implements  RadioGroup.OnCheckedChangeListener,
+        StudyVideoFragment.GroupRadioGone, StudyChouseFragment.GroupRadioGone{
     private RadioGroup video_select_radio;
     private StudyVideoFragment studyVideoFragment;
     private StudyVideoSeriesFragment studyVideoSeriesFragment;

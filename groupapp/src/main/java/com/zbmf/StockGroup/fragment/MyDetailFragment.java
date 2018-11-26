@@ -237,6 +237,7 @@ public class MyDetailFragment extends GroupBaseFragment implements View.OnClickL
                 ShowActivity.showActivity(getActivity(), MyBlogListActivity.class);
                 break;
             case R.id.my_detail_open_button:
+                //开户
                 ShowActivity.showWebViewActivity(getActivity(),HtmlUrl.OPEN);
                 break;
             case R.id.my_detail_shouc_button:
@@ -293,7 +294,6 @@ public class MyDetailFragment extends GroupBaseFragment implements View.OnClickL
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:4000607878"));
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -304,8 +304,7 @@ public class MyDetailFragment extends GroupBaseFragment implements View.OnClickL
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
-                String url = "mqqwpa://im/chat?chat_type=wpa&uin=2852273339&version=1";
+                String url = "mqqwpa://im/chat?chat_type=wpa&uin=130578786&version=1";
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                 kf_dialog.dismiss(); //关闭dialog
             }

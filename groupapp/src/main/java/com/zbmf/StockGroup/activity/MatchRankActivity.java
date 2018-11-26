@@ -28,6 +28,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 训练排行榜页面
+ */
 public class MatchRankActivity extends BaseActivity implements View.OnClickListener, OnAdapterClickListener {
     private PullToRefreshScrollView mPullToRefreshScrollView;
     private TextView mTv_update_date;

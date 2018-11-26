@@ -6,7 +6,6 @@ import android.util.Log;
 
 import com.igexin.sdk.GTIntentService;
 import com.igexin.sdk.PushConsts;
-import com.igexin.sdk.PushManager;
 import com.igexin.sdk.message.FeedbackCmdMessage;
 import com.igexin.sdk.message.GTCmdMessage;
 import com.igexin.sdk.message.GTTransmitMessage;
@@ -21,6 +20,7 @@ import com.zbmf.StockGroup.constans.Constants;
 import com.zbmf.StockGroup.utils.LogUtil;
 import com.zbmf.StockGroup.utils.MessageType;
 import com.zbmf.StockGroup.utils.NotificationUtil;
+import com.zbmf.StockGroup.utils.SettingDefaultsManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -62,6 +62,7 @@ public class DemoIntentService extends GTIntentService {
     @Override
     public void onReceiveClientId(Context context, String clientid) {
 //        sendMessage(clientid, 1);
+        SettingDefaultsManager.getInstance().setPushCilentId(clientid);
         LogUtil.e(TAG + "onReceiveClientId -> " + "clientid = " + clientid);
     }
 

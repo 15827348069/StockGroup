@@ -37,6 +37,8 @@ import com.zbmf.StockGroup.constans.RequestCode;
 import com.zbmf.StockGroup.db.Database;
 import com.zbmf.StockGroup.dialog.EditTextDialog;
 import com.zbmf.StockGroup.dialog.TextDialog;
+import com.zbmf.StockGroup.fragment.chat.observe.EventCar;
+import com.zbmf.StockGroup.fragment.chat.observe.Observer;
 import com.zbmf.StockGroup.interfaces.DialogYesClick;
 import com.zbmf.StockGroup.utils.ChatMessageComparator;
 import com.zbmf.StockGroup.utils.DateUtil;
@@ -58,7 +60,8 @@ import java.util.List;
 import static android.view.View.VISIBLE;
 import static com.zbmf.StockGroup.utils.ShowActivity.showActivityForResult;
 
-public class ChatFragment extends Fragment implements View.OnClickListener/*, AdapterView.OnItemClickListener */ {
+public class ChatFragment extends Fragment implements View.OnClickListener/*, AdapterView.OnItemClickListener */
+        ,Observer {
     private static final String ARG_PARAM1 = "group";
     private TextView ed_msg;
     private TextView tv_unread, tv_return, tv_reply;
@@ -121,7 +124,7 @@ public class ChatFragment extends Fragment implements View.OnClickListener/*, Ad
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         chat_activity = (Chat1Activity) getActivity();
-
+        EventCar.getDefault().register(this);
         setupView(view);
         fragmentregisterReceiver();
     }
@@ -472,6 +475,12 @@ public class ChatFragment extends Fragment implements View.OnClickListener/*, Ad
             }
         }
         return true;
+    }
+
+    @Override
+    public void updata(Object object) {
+      //不知道在哪里改
+
     }
 
     public class DelMsgReceiver extends BroadcastReceiver {

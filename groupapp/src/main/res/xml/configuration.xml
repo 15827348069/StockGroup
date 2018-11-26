@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+    <!-- 所有item中的name值必须唯一 -->
+    <system>
+        <item
+            name="ISDEBUG"
+            description="是否为调试模式"
+            value="false"/>
+        <item
+            name="CHARSET"
+            description="http请求/响应编码格式"
+            value="UTF-8"/>
+        <item
+            name="IS_THIRD_INTEGRATION"
+            description="是否为第三方集成版本，true表示是，false表示不是"
+            value="false"/>
+        <item
+            name="VIDEO_SAVE_PATH"
+            value="/mobiletrader"/>
+        <item
+            name="webviewCount"
+            description="webview管理池中webview的个数，根据项目中用到多少h5模块来指定"
+            value="1"/>
+        <item
+            name="disableWebViewCache"
+            description="禁用webview重用功能"
+            value="true"/>
+        <!-- <item -->
+        <!-- name="STATUS_BAR_COLOR" -->
+        <!-- description="状态栏颜色" -->
+        <!-- value="#009be7" /> -->
+        <item
+            name="IMG_SIZE"
+            description="影像大小，单位为KB"
+            value="200"/>
+        <item
+            name="SMS_CHANNEL"
+            description="发送验证码的短信通道号码"
+            value="10698000088536606"/>
+        <!--包名:  com.zbmf.StockGroup  应用名: 资本魔方炒股圈子-->
+        <item
+            name="LICENSE"
+            description="思迪证书签名控件License"
+            value="0WSw/sVOP9zYVpad6rHySkoRbb5f2kwfWz985+SutTEpJr/w6LNlpRJnDPCbZo54xmGZReTBkEMbfHQ5xGeTV2sLF7uqkLTczNiM6gBWgiIv8ra7pqKkEEa6IaaiA42UESd8SgYnkIyeTWx6Fm27/6GTCIDNqk5FnWpZUquiAkE="/>
+        <item
+            name="WITNESS_SUCCESS"
+            description="见证通过"
+            value="SYS:10000"/>
+        <item
+            name="JUST_REJECT"
+            description="直接驳回"
+            value="SYS:10001"/>
+        <item
+            name="USER_LEAVE_ROOM"
+            description="客户端主动退出"
+            value="SYS:10002"/>
+        <item
+            name="REJECT_REASON1"
+            description="网络问题"
+            value="SYS:10007"/>
+        <item
+            name="REJECT_REASON2"
+            description="视频问题"
+            value="SYS:10008"/>
+        <item
+            name="REJECT_REASON3"
+            description="资料问题"
+            value="SYS:10009"/>
+        <item
+            name="CHECK_SUCCESS"
+            description="视频见证成功消息"
+            value="SYS:10000"/>
+        <item
+            name="CHECK_FAILED"
+            description="视频见证失败消息"
+            value="SYS:10001"/>
+        <item
+            name="USER_LEAVE_ROOM"
+            description="手动退出房间"
+            value="SYS:10002"/>
+        <item
+            name="SEAT_LEAVE_ROOM"
+            description="坐席退出房间，针对恶意账户清除出队列"
+            value="SYS:10003"/>
+        <item
+            name="SEAT_FORCE_QUIT"
+            description="坐席强制退出房间"
+            value="SYS:10004"/>
+        <item
+            name="USER_CONFIRM_QUIT"
+            description="用户确认退出房间"
+            value="SYS:10005"/>
+        <item
+            name="SEAT_REFRESH_IE"
+            description="坐席刷新浏览器"
+            value="SYS:10006"/>
+        <item
+            name="NETWORK_PROBLEM"
+            description="网络问题"
+            value="SYS:10007"/>
+        <item
+            name="VIDEO_PROBLEM"
+            description="视频问题 "
+            value="SYS:10008"/>
+        <item
+            name="CHECK_REJECT"
+            description="用户驳回"
+            value="SYS:10009"/>
+        <item
+            name="TEXT_MSG"
+            description="文字消息"
+            value="USR:0:"/>
+        
+         <item
+            name="http-address-xml"
+            description="HTTP请求对应环境的配置文件"
+            value="http_address_empty" />
+         
+    </system>
+
+    <!-- 配置系统业务模块 -->
+    <!-- module name不能定义为common，common关键字保留给框架使用 -->
+    <module-config>
+        <module
+            name="open"
+            class="com.thinkive.android.ui.OpenWebFragment"
+            description="开户模块" />
+    </module-config>
+
+    <logger>
+        <properties
+            name="LOG_OUTPUT"
+            description="系统日志输出方式[LOG.ALL | LOG.CONSOLE | LOG.FILE | LOG.CLOSE]"
+            value="LOG.FILE" />
+        <properties
+            name="LOG_LEVEL"
+            description="系统日志级别[INFO | DEBUG | WARN | ERROR]"
+            value="DEBUG" />
+    </logger>
+
+</configs>

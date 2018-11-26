@@ -11,6 +11,8 @@ public class AppUrl {
     public static final String API_SECRET = "BrZ2g1TB";
     public static final String DEVICE_TYPE="1";//设备标识
     public static final String REDIRECT_URL = "http://www.sina.com";
+    //开户
+    public static final String OPEN_URL="http://app:zhongtou";
 
     public static final String SCOPE ="email,direct_messages_read,direct_messages_write,"
                     + "friendships_groups_read,friendships_groups_write,statuses_to_me_read,"

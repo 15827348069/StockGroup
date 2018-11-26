@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -141,6 +142,8 @@ public class ForgetActivity extends AppCompatActivity implements View.OnClickLis
                     return;
                 }
                 String push_cilent_id = SettingDefaultsManager.getInstance().PUSH_CILENT_ID();
+                Log.i("===TAG","   圈子的   个推clientId  ："+push_cilent_id);
+
                 WebBase.code_forget(phone, push_cilent_id, new JSONHandler(true, ForgetActivity.this, "获取验证码") {
                     @Override
                     public void onSuccess(JSONObject obj) {

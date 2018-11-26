@@ -15,6 +15,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -78,8 +79,11 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+//import com.igexin.sdk.PushManager;
 
-public class GroupActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener, OnUrlClick {
+
+public class GroupActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener,
+        View.OnClickListener, OnUrlClick{
     private List<Fragment> infolist;
     private RadioGroup group_main_munu;
     private UpdateReceiver receiver;
@@ -416,6 +420,7 @@ public class GroupActivity extends AppCompatActivity implements ViewPager.OnPage
             switch (intent.getAction()) {
                 case Constants.BIND_CLIENT_ID:
                     String client_id = intent.getStringExtra("client_id");
+                    Log.i("===TAG","---   存储  聊天的socketID："+client_id);
                     SettingDefaultsManager.getInstance().setClientId(client_id);
                     if (SettingDefaultsManager.getInstance().authToken() != null) {
                         bind_client_id();

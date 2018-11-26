@@ -81,12 +81,16 @@ public class UpdateManager {
 //                    notification.contentView.setProgressBar(R.id.progressbar, 100, progress, false);
                     mRemoteViews.setProgressBar(R.id.progressbar,100,progress,false);
                     mBuilder.setProgress(100,progress,false);
-                    notificationManager.notify(notifyId, notification);
+                    if (notificationManager!=null){
+                        notificationManager.notify(notifyId, notification);
+                    }
                 }
                 break;
 
                 case DOWN_OVER: {
-                    notificationManager.cancelAll();
+                    if (notificationManager!=null) {
+                        notificationManager.cancelAll();
+                    }
                     installApk();
                 }
                 break;

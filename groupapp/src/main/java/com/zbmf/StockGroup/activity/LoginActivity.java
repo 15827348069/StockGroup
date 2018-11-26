@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.CheckedTextView;
@@ -23,9 +24,9 @@ import com.zbmf.StockGroup.api.JSONHandler;
 import com.zbmf.StockGroup.api.WebBase;
 import com.zbmf.StockGroup.beans.User;
 import com.zbmf.StockGroup.callback.ResultCallback;
+import com.zbmf.StockGroup.constans.Constants;
 import com.zbmf.StockGroup.db.DBManager;
 import com.zbmf.StockGroup.utils.ActivityUtil;
-import com.zbmf.StockGroup.constans.Constants;
 import com.zbmf.StockGroup.utils.EditTextUtil;
 import com.zbmf.StockGroup.utils.SettingDefaultsManager;
 import com.zbmf.StockGroup.utils.ShowActivity;
@@ -303,6 +304,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     return;
                 }
                 String clientid = PushManager.getInstance().getClientid(getBaseContext());
+                Log.i("===TAG","   圈子的 登录时候的   个推clientId  ："+clientid);
                 WebBase.login(ed_phone.getText().toString(), ed_pwd.getText().toString(), clientid, new JSONHandler(true, LoginActivity.this, "正在登录...") {
                     @Override
                     public void onSuccess(JSONObject obj) {

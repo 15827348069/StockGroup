@@ -137,9 +137,9 @@ public class SettingDefaultsManager {
         return sharedPreferences.getString(USER_PHONE,"");
     }
     // 设置当前用户的PUSH_CILENT_ID
-    public void setPushCilentId(String authToken)
+    public void setPushCilentId(String pushClientID)
     {
-        editor.putString(PUSH_CILENT_ID, authToken);
+        editor.putString(PUSH_CILENT_ID, pushClientID);
         editor.commit();
     }
     public String getCoupon()
@@ -198,8 +198,6 @@ public class SettingDefaultsManager {
         editor.putInt(IS_SHOW_KLINE_CHART,kChart);
         editor.commit();
     }
-
-
     public void setIdcard(String idcard){
         editor.putString(IDCARD, idcard);
         editor.commit();

@@ -926,8 +926,9 @@ public class LiveFragment extends BaseFragment implements MyTextView.OnTextClick
         switch (view.getId()) {
             case R.id.kf_button:
                 try {
-                    String qq_url = "mqqwpa://im/chat?chat_type=crm&uin=2852273339&version=1&src_type=web&web_src=http:://wpa.b.qq.com";
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(qq_url)));
+                    String url = "mqqwpa://im/chat?chat_type=wpa&uin=130578786&version=1";
+//                    String qq_url = "mqqwpa://im/chat?chat_type=crm&uin=130578786&version=1&src_type=web&web_src=http:://wpa.b.qq.com";
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                 } catch (ActivityNotFoundException exception) {
 
                 }
